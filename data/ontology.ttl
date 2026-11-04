@@ -1,0 +1,918 @@
+# 红楼梦·脂评汇校 本体（前八十回）
+# 模型层 TBox + 实例层 ABox；以 Turtle (OWL) 序列化。
+@prefix : <http://example.org/honglou#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+########## 模型层 TBox · 类层级 ##########
+:人物 a owl:Class .
+:事件 a owl:Class .
+:地点 a owl:Class .
+:家族 a owl:Class .
+:纪年 a owl:Class .
+:脂批 a owl:Class .
+:作品 a owl:Class .
+:主子姻眷 rdfs:subClassOf :人物 .
+:官宦皇亲 rdfs:subClassOf :人物 .
+:仆婢仆役 rdfs:subClassOf :人物 .
+:优伶伶人 rdfs:subClassOf :人物 .
+:医卜清客 rdfs:subClassOf :人物 .
+:方外僧道 rdfs:subClassOf :人物 .
+:市井平民 rdfs:subClassOf :人物 .
+:仙幻谶语 rdfs:subClassOf :事件 .
+:身世遭际 rdfs:subClassOf :事件 .
+:节庆祭祀 rdfs:subClassOf :事件 .
+:病丧生死 rdfs:subClassOf :事件 .
+:婚嫁姻缘 rdfs:subClassOf :事件 .
+:风波冲突 rdfs:subClassOf :事件 .
+:诗社雅集 rdfs:subClassOf :事件 .
+:情缘际会 rdfs:subClassOf :事件 .
+:宦途经济 rdfs:subClassOf :事件 .
+:虚境幻域 rdfs:subClassOf :地点 .
+:州府城邑 rdfs:subClassOf :地点 .
+:府邸庄园 rdfs:subClassOf :地点 .
+:园林院苑 rdfs:subClassOf :地点 .
+:庵观寺院 rdfs:subClassOf :地点 .
+:官署衙门 rdfs:subClassOf :地点 .
+
+########## 模型层 TBox · 对象属性 ##########
+:血亲眷属 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:夫妻妾室 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:主仆役使 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:朋友知交 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:情缘私恋 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:仇怨对立 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:师恩庇护 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:交易勾结 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:事缘交往 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:泛关联 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :人物 .
+:隶属家族 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :家族 .
+:居于 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :地点 .
+:参与 a owl:ObjectProperty ; rdfs:domain :人物 ; rdfs:range :事件 .
+:发生于 a owl:ObjectProperty ; rdfs:domain :事件 ; rdfs:range :地点 .
+:处于纪年 a owl:ObjectProperty ; rdfs:domain :事件 ; rdfs:range :纪年 .
+:批语点睛 a owl:ObjectProperty ; rdfs:domain :事件 ; rdfs:range :脂批 .
+:撰作 a owl:ObjectProperty ; rdfs:domain :作品 ; rdfs:range :人物 .
+:所咏 a owl:ObjectProperty ; rdfs:domain :作品 ; rdfs:range :人物 .
+:关涉 a owl:ObjectProperty ; rdfs:domain :作品 ; rdfs:range :事件 .
+:题于 a owl:ObjectProperty ; rdfs:domain :作品 ; rdfs:range :地点 .
+:位于 a owl:ObjectProperty ; rdfs:domain :地点 ; rdfs:range :地点 .
+
+########## 模型层 TBox · 数据属性 ##########
+:hasName a owl:DatatypeProperty ; rdfs:domain :人物 .
+:hasAlias a owl:DatatypeProperty ; rdfs:domain :人物 .
+:hasNickname a owl:DatatypeProperty ; rdfs:domain :人物 .
+:hasRole a owl:DatatypeProperty ; rdfs:domain :人物 .
+:birthYear a owl:DatatypeProperty ; rdfs:domain :人物 .
+:deathYear a owl:DatatypeProperty ; rdfs:domain :人物 .
+:firstInChapter a owl:DatatypeProperty ; rdfs:domain :人物 .
+:mentionCount a owl:DatatypeProperty ; rdfs:domain :人物 .
+:hasTitle a owl:DatatypeProperty ; rdfs:domain :事件 .
+:hasDate a owl:DatatypeProperty ; rdfs:domain :事件 .
+:hasSeason a owl:DatatypeProperty ; rdfs:domain :事件 .
+:inChapter a owl:DatatypeProperty ; rdfs:domain :事件 .
+:hasDesc a owl:DatatypeProperty ; rdfs:domain :事件 .
+:hasName a owl:DatatypeProperty ; rdfs:domain :地点 .
+:hasRegion a owl:DatatypeProperty ; rdfs:domain :地点 .
+:familyName a owl:DatatypeProperty ; rdfs:domain :家族 .
+:eraLabel a owl:DatatypeProperty ; rdfs:domain :纪年 .
+:eraChapters a owl:DatatypeProperty ; rdfs:domain :纪年 .
+:hasDesc a owl:DatatypeProperty ; rdfs:domain :纪年 .
+:hasText a owl:DatatypeProperty ; rdfs:domain :脂批 .
+:批型 a owl:DatatypeProperty ; rdfs:domain :脂批 .
+:inChapter a owl:DatatypeProperty ; rdfs:domain :脂批 .
+:hasTitle a owl:DatatypeProperty ; rdfs:domain :作品 .
+:gemKind a owl:DatatypeProperty ; rdfs:domain :作品 .
+:inChapter a owl:DatatypeProperty ; rdfs:domain :作品 .
+:famousLine a owl:DatatypeProperty ; rdfs:domain :作品 .
+:hasDesc a owl:DatatypeProperty ; rdfs:domain :作品 .
+
+########## 实例层 ABox · 家族 / 纪年 / 脂批 ##########
+:贾氏 a :家族 ; :familyName "贾" .
+:史氏 a :家族 ; :familyName "史" .
+:王氏 a :家族 ; :familyName "王" .
+:薛氏 a :家族 ; :familyName "薛" .
+:林氏 a :家族 ; :familyName "林" .
+:甄氏 a :家族 ; :familyName "甄" .
+:era1 a :纪年 ; :eraLabel "红楼前一年 — 元年" ; :eraChapters "第1—1回" ; :hasDesc "甄士隐梦幻识通灵：僧道携石下世，英莲失于元宵，三月十五葫芦庙火，好了歌里士隐出家；宝玉于元年衔玉而诞——纪元即以此年为「红楼元年」。" .
+:era2 a :纪年 ; :eraLabel "红楼二年 — 八年" ; :eraChapters "第2—8回" ; :hasDesc "黛玉生于二年二月十二；六年雨村馆于林府、冷子兴演说荣国府；七年黛玉六岁进贾府、葫芦案后薛家进京；八年正月宁府梅开、宝玉梦游太虚幻境，十月刘姥姥一进荣国府。" .
+:era3 a :纪年 ; :eraLabel "红楼九年 — 十二年" ; :eraChapters "第9—16回" ; :hasDesc "九年冬至（十一月三十）可卿病笃，腊月相思局起；十一年腊月贾瑞殒命、冬底黛玉南归扬州；十二年九月初三林如海卒，可卿大丧、凤姐协理宁国府、元春才选凤藻宫，省亲别墅兴工。" .
+:era4 a :纪年 ; :eraLabel "红楼十三年" ; :eraChapters "第17—36回" ; :hasDesc "正月十五元妃省亲（宝玉十三岁，癞僧言通灵「青埂峰一别已过十三载」）；正月廿一宝钗生日，二月廿二姐妹搬入大观园；四月廿六未时交芒种、黛玉葬花；五月初一清虚观打醮、初五端阳金钏投井；六月宝玉遭笞挞。" .
+:era5 a :纪年 ; :eraLabel "红楼十六年" ; :eraChapters "第37—53回" ; :hasDesc "（三十六回夏至三十七回秋正文留空档约三年）八月二十贾政赴学差；海棠社、菊花诗、螃蟹宴；刘姥姥二进大观园；九月初二凤姐泼醋；金兰契、鸳鸯抗婚、香菱学诗；琉璃世界白雪红梅；除夕祭宗祠。黛玉于本年自述「今年十五岁」。" .
+:era6 a :纪年 ; :eraLabel "红楼十七年" ; :eraChapters "第54—69回" ; :hasDesc "正月十五元宵夜宴；探春理家、老太妃薨；四月廿六宝玉生辰、群芳夜宴，当夜贾敬殁于玄真观；六月贾琏偷娶尤二姨，八月前后尤三姐殒、柳湘莲出家，腊月尤二姐吞金自逝。" .
+:era7 a :纪年 ; :eraLabel "红楼十八年" ; :eraChapters "第70—80回" ; :hasDesc "三月初二重起桃花社；八月初三贾母八旬大庆；中秋前后抄检大观园；八月下浣晴雯夭亡、芙蓉女儿诔；九、十月迎春误嫁中山狼、夏金桂进门——八十回终。" .
+:q_leijin a :脂批 ; :hasText "能解者方有辛酸之泪，哭成此书。壬午除夕。书未成，芹为泪尽而逝。余尝哭芹，泪亦待尽。每意觅青埂峰再问石兄，奈不遇癞头和尚何！怅怅！" ; :批型 "甲戌本·眉批" ; :inChapter 1 .
+:q_zousan a :脂批 ; :hasText "“走罢”二字，真悬崖撒手，若个能行？" ; :批型 "甲戌本·眉批" ; :inChapter 1 .
+:q_yizi a :脂批 ; :hasText "是作者具菩萨之心，秉刀斧之笔，撰成此书，一字不可更，一语不可少。" ; :批型 "脂批·夹批" ; :inChapter 5 .
+:q_qingbang a :脂批 ; :hasText "按警幻情榜，宝玉系“情不情”。凡世间之无知无识，彼俱有一痴情去体贴。" ; :批型 "脂批·眉批" ; :inChapter 8 .
+:q_tianxianglou a :脂批 ; :hasText "九个字写尽天香楼事，是不写之写。" ; :批型 "脂批·眉批" ; :inChapter 13 .
+:q_yushenmiao a :脂批 ; :hasText "茜雪至“狱神庙”方呈正文。袭人正文标目曰“花袭人有始有终”，余只见有一次誊清时，与“狱神庙慰宝玉”等五六稿，被借阅者迷失，叹叹！" ; :批型 "脂批·眉批（丁亥夏，畸笏叟）" ; :inChapter 20 .
+:q_xuanf a :脂批 ; :hasText "宝玉之情，今古无人可比……然宝玉有情极之毒，亦世人莫忍为者，看至后半部则洞明矣。故后文方有“悬崖撒手”一回。" ; :批型 "脂批·夹批" ; :inChapter 21 .
+:q_tanchun a :脂批 ; :hasText "此探春远适之谶也。使此人不远去，将来事败，诸子孙不致流散也，悲哉伤哉！" ; :批型 "脂批·夹批" ; :inChapter 22 .
+:q_yushenmiao2 a :脂批 ; :hasText "且系本心本意，“狱神庙”回内方见。" ; :批型 "脂批·侧批" ; :inChapter 27 .
+:q_qingbang2 a :脂批 ; :hasText "至末回警幻情榜，方知正副、再副及三四副芳讳。" ; :批型 "脂批·眉批（壬午季春，畸笏）" ; :inChapter 18 .
+:q_jingu a :脂批 ; :hasText "这皆是宝玉意中心中确实之念……皆今古未见之人，亦是未见之文字。说不得贤，说不得愚，说不得风流，说不得下流。" ; :批型 "脂批·夹批" ; :inChapter 19 .
+:q_jiefa a :脂批 ; :hasText "《石头记》用截法、岔法、突然法、伏线法、由近渐远法、将繁改简法、虚敲实应法……总于文中屡用之。" ; :批型 "脂批·总评" ; :inChapter 27 .
+:q_nanxun a :脂批 ; :hasText "借省亲事写南巡，出脱心中多少忆昔感今。" ; :批型 "甲戌本·眉批" ; :inChapter 16 .
+:q_baochai a :脂批 ; :hasText "这方是宝卿正传……看他写宝钗，真是“严严整整”，又“淡到十分”。" ; :批型 "脂批·夹批" ; :inChapter 8 .
+
+########## 实例层 ABox · 作品（红楼撷珍） ##########
+:g_tijue a :作品 ; :hasTitle "题绝（满纸荒唐言）" ; :gemKind "诗" ; :inChapter 1 ; :hasDesc "全书开卷二十字题绝，'痴'与'味'二字为通部书眼；脂批谓'能解者方有辛酸之泪'。" ; :famousLine "都云作者痴，谁解其中味" ; :depicts :e1 ; :composedAt :dahuangshan .
+:g_wucai a :作品 ; :hasTitle "无材补天偈" ; :gemKind "偈铭" ; :inChapter 1 ; :hasDesc "女娲弃石之自嘲，《石头记》缘起；'无材补天'四字亦是作者自况。" ; :famousLine "无材可去补苍天" ; :depicts :e1 ; :composedAt :dahuangshan .
+:g_haolege a :作品 ; :hasTitle "好了歌" ; :gemKind "歌" ; :inChapter 1 ; :hasDesc "四段'好''了'相翻，功名、金银、姣妻、儿孙四关俱破；甄士隐闻歌顿悟，遂注而随之出家。" ; :famousLine "世人都晓神仙好" ; :depicts :e4 ; :composedAt :gusu ; :features :shiyin .
+:g_haolezh a :作品 ; :hasTitle "好了歌注" ; :gemKind "歌" ; :inChapter 1 ; :hasDesc "一句一谶，其后八十回人物翻覆多于此伏线；甄士隐即以之为告别尘世之辞。" ; :famousLine "乱烘烘你方唱罢我登场" ; :depicts :e4 ; :composedAt :gusu ; :features :shiyin .
+:g_yucun_lu a :作品 ; :hasTitle "对月口占（未卜三生愿）" ; :gemKind "诗" ; :inChapter 1 ; :hasDesc "雨村寄居葫芦庙，甄家丫鬟娇杏曾两番回顾，故对月寄怀；后竟以此缘得官纳妾。" ; :famousLine "蟾光如有意，先上玉人楼" ; :authoredBy :yucun ; :composedAt :gusu ; :features :yucun ; :features :jiaoxing .
+:g_yucun_yu a :作品 ; :hasTitle "玉在椟中求善价" ; :gemKind "联" ; :inChapter 1 ; :hasDesc "托'玉''钗'二字言待时之志；脂批点破此联暗埋全书金玉机杼，雨村名'时飞'亦在其中。" ; :famousLine "玉在匮中求善价，钗于奁内待时飞" ; :authoredBy :yucun ; :composedAt :gusu ; :features :yucun .
+:g_yucun_yu2 a :作品 ; :hasTitle "对月寓怀（时逢三五便团圆）" ; :gemKind "诗" ; :inChapter 1 ; :hasDesc "以月喻势，雨村野心毕露；士隐赞'必非久居人下者'，遂赠银两助其进京。" ; :famousLine "天上一轮才捧出，人间万姓仰头看" ; :authoredBy :yucun ; :composedAt :gusu ; :features :yucun .
+:g_taixu_lian a :作品 ; :hasTitle "太虚幻境联（假作真时）" ; :gemKind "联" ; :inChapter 1, 5 ; :hasDesc "通部书之总纲式一联，两现于幻境牌坊；真假有无之辨，统摄全书。" ; :famousLine "假作真时真亦假" ; :depicts :e8 ; :composedAt :taixu .
+:g_zhitong_lian a :作品 ; :hasTitle "智通寺联" ; :gemKind "联" ; :inChapter 2 ; :hasDesc "'想来此二句，文虽浅近，其意则深'——雨村视为翻过筋斗来的过来人之语；寺内聋肿老僧煮粥答非所问，愈增苍凉。" ; :famousLine "身后有余忘缩手" ; :composedAt :yangzhou ; :features :yucun .
+:g_rongxi_lian a :作品 ; :hasTitle "荣禧堂联" ; :gemKind "联" ; :inChapter 3 ; :hasDesc "落款'同乡世教弟勋袭东安郡王穆莳拜手书'，堂匾'荣禧堂'赤金九龙大匾——见贾府与王侯往来之盛。" ; :famousLine "座上珠玑昭日月" ; :depicts :e6 ; :composedAt :rongxitang ; :features :daiyu .
+:g_xijy a :作品 ; :hasTitle "西江月·嘲宝玉二首" ; :gemKind "词" ; :inChapter 3 ; :hasDesc "正话反说：世人眼里的'无能不肖'，正是宝玉不肯入于经济仕途之写；脂批谓'此二词已尽宝玉一生'。" ; :famousLine "行为偏僻性乖张，那管世人诽谤" ; :depicts :e6 ; :composedAt :rongfu ; :features :baoyu .
+:g_huguan a :作品 ; :hasTitle "护官符" ; :gemKind "谶" ; :inChapter 4 ; :hasDesc "四句俗谚口碑，极言贾、史、王、薛四大家族之豪富权势；小小一符，断送冯渊性命，薛蟠逍遥法外。" ; :famousLine "白玉为堂金作马" ; :authoredBy :menzi ; :depicts :e7 ; :composedAt :yingtian ; :features :menzi ; :features :yucun ; :features :xiangling ; :features :xuepan .
+:g_niehai a :作品 ; :hasTitle "孽海情天联" ; :gemKind "联" ; :inChapter 5 ; :hasDesc "警幻司人间之风情月债、掌尘世之女怨男痴——薄命司册页与红楼梦曲皆自此门内展开。" ; :famousLine "堪叹古今情不尽" ; :depicts :e8 ; :composedAt :taixu ; :features :baoyu .
+:g_chunmeng a :作品 ; :hasTitle "春梦歌" ; :gemKind "歌" ; :inChapter 5 ; :hasDesc "警幻出迎所吟，'春梦''飞花'八字摄尽全书盛衰聚散。" ; :famousLine "春梦随云散，飞花逐水流" ; :depicts :e8 ; :composedAt :taixu ; :features :baoyu .
+:g_pan_qingwen a :作品 ; :hasTitle "晴雯判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "又副册之首。画幅满纸乌云浊雾；'霁月'拆'晴'、'彩云'化'雯'，毁谤致夭，正是七十七回之谶。" ; :famousLine "心比天高，身为下贱" ; :depicts :e8 ; :composedAt :taixu ; :features :qingwen ; :features :baoyu .
+:g_pan_xiren a :作品 ; :hasTitle "袭人判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "又副册。画幅一簇鲜花、一床破席；'花'袭人、'优伶'蒋玉菡，后文前八十回虽未及，谶语已明。" ; :famousLine "堪羡优伶有福，谁知公子无缘" ; :depicts :e8 ; :composedAt :taixu ; :features :xiren ; :features :yuhan ; :features :baoyu .
+:g_pan_xiangling a :作品 ; :hasTitle "香菱判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "副册之首。画幅一枝桂花下有一池沼其中水涸泥干莲枯藕败；'两地生孤木'拆'桂'字，应夏金桂进门后之虐。" ; :famousLine "自从两地生孤木，致使香魂返故乡" ; :depicts :e8 ; :composedAt :taixu ; :features :xiangling ; :features :jingui .
+:g_pan_dai_bao a :作品 ; :hasTitle "黛玉宝钗判词（合一）" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "正册之首，钗黛合一题。画幅两株枯木上悬一围玉带，又有一堆雪下着一股金簪；'停机德'咏宝钗、'咏絮才'咏黛玉。" ; :famousLine "玉带林中挂，金簪雪里埋" ; :depicts :e8 ; :composedAt :taixu ; :features :daiyu ; :features :baochai .
+:g_pan_yuanchun a :作品 ; :hasTitle "元春判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一张弓（谐'宫'），弓上挂着香橼（谐'元'）；辨是非、大梦归，荣华之顶即命运之限。" ; :famousLine "虎兔相逢大梦归" ; :depicts :e8 ; :composedAt :taixu ; :features :yuanchun .
+:g_pan_tanchun a :作品 ; :hasTitle "探春判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅两人放风筝、一片大海一只大船，船中一女子掩面泣涕之状；远嫁之谶，清明江边一别。" ; :famousLine "千里东风一梦遥" ; :depicts :e8 ; :composedAt :taixu ; :features :tanchun .
+:g_pan_xiangyun a :作品 ; :hasTitle "湘云判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅几缕飞云、一湾逝水；襁褓失怙，英豪阔大之性难改云散水逝之局。" ; :famousLine "湘江水逝楚云飞" ; :depicts :e8 ; :composedAt :taixu ; :features :xiangyun .
+:g_pan_miaoyu a :作品 ; :hasTitle "妙玉判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一块美玉落在泥垢之中；'太高人愈妒，过洁世同嫌'，栊翠庵之洁终难自保。" ; :famousLine "可怜金玉质，终陷淖泥中" ; :depicts :e8 ; :composedAt :taixu ; :features :miaoyu .
+:g_pan_yingchun a :作品 ; :hasTitle "迎春判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一恶狼追扑一美女欲啖之意；'子系'合'孙'字，指孙绍祖——八十回后'误嫁'之谶于册页先伏。" ; :famousLine "子系中山狼，得志便猖狂" ; :depicts :e8 ; :composedAt :taixu ; :features :yingchun ; :features :shaozu .
+:g_pan_xichun a :作品 ; :hasTitle "惜春判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一所古庙里面一美人在内看经独坐；勘破三春，出家为尼之谶。" ; :famousLine "独卧青灯古佛旁" ; :depicts :e8 ; :composedAt :taixu ; :features :xichun .
+:g_pan_xifeng a :作品 ; :hasTitle "王熙凤判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一片冰山上一只雌凤；'凡鸟'合'凤'字，'一从二令三人木'拆'休'字，末世机关终自误。" ; :famousLine "一从二令三人木，哭向金陵事更哀" ; :depicts :e8 ; :composedAt :taixu ; :features :xifeng .
+:g_pan_qiaojie a :作品 ; :hasTitle "巧姐判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一座荒村野店有一美人在那里纺绩；势败家亡之际，昔日济困之刘姥姥反成救难之恩人。" ; :famousLine "偶因济刘氏，巧得遇恩人" ; :depicts :e8 ; :composedAt :taixu ; :features :qiaojie ; :features :liulaolao .
+:g_pan_liwan a :作品 ; :hasTitle "李纨判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅一盆茂兰旁一位凤冠霞帔的美人；'完'字谶早寡，一盆兰指贾兰，富贵已成而韶华已逝。" ; :famousLine "枉与他人作笑谈" ; :depicts :e8 ; :composedAt :taixu ; :features :liwan ; :features :jialan .
+:g_pan_keqing a :作品 ; :hasTitle "秦可卿判词" ; :gemKind "谶" ; :inChapter 5 ; :hasDesc "画幅高楼大厦有一美人悬梁自缢；情天情海点'情'字总纲，'造衅开端实在宁'直指宁府——脂批于此最详。" ; :famousLine "造衅开端实在宁" ; :depicts :e8 ; :composedAt :taixu ; :features :keqing .
+:g_qu_yinzi a :作品 ; :hasTitle "红楼梦曲 · 引子" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "全书点题之曲：'怀金悼玉'四字，金谓宝钗、玉谓黛玉，红梦之名自此立。" ; :famousLine "演出这怀金悼玉的红楼梦" ; :depicts :e8 ; :composedAt :taixu ; :features :baoyu .
+:g_qu_zhongshen a :作品 ; :hasTitle "终身误" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "以宝玉口吻咏金玉成婚而心念黛玉之终身憾事——曲牌即谶语。" ; :famousLine "纵然是齐眉举案，到底意难平" ; :depicts :e8 ; :composedAt :taixu ; :features :baochai ; :features :daiyu ; :features :baoyu .
+:g_qu_wangningmei a :作品 ; :hasTitle "枉凝眉" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "木石前盟之曲，绛珠还泪一生；'水中月''镜中花'，镜花水月终虚化。" ; :famousLine "想眼中能有多少泪珠儿，怎经得秋流到冬尽，春流到夏" ; :depicts :e8 ; :composedAt :taixu ; :features :daiyu ; :features :baoyu .
+:g_qu_henwu a :作品 ; :hasTitle "恨无常" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "元春之曲。荣华正好而无常忽至，托梦爹娘'退步抽身'——元春之死与贾府之败在此一曲。" ; :famousLine "故向爹娘梦里相寻告：须要退步抽身早" ; :depicts :e8 ; :composedAt :taixu ; :features :yuanchun .
+:g_qu_fengu a :作品 ; :hasTitle "分骨肉" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "探春之曲。一帆风雨路三千，远适之谶；辞亲话语平白而痛绝。" ; :famousLine "自古穷通皆有定，离合岂无缘" ; :depicts :e8 ; :composedAt :taixu ; :features :tanchun .
+:g_qu_lezhong a :作品 ; :hasTitle "乐中悲" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "湘云之曲。幼年失怙、英豪阔大；'厮配才貌仙郎'一笔，八十回后婚事于此伏线，终亦云散水涸。" ; :famousLine "英豪阔大宽宏量，从未将儿女私情略萦心上" ; :depicts :e8 ; :composedAt :taixu ; :features :xiangyun .
+:g_qu_shinang a :作品 ; :hasTitle "世难容" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "妙玉之曲。'太高''过洁'六字与判词互文，终陷淖泥之谶成于曲中。" ; :famousLine "太高人愈妒，过洁世同嫌" ; :depicts :e8 ; :composedAt :taixu ; :features :miaoyu .
+:g_qu_xishui a :作品 ; :hasTitle "虚花悟" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "惜春之曲。看破三春（元迎探三人命运），勘破而出家；'白杨青枫'一番阴景与判词'青灯古佛'相应。" ; :famousLine "西方宝树唤婆娑，上结着长生果" ; :depicts :e8 ; :composedAt :taixu ; :features :xichun .
+:g_qu_congming a :作品 ; :hasTitle "聪明累" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "凤姐之曲。'忽喇喇似大厦倾'五字兼谶贾府之败；机关算尽与家亡人散一语双关。" ; :famousLine "机关算尽太聪明，反算了卿卿性命" ; :depicts :e8 ; :composedAt :taixu ; :features :xifeng .
+:g_qu_xishui2 a :作品 ; :hasTitle "好事终" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "秦可卿之曲。'画梁春尽'应册页悬梁之画；脂批谓'家事消亡首罪宁'为通部大纲之一。" ; :famousLine "箕裘颓堕皆从敬，家事消亡首罪宁" ; :depicts :e8 ; :composedAt :taixu ; :features :keqing ; :features :jiajing .
+:g_qu_liuyu a :作品 ; :hasTitle "留余庆" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "巧姐之曲。娘亲（凤姐）接济刘姥姥积得阴功，故巧姐于家败后为恩人所救；'狠舅奸兄'暗伏八十回后卖女之人。" ; :famousLine "劝人生，济困扶穷" ; :depicts :e8 ; :composedAt :taixu ; :features :qiaojie ; :features :liulaolao ; :features :xifeng .
+:g_qu_xiyuan a :作品 ; :hasTitle "喜冤家" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "迎春之曲。与判词'子系中山狼'互证，误嫁孙绍祖，一载而亡。" ; :famousLine "中山狼，无情兽" ; :depicts :e8 ; :composedAt :taixu ; :features :yingchun ; :features :shaozu .
+:g_que_wanshao a :作品 ; :hasTitle "晚韶华" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "李纨之曲。青春守寡、晚岁子贵而年寿将尽；叠句急促如点更，一字一叹。" ; :famousLine "也只是虚名儿与后人钦敬" ; :depicts :e8 ; :composedAt :taixu ; :features :liwan ; :features :jialan .
+:g_qu_feiniao a :作品 ; :hasTitle "收尾 · 飞鸟各投林" ; :gemKind "曲" ; :inChapter 5 ; :hasDesc "红楼梦曲收尾，十二支之总括——一人一句谶毕，归结于'白茫茫大地'；脂批谓与'好一似'相发明。" ; :famousLine "好一似食尽鸟投林，落了片白茫茫大地真干净" ; :depicts :e8 ; :composedAt :taixu .
+:g_jinyu a :作品 ; :hasTitle "通灵宝玉与金锁铭文" ; :gemKind "偈铭" ; :inChapter 8 ; :hasDesc "两件佩物铭文八字相对，即'金玉良缘'之根；丫头一句话，惊动通部书。" ; :famousLine "莫失莫忘，仙寿恒昌 / 不离不弃，芳龄永继" ; :depicts :e10 ; :composedAt :lixiang ; :features :baoyu ; :features :baochai ; :features :yinger .
+:g_qujing a :作品 ; :hasTitle "曲径通幽" ; :gemKind "联" ; :inChapter 17 ; :hasDesc "众客拟'叠翠''锦嶂'等俗套，宝玉谓'编新不如述旧'，取唐常建诗意——园林美学第一笔。" ; :famousLine "曲径通幽" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :daguan ; :features :baoyu ; :features :jiazheng .
+:g_qinfang_lian a :作品 ; :hasTitle "沁芳联" ; :gemKind "联" ; :inChapter 17 ; :hasDesc "匾题'沁芳'，联句不着一'水'字而水意全出；沁芳亭闸后为共读西厢、葬花诸事之地。" ; :famousLine "绕堤柳借三篙翠" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :qinfang ; :features :baoyu ; :features :jiazheng .
+:g_youfeng_lian a :作品 ; :hasTitle "有凤来仪联" ; :gemKind "联" ; :inChapter 17 ; :hasDesc "千竿翠竹遮映，故烟尚绿、指犹凉；'有凤来仪'既点省亲，又伏黛玉之居。" ; :famousLine "宝鼎茶闲烟尚绿" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :xiaoxiang ; :features :baoyu ; :features :jiazheng .
+:g_hengzhi_lian a :作品 ; :hasTitle "蘅芷清芬联" ; :gemKind "联" ; :inChapter 17 ; :hasDesc "满庭异香香草，故联语皆香；蘅芜苑之冷香伏宝钗'冷香丸'之意。" ; :famousLine "吟成豆蔻才犹艳" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :hengwu ; :features :baoyu ; :features :jiazheng .
+:g_daoxiang_lian a :作品 ; :hasTitle "杏帘在望联（稻香村）" ; :gemKind "联" ; :inChapter 17 ; :hasDesc "田舍风光；'采芹'用《诗经》泮水采芹之典，暗切学业功名——正与宝玉性情相反处着笔。" ; :famousLine "好云香护采芹人" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :daoxiang ; :features :baoyu ; :features :jiazheng .
+:g_daguan_ti a :作品 ; :hasTitle "大观园题（元春）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "正殿'顾恩思义'匾联之外的总题一绝，大观园由是得名——此后一切繁华故事皆在此园中。" ; :famousLine "芳园应锡大观名" ; :authoredBy :yuanchun ; :depicts :e17 ; :composedAt :daguanlou ; :features :yuanchun .
+:g_shiwai a :作品 ; :hasTitle "世外仙源（林黛玉）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "应制亦自清新流丽；元妃评'果然进益了'——此夜胡乱应景，方是黛玉真性情之反面。" ; :famousLine "借得山川秀，添来景物新" ; :authoredBy :daiyu ; :depicts :e17 ; :composedAt :xiaoxiang ; :features :daiyu ; :features :yuanchun .
+:g_ninghui a :作品 ; :hasTitle "凝晖钟瑞（薛宝钗）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "颂圣得体、雍容含蓄，正宝钗本色；'自惭何敢再为辞'谦而下笔已工。" ; :famousLine "华日祥云笼罩奇" ; :authoredBy :baochai ; :depicts :e17 ; :composedAt :daguan ; :features :baochai ; :features :yuanchun .
+:g_yihong_kuai a :作品 ; :hasTitle "怡红快绿（贾宝玉）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "原稿'绿玉'被宝钗指点改'绿蜡'，用韩偓'冷烛无烟绿蜡干'典；院中海棠名'女儿棠'。" ; :famousLine "绿蜡春犹卷，红妆夜未眠" ; :authoredBy :baoyu ; :depicts :e17 ; :composedAt :yihong ; :features :baoyu ; :features :baochai .
+:g_xinglian a :作品 ; :hasTitle "杏帘在望（黛玉代作）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "元春评为四首之冠，遂命'浣葛山庄'仍名'稻香村'——姊妹代笔一段佳话，亦见黛玉诗才之冠。" ; :famousLine "一畦春韭绿，十里稻花香" ; :authoredBy :daiyu ; :depicts :e17 ; :composedAt :daoxiang ; :features :daiyu ; :features :yuanchun ; :features :baoyu .
+:g_santi a :作品 ; :hasTitle "旷性怡情等三首（迎春 · 惜春 · 探春）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "三春应制各题一景，才情高下与各人判词互映；探春之作气象最阔。" ; :famousLine "山水横拖千里外，楼台高起五云中" ; :depicts :e17 ; :composedAt :daguan ; :features :yingchun ; :features :xichun ; :features :tanchun .
+:g_xuzhuangzi a :作品 ; :hasTitle "续〈庄子·胠箧〉" ; :gemKind "文" ; :inChapter 21 ; :hasDesc "愤极之戏笔，次日酒醒即'焚花散麝'成戏语；黛玉题绝于后，遂有一场'作践南华'公案。" ; :famousLine "戕宝钗之仙姿，灰黛玉之灵窍" ; :authoredBy :baoyu ; :depicts :e18 ; :composedAt :yihong ; :features :baoyu ; :features :xiren ; :features :daiyu ; :features :baochai .
+:g_daiyu_ti a :作品 ; :hasTitle "黛玉题绝（嘲宝玉续庄）" ; :gemKind "诗" ; :inChapter 21 ; :hasDesc "四句辛辣，直驳宝玉'焚花散麝'之论；次日宝玉见之，笑自己'多事'。" ; :famousLine "作践南华庄子因" ; :authoredBy :daiyu ; :depicts :e18 ; :composedAt :yihong ; :features :daiyu ; :features :baoyu .
+:g_canchan a :作品 ; :hasTitle "宝玉参禅偈（并黛玉续笔）" ; :gemKind "偈铭" ; :inChapter 22 ; :hasDesc "宝玉自以为悟，黛玉续二句，宝钗谓'实在这丫头悟得彻底'——比出禅机高下，亦是三人关系之微缩。" ; :famousLine "无立足境，是方干净" ; :authoredBy :baoyu ; :composedAt :rongfu ; :features :baoyu ; :features :daiyu ; :features :baochai .
+:g_jishengcao a :作品 ; :hasTitle "寄生草（《鲁智深醉闹五台山》）" ; :gemKind "曲" ; :inChapter 22 ; :hasDesc "宝钗念曲而宝玉顿悟，遂有参禅偈一场公案；'赤条条来去无牵挂'为宝玉日后出家之先声。" ; :famousLine "赤条条来去无牵挂" ; :composedAt :rongfu ; :features :baochai ; :features :baoyu .
+:g_mi_yuanchun a :作品 ; :hasTitle "爆竹谜（元春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "一响而散，应元春荣华之短促；贾政愈想愈闷，'悲谶语'三字点题。" ; :famousLine "一声震得人方恐" ; :authoredBy :yuanchun ; :composedAt :rongfu ; :features :yuanchun .
+:g_mi_yingchun a :作品 ; :hasTitle "算盘谜（迎春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "打动乱如麻，正迎春懦弱任人之谶——'算盘'即身不由己。" ; :famousLine "天运人功理不穷" ; :authoredBy :yingchun ; :composedAt :rongfu ; :features :yingchun .
+:g_mi_tanchun a :作品 ; :hasTitle "风筝谜（探春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "与判词'清明涕送江边望'互证——风筝断线，远适不归之谶。" ; :famousLine "游丝一断浑无力" ; :authoredBy :tanchun ; :composedAt :rongfu ; :features :tanchun .
+:g_mi_xichun a :作品 ; :hasTitle "海灯谜（惜春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "佛前海灯，应'独卧青灯古佛旁'之判；贾政叹'此物还倒罢了'。" ; :famousLine "性中自有大光明" ; :authoredBy :xichun ; :composedAt :rongfu ; :features :xichun .
+:g_mi_baochai a :作品 ; :hasTitle "更香谜（宝钗）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "更香燃尽方知时过——'焦首''煎心'写尽日后岁月；脂本此谜归属有异文，汇校依庚辰本列于宝钗名下。" ; :famousLine "焦首朝朝还暮暮，煎心日日复年年" ; :authoredBy :baochai ; :composedAt :rongfu ; :features :baochai .
+:g_sishi a :作品 ; :hasTitle "四时即事诗四首" ; :gemKind "诗" ; :inChapter 23 ; :hasDesc "大观园第一段安富尊荣岁月之写真；'麝月''檀云''茜雪'诸名嵌入句中，脂批谓伏丫头名姓。" ; :famousLine "窗明麝月开宫镜，室霭檀云品御香" ; :authoredBy :baoyu ; :depicts :e19 ; :composedAt :yihong ; :features :baoyu .
+:g_chisong a :作品 ; :hasTitle "癞僧持颂（沉酣一梦）" ; :gemKind "偈铭" ; :inChapter 25 ; :hasDesc "和尚摸玉长叹'青埂峰一别，展眼已过十三载'——通灵玉之来历与年限由此补足；持颂一毕，叔嫂遂愈。" ; :famousLine "沉酣一梦终须醒" ; :depicts :e20 ; :composedAt :rongfu ; :features :baoyu ; :features :xifeng .
+:g_zanghua a :作品 ; :hasTitle "葬花吟" ; :gemKind "诗" ; :inChapter 27 ; :hasDesc "黛玉诗谶之首，亦全书女儿命运之总哀；脂批谓'埋香冢葬花乃诸艳归源'，宝玉恸倒山坡之上。" ; :famousLine "质本洁来还洁去，强于污淖陷渠沟" ; :authoredBy :daiyu ; :depicts :e21 ; :composedAt :huazhong ; :features :daiyu ; :features :baoyu .
+:g_yuner a :作品 ; :hasTitle "云儿曲" ; :gemKind "歌" ; :inChapter 28 ; :hasDesc "茶蘼架下私订幽期——曲中情事正暗合龄官画蔷、司棋幽会诸案；脂批谓'难得他写的出'。" ; :famousLine "两个冤家，都难丢下" ; :depicts :e22 ; :composedAt :dudu .
+:g_beichou a :作品 ; :hasTitle "女儿悲愁喜乐酒令" ; :gemKind "令" ; :inChapter 28 ; :hasDesc "宝玉《红豆曲》雅，薛蟠'哼哼韵'俗，同席而出，雅俗对照；'女儿悲'四字亦各自成谶。" ; :famousLine "滴不尽相思血泪抛红豆" ; :depicts :e22 ; :composedAt :dudu ; :features :baoyu ; :features :xuepan ; :features :fengziying .
+:g_tipa a :作品 ; :hasTitle "题帕三绝句" ; :gemKind "诗" ; :inChapter 34 ; :hasDesc "'以泪还泪'之枢纽一笔：旧帕不避嫌疑，情遂定于无言；三首皆用湘妃啼竹之典。" ; :famousLine "湘江旧迹已模糊" ; :authoredBy :daiyu ; :depicts :e25 ; :composedAt :xiaoxiang ; :features :daiyu ; :features :baoyu .
+:g_bh_daiyu a :作品 ; :hasTitle "咏白海棠（林黛玉）" ; :gemKind "诗" ; :inChapter 37 ; :hasDesc "李纨评'风流别致'，众人皆服其构思新颖；'碾冰为土玉为盆'一联已是黛玉人格写照。" ; :famousLine "偷来梨蕊三分白，借得梅花一缕魂" ; :authoredBy :daiyu ; :depicts :e27 ; :composedAt :qiushuang ; :features :daiyu .
+:g_bh_baochai a :作品 ; :hasTitle "咏白海棠（薛宝钗）" ; :gemKind "诗" ; :inChapter 37 ; :hasDesc "李纨评'含蓄浑厚'列为第一，黛玉'风流别致'次之——评诗即评人，两家立身处世之道俱在其中。" ; :famousLine "淡极始知花更艳" ; :authoredBy :baochai ; :depicts :e27 ; :composedAt :qiushuang ; :features :baochai .
+:g_bh_baoyu a :作品 ; :hasTitle "咏白海棠（贾宝玉）" ; :gemKind "诗" ; :inChapter 37 ; :hasDesc "太真、西子两喻，又分咏宝钗黛玉——脂批点破'二美合一'之意。" ; :famousLine "出浴太真冰作影，捧心西子玉为魂" ; :authoredBy :baoyu ; :depicts :e27 ; :composedAt :qiushuang ; :features :baoyu .
+:g_bh_tanchun a :作品 ; :hasTitle "咏白海棠（贾探春）" ; :gemKind "诗" ; :inChapter 37 ; :hasDesc "结社花笺出自探春，首课亦清朗有骨——'玉是精神'四字自况。" ; :famousLine "玉是精神难比洁" ; :authoredBy :tanchun ; :depicts :e27 ; :composedAt :qiushuang ; :features :tanchun .
+:g_bh_xiangyun a :作品 ; :hasTitle "咏白海棠二首（史湘云）" ; :gemKind "诗" ; :inChapter 37 ; :hasDesc "一口气依韵两首，压倒群芳之捷才；'也宜墙角也宜盆'亦湘云随遇而安之性。" ; :famousLine "自是霜娥偏爱冷" ; :authoredBy :xiangyun ; :depicts :e27 ; :composedAt :qiushuang ; :features :xiangyun .
+:g_ju_yi a :作品 ; :hasTitle "忆菊（蘅芜君）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "十二题第一题，宝钗亦'闷思''断肠'——冷面之下自有深情，与其平日含蓄相映。" ; :famousLine "谁怜我为黄花病" ; :authoredBy :baochai ; :depicts :e27 ; :composedAt :liaofeng ; :features :baochai .
+:g_ju_fang a :作品 ; :hasTitle "访菊（怡红公子）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "访而未得之意，兴味盎然；宝玉菊诗三首终未夺魁——评者谓'宝玉不算出色'。" ; :famousLine "蜡屐远来情得得" ; :authoredBy :baoyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :baoyu .
+:g_ju_zhong a :作品 ; :hasTitle "种菊（怡红公子）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "种而得之喜，'绝尘埃'三字恰是宝玉心性。" ; :famousLine "冷吟秋色诗千首，醉酹寒香酒一杯" ; :authoredBy :baoyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :baoyu .
+:g_ju_dui a :作品 ; :hasTitle "对菊（枕霞旧友）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "'科头'不冠而坐，湘云豪放本色；与'傲世'二字互为知音之许。" ; :famousLine "萧疏篱畔科头坐，清冷香中抱膝吟" ; :authoredBy :xiangyun ; :depicts :e27 ; :composedAt :liaofeng ; :features :xiangyun .
+:g_ju_gong a :作品 ; :hasTitle "供菊（枕霞旧友）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "黛玉评'抛书人对一枝秋'妙绝——供菊之'供'字活画闺阁清趣。" ; :famousLine "隔座香分三径露，抛书人对一枝秋" ; :authoredBy :xiangyun ; :depicts :e27 ; :composedAt :liaofeng ; :features :xiangyun .
+:g_ju_yong a :作品 ; :hasTitle "咏菊（潇湘妃子）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "魁夺菊花诗之首篇；'口齿噙香'句兼写诗与人，'素怨''秋心'即黛玉一生。" ; :famousLine "满纸自怜题素怨，片言谁解诉秋心" ; :authoredBy :daiyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :daiyu .
+:g_ju_hua a :作品 ; :hasTitle "画菊（蘅芜君）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "戏笔而不失法度，'淡浓神会'亦宝钗论画论诗之旨。" ; :famousLine "聚叶泼成千点墨" ; :authoredBy :baochai ; :depicts :e27 ; :composedAt :liaofeng ; :features :baochai .
+:g_ju_wen a :作品 ; :hasTitle "问菊（潇湘妃子）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "菊诗第二名，'孤标傲世偕谁隐'直是黛玉自问——问菊即自问终身。" ; :famousLine "孤标傲世偕谁隐，一样花开为底迟" ; :authoredBy :daiyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :daiyu .
+:g_ju_zan a :作品 ; :hasTitle "簪菊（蕉下客）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "'高情不入时人眼，拍手凭他笑路旁'——探春'英豪阔大'之气见于菊诗。" ; :famousLine "彭泽先生是酒狂" ; :authoredBy :tanchun ; :depicts :e27 ; :composedAt :liaofeng ; :features :tanchun .
+:g_ju_ying a :作品 ; :hasTitle "菊影（枕霞旧友）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "咏影而及于梦，'霜印传神梦也空'已是湘云日后'云散高唐'之谶。" ; :famousLine "篱筛破月锁玲珑" ; :authoredBy :xiangyun ; :depicts :e27 ; :composedAt :liaofeng ; :features :xiangyun .
+:g_ju_meng a :作品 ; :hasTitle "菊梦（潇湘妃子）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "菊诗第三名；'醒时幽怨同谁诉'与咏菊'片言谁解诉秋心'互为呼应。" ; :famousLine "醒时幽怨同谁诉，衰草寒烟无限情" ; :authoredBy :daiyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :daiyu .
+:g_ju_can a :作品 ; :hasTitle "残菊（蕉下客）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "十二题以残菊煞尾，盛极而衰之序；众人评：'雅座至此该散了'。" ; :famousLine "蒂有馀香金淡泊" ; :authoredBy :tanchun ; :depicts :e27 ; :composedAt :liaofeng ; :features :tanchun .
+:g_px_baoyu a :作品 ; :hasTitle "螃蟹咏（贾宝玉）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "'横行公子'自嘲兼嘲世，用坡仙典收束，谐趣中见胸襟。" ; :famousLine "横行公子却无肠" ; :authoredBy :baoyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :baoyu .
+:g_px_daiyu a :作品 ; :hasTitle "螃蟹咏（林黛玉）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "写形传神俱佳，唯众人仍推宝钗一首为绝唱。" ; :famousLine "螯封嫩玉双双满，壳凸红脂块块香" ; :authoredBy :daiyu ; :depicts :e27 ; :composedAt :liaofeng ; :features :daiyu .
+:g_px_baochai a :作品 ; :hasTitle "螃蟹咏（薛宝钗）" ; :gemKind "诗" ; :inChapter 38 ; :hasDesc "讽世之作——'眼前道路无经纬'骂尽横行世人；众人叹'这只是大才，小题目寓大意思'。" ; :famousLine "眼前道路无经纬，皮里春秋空黑黄" ; :authoredBy :baochai ; :depicts :e27 ; :composedAt :liaofeng ; :features :baochai .
+:g_yapai a :作品 ; :hasTitle "金鸳鸯三宣牙牌令" ; :gemKind "令" ; :inChapter 40 ; :hasDesc "黛玉脱口引《牡丹亭》《西厢记》曲文，宝钗闻而不言——第四十二回'兰言解疑癖'由此埋线；刘姥姥俚语引满堂大笑。" ; :famousLine "双悬日月照乾坤" ; :depicts :e28 ; :composedAt :daguan ; :features :yuanyang ; :features :jiamu ; :features :daiyu ; :features :liulaolao ; :features :baochai ; :features :xiangyun .
+:g_qiuchuang a :作品 ; :hasTitle "秋窗风雨夕" ; :gemKind "诗" ; :inChapter 45 ; :hasDesc "与《葬花吟》并称黛玉双璧；是夜宝玉披蓑戴笠冒雨来访，调笑'渔翁渔婆'，宝黛情谊自此更进一层。" ; :famousLine "已觉秋窗秋不尽，那堪风雨助凄凉" ; :authoredBy :daiyu ; :depicts :e30 ; :composedAt :xiaoxiang ; :features :daiyu ; :features :baoyu .
+:g_yinyue a :作品 ; :hasTitle "香菱吟月三首" ; :gemKind "诗" ; :inChapter 48 ; :hasDesc "从'凑泊'到'新巧有意趣'的学诗全程记录；香菱苦吟至梦中得句，众人评'不但好，而且新巧有意趣'。" ; :famousLine "一片砧敲千里白，半轮鸡唱五更残" ; :authoredBy :xiangling ; :depicts :e32 ; :composedAt :hengwu ; :features :xiangling ; :features :daiyu ; :features :baochai .
+:g_lianju a :作品 ; :hasTitle "芦雪庵即景联句" ; :gemKind "诗" ; :inChapter 49, 50 ; :hasDesc "凤姐起句虽不识字而气局老到，众人赞'留了多少地步与后人'；湘云与宝钗宝琴抢联最勇，笑倒芦雪庵。" ; :famousLine "一夜北风紧" ; :depicts :e33 ; :composedAt :luxue ; :features :xifeng ; :features :xiangyun ; :features :baochai ; :features :baoqin ; :features :daiyu ; :features :baoyu .
+:g_hongmei a :作品 ; :hasTitle "赋得红梅花三首（岫烟 · 李纹 · 宝琴）" ; :gemKind "诗" ; :inChapter 49, 50 ; :hasDesc "三人插足诗社之始，各见性情：岫烟'浓淡由他'淡泊、李纹'酸心成灰'沉郁、宝琴'前身瑶台'飘逸。" ; :famousLine "冲寒先已笑东风" ; :depicts :e33 ; :composedAt :luxue ; :features :xingqiuyan ; :features :liwen ; :features :baoqin ; :features :baoyu .
+:g_hg_chibi a :作品 ; :hasTitle "赤壁怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "十首之首，隐物谜底至今无定论（多猜法船、蚊子灯之类）；起笔即是战场阴风。" ; :famousLine "喧阗一炬悲风冷" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_jiaozhi a :作品 ; :hasTitle "交趾怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏马援铜柱之功，与张良（子房）对举；隐物或猜喇叭、炮仗之类。" ; :famousLine "马援自是功劳大" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_zhongshan a :作品 ; :hasTitle "钟山怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏周颙隐而复出之典，讥假隐士；隐物或猜肉、傀儡之类。" ; :famousLine "莫怨他人嘲笑频" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_huaiyin a :作品 ; :hasTitle "淮阴怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏韩信成败（'恶犬'指吕后之钟室之祸），褒漂母一饭之恩；隐物或猜马桶、纳宝瓶之类。" ; :famousLine "一饭之恩死也知" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_guangling a :作品 ; :hasTitle "广陵怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏隋堤柳——风流之名反招口舌；隐物或猜柳木牙签、箫之类。" ; :famousLine "只缘占得风流号，惹得纷纷口舌多" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_taoye a :作品 ; :hasTitle "桃叶渡怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏王献之爱妾桃叶渡口之别；'桃枝桃叶总分离'亦闺阁聚散之谶。隐物或猜油灯、镜子之类。" ; :famousLine "六朝梁栋多如许" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_qingzhong a :作品 ; :hasTitle "青冢怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏昭君出塞，讥汉家以女子和番之制；隐物或猜墨斗、枷之类。" ; :famousLine "黑水茫茫咽不流" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_mawei a :作品 ; :hasTitle "马嵬怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏杨妃马嵬之变；'衣衾尚有香'犹言风流余韵。隐物或猜肥皂、香皂之类。" ; :famousLine "温柔一旦付东洋" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_pudong a :作品 ; :hasTitle "蒲东寺怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏《西厢记》红娘牵线；蒲东寺本系虚构，'骨贱身轻'四字评语尖刻——众姊妹谓'到底不大沾染'，宝钗亦为之辩。" ; :famousLine "小红骨贱最身轻" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_hg_meihua a :作品 ; :hasTitle "梅花观怀古" ; :gemKind "诗" ; :inChapter 50, 51 ; :hasDesc "咏《牡丹亭》杜丽娘自画像题'他年得傍蟾宫客，不在梅边在柳边'；十首之末以情缘收束。隐物或猜纨扇、团扇之类。" ; :famousLine "不在梅边在柳边" ; :authoredBy :baoqin ; :depicts :e33 ; :composedAt :luxue ; :features :baoqin .
+:g_zhenzhen a :作品 ; :hasTitle "真真国女儿诗" ; :gemKind "诗" ; :inChapter 52 ; :hasDesc "少年时代远游见闻，带出海外视角；'昨夜朱楼梦'五字暗点《红楼梦》题名，尤为奇笔。" ; :famousLine "月本无今古，情缘自浅深" ; :authoredBy :baoqin ; :depicts :e34 ; :composedAt :xiaoxiang ; :features :baoqin ; :features :daiyu ; :features :baochai .
+:g_zongci_lian a :作品 ; :hasTitle "贾氏宗祠联" ; :gemKind "联" ; :inChapter 53 ; :hasDesc "五间大门悬'贾氏宗祠'九龙金匾，对联为衍圣公手书——开国勋贵门第之隆重，尽在此联。" ; :famousLine "功名贯天" ; :depicts :e35 ; :composedAt :zongci .
+:g_huaqian a :作品 ; :hasTitle "群芳夜宴占花名" ; :gemKind "令" ; :inChapter 63 ; :hasDesc "八句签诗皆唐宋成句，一句一谶：宝钗'任是无情'、黛玉'莫怨东风'、袭人'桃红又是一年春'皆切终身；麝月一签，脂批谓应'开到荼蘼'后诸芳流散。" ; :famousLine "开到荼縻花事了" ; :depicts :e39 ; :composedAt :yihong ; :features :baochai ; :features :tanchun ; :features :liwan ; :features :xiangyun ; :features :sheyue ; :features :xiangling ; :features :daiyu ; :features :xiren ; :features :baoyu .
+:g_wumei a :作品 ; :hasTitle "五美吟" ; :gemKind "诗" ; :inChapter 64 ; :hasDesc "五美人皆色艳而能自决者——黛玉借古人自写胸臆；宝钗评'命意新奇，别开生面'。" ; :famousLine "红颜命薄古今同" ; :authoredBy :daiyu ; :depicts :e40 ; :composedAt :xiaoxiang ; :features :daiyu ; :features :baochai .
+:g_taohua a :作品 ; :hasTitle "桃花行" ; :gemKind "诗" ; :inChapter 70 ; :hasDesc "与《葬花吟》同调而更凄厉；宝玉知非宝琴所能，'这渊博罢了……必是林妹妹'——潇湘妃子之谶又一重。" ; :famousLine "泪眼观花泪易干，泪干春尽花憔悴" ; :authoredBy :daiyu ; :depicts :e44 ; :composedAt :xiaoxiang ; :features :daiyu ; :features :baoyu ; :features :baoqin .
+:g_lx_rumengling a :作品 ; :hasTitle "柳絮词 · 如梦令（史湘云）" ; :gemKind "词" ; :inChapter 70 ; :hasDesc "起社第一阕；'且住且住'一叠，湘云惜春之情与临江仙'送我上青云'恰成对照。" ; :famousLine "莫使春光别去" ; :authoredBy :xiangyun ; :depicts :e44 ; :composedAt :daguan ; :features :xiangyun .
+:g_lx_nankezi a :作品 ; :hasTitle "柳絮词 · 南柯子（探春上半 · 宝玉续）" ; :gemKind "词" ; :inChapter 70 ; :hasDesc "探春'一任东西南北各分离'应远嫁之谶；宝玉续词难掩儿女之痴，众人评'总有些落套'。" ; :famousLine "一任东西南北各分离" ; :depicts :e44 ; :composedAt :daguan ; :features :tanchun ; :features :baoyu .
+:g_lx_tangduoling a :作品 ; :hasTitle "柳絮词 · 唐多令（林黛玉）" ; :gemKind "词" ; :inChapter 70 ; :hasDesc "众人评'太作悲了，好是固然好的'——缠绵悲戚自是潇湘子，亦黛玉殒逝之谶。" ; :famousLine "嫁与东风春不管，凭尔去，忍淹留" ; :authoredBy :daiyu ; :depicts :e44 ; :composedAt :daguan ; :features :daiyu .
+:g_lx_xijiangyue a :作品 ; :hasTitle "柳絮词 · 西江月（薛宝琴）" ; :gemKind "词" ; :inChapter 70 ; :hasDesc "宝琴常年随父行商见识广，'汉苑隋堤'气象最阔；'三春事业付东风'又双关诸芳流散。" ; :famousLine "偏是离人恨重" ; :authoredBy :baoqin ; :depicts :e44 ; :composedAt :daguan ; :features :baoqin .
+:g_lx_linjiangxian a :作品 ; :hasTitle "柳絮词 · 临江仙（薛宝钗）" ; :gemKind "词" ; :inChapter 70 ; :hasDesc "众人皆写絮之飘零，独宝钗翻出昂扬意——'送我上青云'自是宝钗志向；与黛玉之词一哀一壮，两家立身之别尽在。" ; :famousLine "好风频借力，送我上青云" ; :authoredBy :baochai ; :depicts :e44 ; :composedAt :daguan ; :features :baochai .
+:g_zhongqiu a :作品 ; :hasTitle "凹晶馆联诗（寒塘鹤影 · 冷月花魂）" ; :gemKind "诗" ; :inChapter 76 ; :hasDesc "'鹤影''花魂'各自成谶：湘云散于寒塘、黛玉殒于冷月；妙玉恐其过颓败凄楚，一口气续完三十五韵。" ; :famousLine "寒塘渡鹤影，冷月葬花魂" ; :depicts :e47 ; :composedAt :tubi ; :features :xiangyun ; :features :daiyu ; :features :miaoyu .
+:g_furong a :作品 ; :hasTitle "芙蓉女儿诔（节录）" ; :gemKind "文" ; :inChapter 78 ; :hasDesc "全书最长之抒情文；末四句黛玉闻之忡然变色——脂批谓'知虽诔晴雯，而又实诔黛玉也'，神瑛与绛珠之缘至此愈迫。" ; :famousLine "茜纱窗下，我本无缘；黄土垄中，卿何薄命" ; :authoredBy :baoyu ; :depicts :e48 ; :composedAt :daguan ; :features :baoyu ; :features :qingwen ; :features :daiyu .
+:g_guihua a :作品 ; :hasTitle "姽婳词" ; :gemKind "诗" ; :inChapter 78 ; :hasDesc "宝玉歌行独出，贾兰贾环各成一绝；一夜之间，诔晴雯之哀婉与咏四娘之慷慨并作——晴雯夭亡后宝玉仅存之雄声。" ; :famousLine "何事文武立朝纲，不及闺中林四娘" ; :authoredBy :baoyu ; :depicts :e49 ; :composedAt :rongfu ; :features :baoyu ; :features :jiazheng ; :features :jiahuan ; :features :jialan .
+
+########## 实例层 ABox · 地点 ##########
+:jinling a :州府城邑 ; :hasName "金陵" ; :hasRegion "江南·今江苏南京" .
+:gusu a :州府城邑 ; :hasName "姑苏" ; :hasRegion "江南·今江苏苏州" .
+:yangzhou a :州府城邑 ; :hasName "扬州（维扬）" ; :hasRegion "江南·今江苏扬州" .
+:dudu a :州府城邑 ; :hasName "京都（都中）" ; :hasRegion "北方·今北京" .
+:ruzhou a :州府城邑 ; :hasName "大如州·胡州" ; :hasRegion "州府·约今江苏如皋（存疑）" .
+:heishan a :州府城邑 ; :hasName "黑山村" ; :hasRegion "关外庄田·约吉林乌拉（存疑）" .
+:dahuangshan a :虚境幻域 ; :hasName "大荒山无稽崖·青埂峰" ; :hasRegion "虚指·一说即长白山" .
+:taixu a :虚境幻域 ; :hasName "太虚幻境" ; :hasRegion "虚境·不在地理" .
+:rongfu a :府邸庄园 ; :hasName "荣国府" ; :hasRegion "京都" ; :locatedIn :dudu .
+:ningfu a :府邸庄园 ; :hasName "宁国府" ; :hasRegion "京都" ; :locatedIn :dudu .
+:daguan a :府邸庄园 ; :hasName "大观园" ; :hasRegion "京都" ; :locatedIn :dudu .
+:yihong a :园林院苑 ; :hasName "怡红院" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:xiaoxiang a :园林院苑 ; :hasName "潇湘馆" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:hengwu a :园林院苑 ; :hasName "蘅芜苑" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:daoxiang a :园林院苑 ; :hasName "稻香村" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:qiushuang a :园林院苑 ; :hasName "秋爽斋" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:ziling a :园林院苑 ; :hasName "紫菱洲·缀锦楼" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:liaofeng a :园林院苑 ; :hasName "蓼风轩·藕香榭" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:longcui a :园林院苑 ; :hasName "栊翠庵" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:lixiang a :园林院苑 ; :hasName "梨香院" ; :hasRegion "荣国府" ; :locatedIn :rongfu .
+:luxue a :园林院苑 ; :hasName "芦雪广·暖香坞" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:tubi a :园林院苑 ; :hasName "凸碧堂·凹晶馆" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:qinfang a :园林院苑 ; :hasName "沁芳亭·沁芳闸" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:huazhong a :园林院苑 ; :hasName "花冢（埋香冢）" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:dicui a :园林院苑 ; :hasName "滴翠亭·蜂腰桥" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:jiashu a :庵观寺院 ; :hasName "贾氏家塾" ; :hasRegion "京都" ; :locatedIn :dudu .
+:tiekan a :庵观寺院 ; :hasName "铁槛寺·水月庵（馒头庵）" ; :hasRegion "京郊" .
+:qingxu a :庵观寺院 ; :hasName "清虚观" ; :hasRegion "京都" ; :locatedIn :dudu .
+:tianqi a :庵观寺院 ; :hasName "天齐庙" ; :hasRegion "京都城外" .
+:shuixian a :庵观寺院 ; :hasName "水仙庵" ; :hasRegion "京郊" .
+:xuanguan a :庵观寺院 ; :hasName "玄真观" ; :hasRegion "京都城外" .
+:yingtian a :官署衙门 ; :hasName "应天府衙" ; :hasRegion "金陵" ; :locatedIn :jinling .
+:gongbu a :官署衙门 ; :hasName "工部" ; :hasRegion "京师" .
+:hubu a :官署衙门 ; :hasName "户部" ; :hasRegion "京师" .
+:daming a :官署衙门 ; :hasName "大明宫" ; :hasRegion "宫禁" .
+:longjinwei a :官署衙门 ; :hasName "龙禁尉" ; :hasRegion "宫禁" .
+:jingying a :官署衙门 ; :hasName "京营节度使衙" ; :hasRegion "京师" .
+:duchayuan a :官署衙门 ; :hasName "都察院" ; :hasRegion "京师" .
+:lantai a :官署衙门 ; :hasName "兰台寺" ; :hasRegion "京师" .
+:beijingwangfu a :府邸庄园 ; :hasName "北静王府" ; :hasRegion "京都" ; :locatedIn :dudu .
+:zhongshun a :府邸庄园 ; :hasName "忠顺王府" ; :hasRegion "京都" ; :locatedIn :dudu .
+:zhenfu a :府邸庄园 ; :hasName "江南甄府" ; :hasRegion "金陵" ; :locatedIn :jinling .
+:xiazhu a :府邸庄园 ; :hasName "夏家（桂花夏家）" ; :hasRegion "京都" ; :locatedIn :dudu .
+:pinganzhou a :州府城邑 ; :hasName "平安州" ; :hasRegion "都中以北·约直隶北境（存疑）" .
+:huzhou a :州府城邑 ; :hasName "湖州（胡州）" ; :hasRegion "江南·浙江" .
+:jiamuyuan a :园林院苑 ; :hasName "贾母院" ; :hasRegion "荣国府" ; :locatedIn :rongfu .
+:rongxitang a :园林院苑 ; :hasName "荣禧堂（贾政·王夫人正房）" ; :hasRegion "荣国府" ; :locatedIn :rongfu .
+:fengjieyuan a :园林院苑 ; :hasName "凤姐院（贾琏院）" ; :hasRegion "荣国府" ; :locatedIn :rongfu .
+:jiasheyuan a :园林院苑 ; :hasName "贾赦院（东别院）" ; :hasRegion "荣国府外东" ; :locatedIn :rongfu .
+:huifang a :园林院苑 ; :hasName "会芳园·天香楼" ; :hasRegion "宁国府" ; :locatedIn :ningfu .
+:zongci a :庵观寺院 ; :hasName "贾氏宗祠" ; :hasRegion "宁国府西侧" ; :locatedIn :ningfu .
+:daguanlou a :园林院苑 ; :hasName "省亲别墅·大观楼" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:qiangwei a :园林院苑 ; :hasName "蔷薇架" ; :hasRegion "大观园" ; :locatedIn :daguan .
+:hongxiangpu a :园林院苑 ; :hasName "红香圃·芍药栏" ; :hasRegion "大观园" ; :locatedIn :daguan .
+
+########## 实例层 ABox · 人物 ##########
+:jiajing a :主子姻眷 ; :hasName "贾敬" ; :hasNickname "炼丹翁" ; :hasRole "宁府老爷，袭爵后弃家好道" ; :memberOf :贾氏 ; :residesAt :xuanguan ; :firstInChapter 2 ; :mentionCount 20 ; :birthYear "红楼前二十六年" ; :deathYear "红楼十七年四月廿六夜（63）" .
+:jiazhen a :主子姻眷 ; :hasName "贾珍" ; :hasRole "世袭三品爵威烈将军，宁府族长" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 2 ; :mentionCount 326 ; :birthYear "红楼前十六年" .
+:youshi a :主子姻眷 ; :hasName "尤氏" ; :hasNickname "珍大奶奶" ; :hasRole "贾珍继室，宁府女主人" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 5 ; :mentionCount 324 ; :birthYear "红楼前十五年" .
+:jiarong a :主子姻眷 ; :hasName "贾蓉" ; :hasNickname "蓉哥儿" ; :hasRole "贾珍之子，捐五品龙禁尉" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 2 ; :mentionCount 212 ; :birthYear "红楼前十一年" .
+:keqing a :主子姻眷 ; :hasName "秦可卿" ; :hasNickname "兼美（太虚幻境）" ; :hasRole "贾蓉之妻，营缮郎秦业养女" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 5 ; :mentionCount 13 ; :birthYear "红楼前八年" ; :deathYear "红楼十二年九月下旬（13）" .
+:xichun a :主子姻眷 ; :hasName "贾惜春" ; :hasNickname "四姑娘" ; :hasRole "贾敬之女，宁府四姑娘，善丹青" ; :memberOf :贾氏 ; :residesAt :liaofeng ; :firstInChapter 2 ; :mentionCount 92 ; :birthYear "红楼五年" .
+:jiaoda a :仆婢仆役 ; :hasName "焦大" ; :hasRole "宁府老仆，随太爷出过兵" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 7 ; :mentionCount 12 .
+:jiamu a :主子姻眷 ; :hasName "贾母" ; :hasAlias "史太君" ; :hasAlias "老太太" ; :hasAlias "老祖宗" ; :hasRole "荣府老太君，保龄侯史公之女" ; :memberOf :贾氏 ; :residesAt :jiamuyuan ; :firstInChapter 3 ; :mentionCount 1717 ; :birthYear "红楼前六十二年" .
+:jiashe a :主子姻眷 ; :hasName "贾赦" ; :hasRole "荣府大老爷，袭爵" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 2 ; :mentionCount 89 ; :birthYear "红楼前三十年" .
+:xingfuren a :主子姻眷 ; :hasName "邢夫人" ; :hasRole "贾赦续弦，荣府大太太" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 3 ; :mentionCount 195 ; :birthYear "红楼前二十八年" .
+:jialian a :主子姻眷 ; :hasName "贾琏" ; :hasAlias "琏二爷" ; :hasRole "贾赦之子，捐同知衔，掌荣府外务" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 2 ; :mentionCount 456 ; :birthYear "红楼前五年" .
+:xifeng a :主子姻眷 ; :hasName "王熙凤" ; :hasAlias "凤姐" ; :hasAlias "凤丫头" ; :hasAlias "琏二奶奶" ; :hasNickname "凤辣子（贾母语）" ; :hasRole "贾琏之妻，荣府实际管家人" ; :memberOf :王氏 ; :residesAt :fengjieyuan ; :firstInChapter 3 ; :mentionCount 1361 ; :birthYear "红楼前四年" .
+:qiaojie a :主子姻眷 ; :hasName "贾巧姐" ; :hasAlias "大姐儿" ; :hasRole "王熙凤之女，幼名大姐儿" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 6 ; :mentionCount 26 ; :birthYear "红楼十一年" .
+:yingchun a :主子姻眷 ; :hasName "贾迎春" ; :hasNickname "二木头（兴儿语）" ; :hasRole "贾赦庶出之女" ; :memberOf :贾氏 ; :residesAt :ziling ; :firstInChapter 2 ; :mentionCount 143 ; :birthYear "红楼前一年" .
+:jiazheng a :主子姻眷 ; :hasName "贾政" ; :hasRole "贾母次子，工部员外郎" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 2 ; :mentionCount 327 ; :birthYear "红楼前二十八年" .
+:wangfuren a :主子姻眷 ; :hasName "王夫人" ; :hasNickname "太太" ; :hasRole "贾政之妻，王子腾之妹" ; :memberOf :王氏 ; :residesAt :rongfu ; :firstInChapter 3 ; :mentionCount 1076 ; :birthYear "红楼前二十七年" .
+:zhaoyiniang a :主子姻眷 ; :hasName "赵姨娘" ; :hasRole "贾政之妾，贾环、探春生母" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 20 ; :mentionCount 98 .
+:jiahuan a :主子姻眷 ; :hasName "贾环" ; :hasNickname "三爷" ; :hasRole "赵姨娘所生，贾政三子" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 18 ; :mentionCount 85 ; :birthYear "红楼四年" .
+:yuanchun a :主子姻眷 ; :hasName "贾元春" ; :hasAlias "元妃" ; :hasAlias "贵妃" ; :hasRole "贾政长女，入宫封贤德妃" ; :memberOf :贾氏 ; :firstInChapter 2 ; :mentionCount 37 ; :birthYear "红楼前十年" .
+:tanchun a :主子姻眷 ; :hasName "贾探春" ; :hasAlias "三姑娘" ; :hasNickname "蕉下客" ; :hasNickname "玫瑰花（兴儿语）" ; :hasRole "赵姨娘所生，贾政三女" ; :memberOf :贾氏 ; :residesAt :qiushuang ; :firstInChapter 2 ; :mentionCount 365 ; :birthYear "红楼三年" .
+:baoyu a :主子姻眷 ; :hasName "贾宝玉" ; :hasAlias "宝二爷" ; :hasNickname "混世魔王" ; :hasNickname "怡红公子" ; :hasNickname "绛洞花主" ; :hasNickname "富贵闲人" ; :hasNickname "无事忙" ; :hasRole "贾政嫡子，衔通灵玉而生" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 1 ; :mentionCount 2740 ; :birthYear "红楼元年" .
+:jiazhu a :主子姻眷 ; :hasName "贾珠" ; :hasRole "贾政长子，早夭" ; :memberOf :贾氏 .
+:jialan a :主子姻眷 ; :hasName "贾兰" ; :hasRole "贾珠遗孤，李纨之子" ; :memberOf :贾氏 ; :residesAt :daoxiang ; :firstInChapter 4 ; :mentionCount 27 ; :birthYear "红楼二年" .
+:liwan a :主子姻眷 ; :hasName "李纨" ; :hasAlias "李宫裁" ; :hasNickname "稻香老农" ; :hasRole "贾珠遗孀，守节教子" ; :memberOf :贾氏 ; :residesAt :daoxiang ; :firstInChapter 4 ; :mentionCount 271 ; :birthYear "红楼前四年" .
+:jiarui a :主子姻眷 ; :hasName "贾瑞" ; :hasAlias "贾天祥" ; :hasRole "贾代儒之孙" ; :memberOf :贾氏 ; :firstInChapter 9 ; :mentionCount 74 ; :birthYear "红楼前十年" ; :deathYear "红楼十一年腊月尽（12）" .
+:jiadairu a :主子姻眷 ; :hasName "贾代儒" ; :hasRole "贾府家塾塾师" ; :memberOf :贾氏 ; :residesAt :jiashu ; :firstInChapter 8 ; :mentionCount 4 .
+:jiayun a :主子姻眷 ; :hasName "贾芸" ; :hasNickname "芸哥儿" ; :hasRole "西廊下五嫂子之子，贾府远房" ; :memberOf :贾氏 ; :firstInChapter 13 ; :mentionCount 98 .
+:jiaqiang a :主子姻眷 ; :hasName "贾蔷" ; :hasNickname "蔷哥儿" ; :hasRole "宁府玄孙，奉命下姑苏采买十二官" ; :memberOf :贾氏 ; :residesAt :lixiang ; :firstInChapter 9 ; :mentionCount 48 .
+:jiaqin a :主子姻眷 ; :hasName "贾芹" ; :hasRole "贾府远房子弟，领管家庙" ; :memberOf :贾氏 ; :residesAt :tiekan ; :firstInChapter 13 ; :mentionCount 13 .
+:xiangyun a :主子姻眷 ; :hasName "史湘云" ; :hasAlias "云姑娘" ; :hasAlias "云丫头" ; :hasNickname "枕霞旧友" ; :hasRole "史侯家小姐，父母双亡依婶母" ; :memberOf :史氏 ; :residesAt :daguan ; :firstInChapter 13 ; :mentionCount 392 ; :birthYear "红楼二年" .
+:ziteng a :官宦皇亲 ; :hasName "王子腾" ; :hasRole "王夫人、薛姨妈之兄，京营节度使，后升九省统制" ; :memberOf :王氏 ; :firstInChapter 3 ; :mentionCount 17 .
+:xueyima a :主子姻眷 ; :hasName "薛姨妈" ; :hasAlias "姨太太" ; :hasRole "王夫人之妹，皇商之家主母" ; :memberOf :薛氏 ; :residesAt :lixiang ; :firstInChapter 4 ; :mentionCount 299 ; :birthYear "红楼前二十五年" .
+:xuepan a :主子姻眷 ; :hasName "薛蟠" ; :hasAlias "薛大爷" ; :hasNickname "呆霸王" ; :hasNickname "薛大傻子" ; :hasRole "薛家长子，户部挂名行商" ; :memberOf :薛氏 ; :residesAt :lixiang ; :firstInChapter 3 ; :mentionCount 267 ; :birthYear "红楼前四年" .
+:baochai a :主子姻眷 ; :hasName "薛宝钗" ; :hasAlias "宝姐姐" ; :hasNickname "蘅芜君" ; :hasNickname "山中高士晶莹雪" ; :hasRole "薛姨妈之女，宝姑娘" ; :memberOf :薛氏 ; :residesAt :hengwu ; :firstInChapter 4 ; :mentionCount 848 ; :birthYear "红楼前二年" .
+:xueke a :主子姻眷 ; :hasName "薛蝌" ; :hasRole "薛蟠堂弟，送妹宝琴进京" ; :memberOf :薛氏 ; :firstInChapter 49 ; :mentionCount 14 .
+:baoqin a :主子姻眷 ; :hasName "薛宝琴" ; :hasNickname "琴姑娘" ; :hasRole "薛蝌之妹，已许梅翰林之子" ; :memberOf :薛氏 ; :firstInChapter 49 ; :mentionCount 113 ; :birthYear "红楼四年" .
+:jingui a :主子姻眷 ; :hasName "夏金桂" ; :hasAlias "金桂" ; :hasNickname "河东狮" ; :hasRole "薛蟠之妻，皇商“桂花夏家”独女" ; :memberOf :薛氏 ; :firstInChapter 17 ; :mentionCount 59 ; :birthYear "红楼二年" .
+:linruhai a :官宦皇亲 ; :hasName "林如海" ; :hasRole "前科探花，兰台寺大夫，钦点巡盐御史" ; :memberOf :林氏 ; :residesAt :yangzhou ; :firstInChapter 2 ; :mentionCount 10 ; :birthYear "红楼前三十一年" ; :deathYear "红楼十二年九月初三巳时（14）" .
+:jiamin a :主子姻眷 ; :hasName "贾敏" ; :hasRole "贾母幼女，林如海之妻" ; :memberOf :贾氏 ; :firstInChapter 2 ; :mentionCount 1 ; :birthYear "红楼前三十四年" ; :deathYear "红楼七年（约）（3）" .
+:daiyu a :主子姻眷 ; :hasName "林黛玉" ; :hasAlias "林姑娘" ; :hasAlias "林妹妹" ; :hasNickname "颦儿" ; :hasNickname "颦颦" ; :hasNickname "潇湘妃子" ; :hasRole "贾母外孙女，绛珠仙草转世" ; :memberOf :林氏 ; :residesAt :xiaoxiang ; :firstInChapter 2 ; :mentionCount 1136 ; :birthYear "红楼二年" .
+:shiyin a :官宦皇亲 ; :hasName "甄士隐" ; :hasAlias "士隐" ; :hasRole "姑苏乡宦，名费" ; :memberOf :甄氏 ; :residesAt :gusu ; :firstInChapter 1 ; :mentionCount 46 .
+:fengsu a :市井平民 ; :hasName "封肃" ; :hasRole "甄士隐岳丈，大如州人" ; :memberOf :甄氏 ; :residesAt :gusu ; :firstInChapter 1 ; :mentionCount 13 .
+:jiaoxing a :仆婢仆役 ; :hasName "娇杏" ; :hasRole "甄家丫鬟，后为雨村正室" ; :memberOf :甄氏 ; :firstInChapter 2 ; :mentionCount 4 .
+:xiangling a :仆婢仆役 ; :hasName "甄英莲（香菱）" ; :hasAlias "英莲" ; :hasAlias "香菱" ; :hasAlias "菱姑娘" ; :hasAlias "秋菱" ; :hasNickname "真应怜（谐音）" ; :hasRole "甄士隐独女，后为薛蟠之妾" ; :memberOf :甄氏 ; :firstInChapter 1 ; :mentionCount 209 ; :birthYear "红楼前三年" .
+:zhenbaoyu a :主子姻眷 ; :hasName "甄宝玉" ; :hasRole "江南甄府公子，与宝玉同名同貌" ; :memberOf :甄氏 ; :residesAt :zhenfu .
+:yucun a :官宦皇亲 ; :hasName "贾雨村" ; :hasAlias "雨村" ; :hasAlias "贾化" ; :hasNickname "胡州人氏（谐“胡诌”）" ; :hasRole "名化，字时飞，别号雨村，起复应天府知府" ; :residesAt :yingtian ; :firstInChapter 1 ; :mentionCount 119 .
+:lengzixing a :市井平民 ; :hasName "冷子兴" ; :hasRole "古董行商，周瑞家的女婿" ; :firstInChapter 2 ; :mentionCount 8 .
+:menzi a :市井平民 ; :hasName "门子" ; :hasRole "应天府门子，原葫芦庙小沙弥" ; :residesAt :yingtian ; :firstInChapter 4 ; :mentionCount 30 .
+:fengyuan a :市井平民 ; :hasName "冯渊" ; :hasNickname "逢冤（谐音）" ; :hasRole "小乡宦之子" ; :firstInChapter 4 ; :mentionCount 6 .
+:shuirong a :官宦皇亲 ; :hasName "北静王水溶" ; :hasAlias "北静王" ; :hasRole "年未弱冠的贤王" ; :residesAt :beijingwangfu ; :firstInChapter 13 ; :mentionCount 34 .
+:zhongshunwang a :官宦皇亲 ; :hasName "忠顺王" ; :hasRole "与贾府素无往来的亲王" ; :residesAt :zhongshun ; :firstInChapter 33 ; :mentionCount 1 .
+:fengziying a :官宦皇亲 ; :hasName "冯紫英" ; :hasRole "神武将军冯唐之子" ; :firstInChapter 10 ; :mentionCount 27 .
+:yuhan a :优伶伶人 ; :hasName "蒋玉菡" ; :hasAlias "琪官" ; :hasAlias "棋官" ; :hasRole "忠顺王府小旦，艺名琪官（棋官）" ; :firstInChapter 27 ; :mentionCount 29 .
+:xianglian a :市井平民 ; :hasName "柳湘莲" ; :hasAlias "柳二郎" ; :hasNickname "冷郎君" ; :hasNickname "冷二郎" ; :hasRole "世家破落子弟，串客游侠" ; :firstInChapter 46 ; :mentionCount 36 .
+:shaozu a :官宦皇亲 ; :hasName "孙绍祖" ; :hasNickname "中山狼" ; :hasRole "大同府军官世家子，袭职" ; :firstInChapter 5 ; :mentionCount 10 .
+:liulaolao a :市井平民 ; :hasName "刘姥姥" ; :hasAlias "老老" ; :hasNickname "母蝗虫（黛玉谑语）" ; :hasRole "王狗儿岳母，与王家连宗之远亲" ; :firstInChapter 6 ; :mentionCount 234 ; :birthYear "红楼前五十九年" .
+:gouer a :市井平民 ; :hasName "王狗儿" ; :hasRole "京郊庄户，祖上与王夫人娘家连宗" ; :firstInChapter 5 ; :mentionCount 16 .
+:baner a :市井平民 ; :hasName "板儿" ; :hasRole "王狗儿之子，刘姥姥外孙" ; :firstInChapter 6 ; :mentionCount 34 ; :birthYear "红楼四年" .
+:nier a :市井平民 ; :hasName "倪二" ; :hasNickname "醉金刚" ; :hasRole "市井泼皮，专放重利债" ; :firstInChapter 23 ; :mentionCount 18 .
+:wujinxiao a :仆婢仆役 ; :hasName "乌进孝" ; :hasRole "黑山村庄头" ; :residesAt :heishan ; :firstInChapter 53 ; :mentionCount 9 .
+:zhangdaoshi a :方外僧道 ; :hasName "张道士" ; :hasRole "荣国公的替身，清虚观观主" ; :residesAt :qingxu ; :firstInChapter 29 ; :mentionCount 24 .
+:madaopo a :方外僧道 ; :hasName "马道婆" ; :hasRole "宝玉寄名的干娘，走方道婆" ; :firstInChapter 25 ; :mentionCount 23 .
+:yitie a :方外僧道 ; :hasName "王一贴" ; :hasRole "天齐庙老道士，卖膏药糊口" ; :residesAt :tianqi ; :firstInChapter 80 ; :mentionCount 16 .
+:zhangyoushi a :医卜清客 ; :hasName "张友士" ; :hasAlias "张先生" ; :hasAlias "友士" ; :hasRole "冯紫英幼时从学之先生，精医理" ; :firstInChapter 10 ; :mentionCount 1 .
+:hujunrong a :医卜清客 ; :hasName "胡君荣" ; :hasAlias "胡庸医" ; :hasRole "太医" ; :firstInChapter 50 ; :mentionCount 7 .
+:wangjiren a :医卜清客 ; :hasName "王济仁" ; :hasAlias "王太医" ; :hasRole "太医" ; :firstInChapter 30 ; :mentionCount 23 .
+:daiquan a :官宦皇亲 ; :hasName "戴权" ; :hasRole "大明宫掌宫内相（太监）" ; :residesAt :daming ; :firstInChapter 13 ; :mentionCount 8 .
+:zhanguang a :医卜清客 ; :hasName "詹光" ; :hasNickname "沾光（谐音）" ; :hasRole "贾政清客相公" ; :firstInChapter 8 ; :mentionCount 3 .
+:danpinren a :医卜清客 ; :hasName "单聘仁" ; :hasNickname "善骗人（谐音）" ; :hasRole "贾政清客相公" ; :firstInChapter 8 ; :mentionCount 3 .
+:pushiren a :市井平民 ; :hasName "卜世仁" ; :hasNickname "不是人（谐音）" ; :hasRole "贾芸的舅舅，开香料铺" ; :firstInChapter 24 ; :mentionCount 8 .
+:shidaizi a :市井平民 ; :hasName "石呆子" ; :hasRole "穷得连饭也没的吃，偏有二十把旧扇" ; :firstInChapter 48 ; :mentionCount 3 .
+:xingqiuyan a :主子姻眷 ; :hasName "邢岫烟" ; :hasRole "邢夫人侄女，随父母流落" ; :memberOf :贾氏 ; :firstInChapter 49 ; :mentionCount 12 .
+:liwen a :主子姻眷 ; :hasName "李纹、李绮" ; :hasRole "李纨寡婶之女，一同进京" ; :memberOf :贾氏 ; :firstInChapter 49 ; :mentionCount 20 .
+:xiren a :仆婢仆役 ; :hasName "花袭人" ; :hasAlias "花大姐姐" ; :hasNickname "贤袭人" ; :hasRole "宝玉怡红院首席大丫鬟，本名珍珠" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 3 ; :mentionCount 771 ; :birthYear "红楼前二年" .
+:qingwen a :仆婢仆役 ; :hasName "晴雯" ; :hasNickname "病西施（讥语）" ; :hasRole "怡红院大丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 5 ; :mentionCount 311 ; :birthYear "红楼三年" ; :deathYear "红楼十八年八月下浣（77）" .
+:sheyue a :仆婢仆役 ; :hasName "麝月" ; :hasRole "怡红院大丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 5 ; :mentionCount 154 ; :birthYear "红楼元年" .
+:sier a :仆婢仆役 ; :hasName "四儿（蕙香）" ; :hasAlias "蕙香" ; :hasAlias "芸香" ; :hasRole "怡红院小丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 21 ; :mentionCount 28 .
+:fangguan a :优伶伶人 ; :hasName "芳官" ; :hasNickname "金星玻璃（宝玉赐号）" ; :hasRole "十二官正旦，分入怡红院" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 54 ; :mentionCount 157 ; :birthYear "红楼五年" .
+:xiaohong a :仆婢仆役 ; :hasName "小红（林红玉）" ; :hasAlias "红玉" ; :hasRole "林之孝之女，先怡红院后入凤姐房中" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 24 ; :mentionCount 86 ; :birthYear "红楼前一年" .
+:zhuier a :仆婢仆役 ; :hasName "坠儿" ; :hasRole "怡红院小丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 26 ; :mentionCount 36 .
+:zijun a :仆婢仆役 ; :hasName "紫鹃" ; :hasAlias "鹦哥" ; :hasRole "黛玉大丫鬟，原贾母丫鬟鹦哥" ; :memberOf :贾氏 ; :residesAt :xiaoxiang ; :firstInChapter 3 ; :mentionCount 148 ; :birthYear "红楼元年" .
+:xueyan a :仆婢仆役 ; :hasName "雪雁" ; :hasRole "黛玉自苏州带来的小丫鬟" ; :memberOf :贾氏 ; :residesAt :xiaoxiang ; :firstInChapter 3 ; :mentionCount 29 ; :birthYear "红楼五年" .
+:yinger a :仆婢仆役 ; :hasName "莺儿（黄金莺）" ; :hasAlias "黄金莺" ; :hasRole "宝钗大丫鬟" ; :memberOf :贾氏 ; :residesAt :hengwu ; :firstInChapter 7 ; :mentionCount 110 ; :birthYear "红楼三年" .
+:yuanyang a :仆婢仆役 ; :hasName "鸳鸯" ; :hasRole "贾母倚重大丫鬟" ; :memberOf :贾氏 ; :residesAt :jiamuyuan ; :firstInChapter 1 ; :mentionCount 275 ; :birthYear "红楼前三年" .
+:jinchan a :仆婢仆役 ; :hasName "金钏儿" ; :hasRole "王夫人丫鬟，玉钏之姊" ; :memberOf :贾氏 ; :firstInChapter 7 ; :mentionCount 51 ; :birthYear "红楼元年" ; :deathYear "红楼十三年五月（32）" .
+:yuchan a :仆婢仆役 ; :hasName "玉钏儿" ; :hasRole "王夫人丫鬟，金钏之妹" ; :memberOf :贾氏 ; :firstInChapter 25 ; :mentionCount 50 ; :birthYear "红楼元年" .
+:caiyun a :仆婢仆役 ; :hasName "彩云" ; :hasRole "王夫人丫鬟" ; :memberOf :贾氏 ; :firstInChapter 5 ; :mentionCount 39 .
+:caixia a :仆婢仆役 ; :hasName "彩霞" ; :hasRole "王夫人丫鬟" ; :memberOf :贾氏 ; :firstInChapter 23 ; :mentionCount 22 .
+:pinger a :仆婢仆役 ; :hasName "平儿" ; :hasRole "凤姐陪嫁心腹，通房大丫鬟" ; :memberOf :贾氏 ; :residesAt :fengjieyuan ; :firstInChapter 6 ; :mentionCount 512 ; :birthYear "红楼前三年" .
+:siqi a :仆婢仆役 ; :hasName "司棋" ; :hasRole "迎春大丫鬟，王善保家的外孙女" ; :memberOf :贾氏 ; :residesAt :ziling ; :firstInChapter 7 ; :mentionCount 70 .
+:ruhua a :仆婢仆役 ; :hasName "入画" ; :hasRole "惜春丫鬟" ; :memberOf :贾氏 ; :residesAt :liaofeng ; :firstInChapter 7 ; :mentionCount 21 .
+:wuer a :仆婢仆役 ; :hasName "柳五儿" ; :hasRole "柳嫂之女，欲进怡红院" ; :memberOf :贾氏 ; :firstInChapter 21 ; :mentionCount 34 .
+:liusao a :仆婢仆役 ; :hasName "柳嫂" ; :hasRole "大观园小厨房厨娘，五儿之母" ; :memberOf :贾氏 ; :firstInChapter 60 ; :mentionCount 7 .
+:chunyan a :仆婢仆役 ; :hasName "春燕" ; :hasRole "怡红院小丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 59 ; :mentionCount 33 .
+:cuilv a :仆婢仆役 ; :hasName "翠缕" ; :hasRole "湘云丫鬟" ; :memberOf :贾氏 ; :firstInChapter 17 ; :mentionCount 39 .
+:limomo a :仆婢仆役 ; :hasName "李嬷嬷" ; :hasRole "宝玉乳母" ; :memberOf :贾氏 ; :firstInChapter 3 ; :mentionCount 37 .
+:qianxue a :仆婢仆役 ; :hasName "茜雪" ; :hasRole "宝玉早年的丫鬟" ; :memberOf :贾氏 ; :firstInChapter 7 ; :mentionCount 10 .
+:laida a :仆婢仆役 ; :hasName "赖大、赖嬷嬷" ; :hasRole "荣府大总管一家" ; :memberOf :贾氏 ; :firstInChapter 15 ; :mentionCount 44 .
+:lizhixiao a :仆婢仆役 ; :hasName "林之孝夫妇" ; :hasRole "荣府管事，小红父母" ; :memberOf :贾氏 ; :firstInChapter 16 ; :mentionCount 91 .
+:laiwang a :仆婢仆役 ; :hasName "来旺（旺儿）" ; :hasRole "凤姐陪房" ; :memberOf :贾氏 ; :firstInChapter 11 ; :mentionCount 82 .
+:duoguniang a :仆婢仆役 ; :hasName "多姑娘（灯姑娘）" ; :hasAlias "灯姑娘" ; :hasRole "多浑虫之妻" ; :memberOf :贾氏 ; :firstInChapter 21 ; :mentionCount 7 .
+:baoerjia a :仆婢仆役 ; :hasName "鲍二家的" ; :hasRole "贾琏仆妇" ; :memberOf :贾氏 ; :firstInChapter 44 ; :mentionCount 29 .
+:xinger a :仆婢仆役 ; :hasName "兴儿" ; :hasRole "贾琏小厮" ; :memberOf :贾氏 ; :firstInChapter 33 ; :mentionCount 78 .
+:mingyan a :仆婢仆役 ; :hasName "茗烟（焙茗）" ; :hasAlias "焙茗" ; :hasRole "宝玉小厮" ; :memberOf :贾氏 ; :firstInChapter 9 ; :mentionCount 119 .
+:zhouruijia a :仆婢仆役 ; :hasName "周瑞家的" ; :hasRole "王夫人陪房" ; :memberOf :贾氏 ; :firstInChapter 6 ; :mentionCount 147 .
+:lingguan a :优伶伶人 ; :hasName "龄官" ; :hasRole "十二官小旦，贾蔷所钟" ; :memberOf :贾氏 ; :residesAt :lixiang ; :firstInChapter 18 ; :mentionCount 22 ; :birthYear "红楼五年" .
+:wangshanbao a :仆婢仆役 ; :hasName "王善保家的" ; :hasRole "邢夫人陪房" ; :memberOf :贾氏 ; :firstInChapter 74 ; :mentionCount 27 .
+:panyouan a :市井平民 ; :hasName "潘又安" ; :hasRole "司棋表弟" ; :firstInChapter 74 ; :mentionCount 2 .
+:miaoyu a :方外僧道 ; :hasName "妙玉" ; :hasRole "带发修行的道姑，住栊翠庵" ; :residesAt :longcui ; :firstInChapter 18 ; :mentionCount 48 ; :birthYear "红楼前五年" .
+:qinzhong a :主子姻眷 ; :hasName "秦钟" ; :hasAlias "秦鲸卿" ; :hasRole "秦业幼子，可卿之弟" ; :memberOf :贾氏 ; :firstInChapter 7 ; :mentionCount 110 ; :birthYear "红楼元年" ; :deathYear "红楼十二年冬（16）" .
+:qinye a :官宦皇亲 ; :hasName "秦业" ; :hasRole "营缮郎，可卿养父" ; :memberOf :贾氏 ; :firstInChapter 8 ; :mentionCount 7 .
+:zhineng a :方外僧道 ; :hasName "智能儿" ; :hasRole "水月庵小尼姑" ; :residesAt :tiekan ; :firstInChapter 7 ; :mentionCount 26 .
+:jinrong a :市井平民 ; :hasName "金荣" ; :hasRole "学堂中顽童" ; :memberOf :贾氏 ; :residesAt :jiashu ; :firstInChapter 9 ; :mentionCount 38 .
+:youerjie a :主子姻眷 ; :hasName "尤二姐" ; :hasRole "尤老娘前夫之女，贾琏偷娶之妾" ; :memberOf :贾氏 ; :firstInChapter 63 ; :mentionCount 91 ; :birthYear "红楼前七年" ; :deathYear "红楼十七年腊月（69）" .
+:yousanjie a :主子姻眷 ; :hasName "尤三姐" ; :hasRole "尤二姐之妹" ; :memberOf :贾氏 ; :firstInChapter 63 ; :mentionCount 40 ; :birthYear "红楼前六年" ; :deathYear "红楼十七年八-九月（66）" .
+
+########## 实例层 ABox · 人物—人物关系 ##########
+:jiamu :血亲眷属 :baoyu . # 祖孙：隔代最疼
+:jiamu :血亲眷属 :daiyu . # 祖孙：最怜外孙女
+:jiamu :血亲眷属 :yuanchun . # 祖孙
+:jiamu :血亲眷属 :jiashe . # 母子：嫌隙暗生
+:jiamu :血亲眷属 :jiazheng . # 母子
+:jiamu :主仆役使 :yuanyang . # 主仆：倚重
+:jiamu :血亲眷属 :baoqin . # 祖孙：认干孙女
+:jiamu :朋友知交 :zhangdaoshi . # 世交：荣国公替身
+:jiazheng :血亲眷属 :baoyu . # 父子：严父逆子
+:jiazheng :血亲眷属 :yuanchun . # 父女
+:jiazheng :血亲眷属 :tanchun . # 父女
+:jiazheng :血亲眷属 :jiahuan . # 父子
+:jiazheng :夫妻妾室 :wangfuren . # 夫妻
+:jiazheng :夫妻妾室 :zhaoyiniang . # 夫妻：妾
+:jiazhu :夫妻妾室 :liwan . # 夫妻：早夭
+:jiazhu :血亲眷属 :jialan . # 父子
+:liwan :血亲眷属 :jialan . # 母子：守节教子
+:jiashe :血亲眷属 :jialian . # 父子
+:jiashe :血亲眷属 :yingchun . # 父女：一言定姻
+:jiashe :夫妻妾室 :xingfuren . # 夫妻
+:jiashe :仇怨对立 :yuanyang . # 强索：逼婚未遂
+:jiashe :仇怨对立 :shidaizi . # 强夺：古扇
+:jiashe :交易勾结 :yucun . # 勾结：讹扇抄家
+:jiazhen :血亲眷属 :jiarong . # 父子
+:jiazhen :夫妻妾室 :youshi . # 夫妻
+:jiazhen :血亲眷属 :keqing . # 翁媳：逾礼之恸
+:jiazhen :血亲眷属 :xichun . # 兄妹
+:jiazhen :主仆役使 :wujinxiao . # 主仆：庄头对账
+:jiajing :血亲眷属 :xichun . # 父女
+:jiajing :血亲眷属 :jiazhen . # 父子：弃家不管
+:jiarong :夫妻妾室 :keqing . # 夫妻
+:jiarong :交易勾结 :daiquan . # 交易：捐龙禁尉
+:qinye :血亲眷属 :keqing . # 养父女
+:qinye :血亲眷属 :qinzhong . # 父子
+:keqing :血亲眷属 :qinzhong . # 姊弟
+:keqing :事缘交往 :zhangyoushi . # 诊病：论病细穷源
+:keqing :事缘交往 :xifeng . # 托梦：月满则亏之诫
+:jialian :夫妻妾室 :xifeng . # 夫妻：明争暗斗又相依
+:xifeng :血亲眷属 :qiaojie . # 母女
+:xifeng :血亲眷属 :wangfuren . # 姑侄：倚仗
+:xifeng :主仆役使 :pinger . # 主仆：心腹
+:xifeng :仇怨对立 :youerjie . # 仇：借剑杀人
+:xifeng :仇怨对立 :jiarui . # 仇：毒设相思局
+:xifeng :主仆役使 :laiwang . # 主仆
+:xifeng :主仆役使 :zhouruijia . # 主仆
+:xifeng :血亲眷属 :jiazhen . # 叔嫂：联手协理
+:jialian :夫妻妾室 :youerjie . # 偷娶：孝中纳妾
+:jialian :情缘私恋 :duoguniang . # 私通
+:jialian :情缘私恋 :baoerjia . # 私通
+:jialian :主仆役使 :xinger . # 主仆
+:jialian :血亲眷属 :daiyu . # 表兄妹：同奔扬州丧
+:wangfuren :血亲眷属 :jiahuan . # 母子
+:zhaoyiniang :血亲眷属 :jiahuan . # 母子
+:zhaoyiniang :血亲眷属 :tanchun . # 母女：探春不认生母
+:zhaoyiniang :交易勾结 :madaopo . # 勾结：魇魔法
+:yuanchun :血亲眷属 :baoyu . # 姊弟：手引口传教养如母
+:baoyu :朋友知交 :daiyu . # 知己：木石前盟
+:baoyu :情缘私恋 :baochai . # 姻缘伏：金玉良缘
+:baoyu :朋友知交 :xiangyun . # 友：因麒麟伏白首双星
+:baoyu :主仆役使 :xiren . # 主仆：初试云雨情
+:baoyu :主仆役使 :qingwen . # 主仆：撕扇补裘
+:baoyu :主仆役使 :sheyue . # 主仆
+:baoyu :主仆役使 :sier . # 主仆：改名
+:baoyu :主仆役使 :fangguan . # 主仆
+:baoyu :主仆役使 :xiaohong . # 主仆
+:baoyu :主仆役使 :mingyan . # 主仆：最得力小厮
+:baoyu :师恩庇护 :limomo . # 乳母子：枫露茶之怒
+:baoyu :主仆役使 :qianxue . # 主仆：连累被撵
+:baoyu :朋友知交 :shuirong . # 知交：北静王知遇
+:baoyu :朋友知交 :yuhan . # 友：汗巾之交
+:baoyu :朋友知交 :fengziying . # 友
+:baoyu :仇怨对立 :zhongshunwang . # 祸因：索琪官
+:baoyu :血亲眷属 :jialan . # 叔侄
+:baoyu :朋友知交 :miaoyu . # 茶缘：栊翠庵品茶
+:baoyu :血亲眷属 :jiazheng . # 父子：大承笞挞
+:baoyu :血亲眷属 :jiahuan . # 兄弟：进谗相害
+:baoyu :事缘交往 :jinchan . # 事缘：顽笑致祸
+:baoyu :主仆役使 :yuchan . # 主仆：亲尝莲叶羹
+:baoyu :血亲眷属 :jiaqiang . # 兄弟
+:baoyu :师恩庇护 :jiayun . # 义父子：认干爷
+:baoyu :事缘交往 :wuer . # 缘：欲进怡红院
+:baoyu :情缘私恋 :xiangling . # 怜惜：情解石榴裙
+:daiyu :朋友知交 :baochai . # 金兰：兰言解疑癖
+:daiyu :朋友知交 :xiangyun . # 友：凹晶联诗
+:daiyu :主仆役使 :zijun . # 主仆：情同姊妹
+:daiyu :主仆役使 :xueyan . # 主仆：苏州带来
+:daiyu :师恩庇护 :xiangling . # 师徒：教诗
+:daiyu :血亲眷属 :linruhai . # 父女
+:linruhai :夫妻妾室 :jiamin . # 夫妻
+:jiamin :血亲眷属 :jiamu . # 母女
+:linruhai :师恩庇护 :yucun . # 荐举：延为西宾
+:baochai :血亲眷属 :xuepan . # 兄妹
+:baochai :血亲眷属 :xueyima . # 母女
+:baochai :主仆役使 :yinger . # 主仆
+:baochai :血亲眷属 :baoqin . # 堂姊妹
+:baochai :师恩庇护 :xingqiuyan . # 照拂：岫烟典衣
+:baochai :血亲眷属 :jiazheng . # 姻亲：妻之姨侄女
+:baochai :血亲眷属 :wangfuren . # 姨甥
+:xuepan :夫妻妾室 :jingui . # 夫妻：悔娶河东狮
+:jingui :仇怨对立 :xiangling . # 仇：折挫改秋菱
+:xuepan :主仆役使 :xiangling . # 主妾：乱判所得
+:xuepan :仇怨对立 :xianglian . # 仇：荒郊苦打
+:xuepan :仇怨对立 :fengyuan . # 仇：纵豪奴打死
+:xueyima :血亲眷属 :wangfuren . # 姊妹
+:xueyima :血亲眷属 :ziteng . # 兄妹
+:ziteng :血亲眷属 :wangfuren . # 兄妹
+:xiangyun :主仆役使 :cuilv . # 主仆：论阴阳
+:yuanyang :仇怨对立 :jiashe . # 抗婚：铰发明志
+:yuanyang :事缘交往 :siqi . # 事缘：无意遇鸳鸯
+:pinger :主仆役使 :jialian . # 主仆：软语救贾琏
+:pinger :师恩庇护 :wuer . # 援手：行权判冤
+:pinger :师恩庇护 :caiyun . # 遮掩：玫瑰露案
+:jinchan :血亲眷属 :yuchan . # 姊妹
+:jinchan :主仆役使 :wangfuren . # 主仆：撵逐投井
+:caixia :情缘私恋 :jiahuan . # 情：贾环薄情
+:caixia :仇怨对立 :laiwang . # 仇：倚势强聘
+:caiyun :情缘私恋 :jiahuan . # 私情：偷赠玫瑰露
+:siqi :主仆役使 :yingchun . # 主仆
+:siqi :情缘私恋 :panyouan . # 情：私传信物
+:siqi :血亲眷属 :wangshanbao . # 祖孙：外孙女
+:wangshanbao :仇怨对立 :tanchun . # 仇：一掌之辱
+:wangshanbao :主仆役使 :xingfuren . # 主仆：陪房
+:ruhua :主仆役使 :xichun . # 主仆：割席撵逐
+:wuer :血亲眷属 :liusao . # 母女
+:wuer :朋友知交 :fangguan . # 友
+:fangguan :朋友知交 :chunyan . # 同院：干娘家事
+:xiaohong :血亲眷属 :lizhixiao . # 父女：林之孝之女
+:xiaohong :情缘私恋 :jiayun . # 情：手帕传情
+:xiaohong :朋友知交 :zhuier . # 友：传情使者
+:zhuier :主仆役使 :qingwen . # 主仆：戳手撵出
+:jiayun :师恩庇护 :nier . # 义：醉金刚借银
+:jiayun :血亲眷属 :pushiren . # 舅甥：不是人
+:jiaqiang :情缘私恋 :lingguan . # 情：龄官画蔷
+:jiaqiang :朋友知交 :fangguan . # 同伶：十二官
+:xianglian :情缘私恋 :yousanjie . # 情定：鸳鸯剑
+:xianglian :情缘私恋 :yousanjie . # 殉情：三姐自刎后出家
+:shaozu :夫妻妾室 :yingchun . # 夫妻：中山狼
+:yucun :仇怨对立 :menzi . # 充发：献符后被逐
+:yucun :仇怨对立 :shidaizi . # 陷害：讹以官银
+:yucun :交易勾结 :jiazheng . # 攀附：联宗行走
+:yucun :夫妻妾室 :jiaoxing . # 夫妻：二房扶正
+:jiaoxing :主仆役使 :shiyin . # 旧仆：甄家丫鬟
+:shiyin :血亲眷属 :xiangling . # 父女：元宵失散
+:shiyin :血亲眷属 :fengsu . # 翁婿：半哄半赚
+:liulaolao :血亲眷属 :gouer . # 母女：岳母
+:gouer :交易勾结 :wangfuren . # 连宗：远亲
+:liulaolao :血亲眷属 :baner . # 祖孙
+:baner :情缘私恋 :qiaojie . # 姻缘伏：柚子换佛手
+:liulaolao :朋友知交 :jiamu . # 投缘：留客享福
+:qinzhong :情缘私恋 :zhineng . # 情：水月庵
+:qinzhong :朋友知交 :baoyu . # 友：同窗知己
+:jinrong :仇怨对立 :qinzhong . # 结怨：学堂厮打
+:jinrong :事缘交往 :jiadairu . # 附学：塾中顽童
+:jiarui :血亲眷属 :jiadairu . # 祖孙
+:madaopo :师恩庇护 :baoyu . # 寄名：干娘作祟
+:yitie :事缘交往 :baoyu . # 问答：疗妒方
+:hujunrong :事缘交往 :qingwen . # 误诊：虎狼药
+:hujunrong :事缘交往 :youerjie . # 误诊：堕胎
+:wangjiren :事缘交往 :jiamu . # 诊病：王太医
+:xinger :事缘交往 :youerjie . # 演说：评府中人物
+:mingyan :主仆役使 :baoyu . # 主仆
+:duoguniang :事缘交往 :baoyu . # 试：灯下试探
+:laiwang :仇怨对立 :caixia . # 强聘：霸成亲
+
+########## 实例层 ABox · 事件 ##########
+:e1 a :仙幻谶语 ; :hasTitle "女娲弃石·绛珠还泪" ; :hasSeason "洪荒楔子" ; :inChapter 1 ; :hasDesc "大荒山无稽崖炼剩一石，僧道大展幻术携入红尘；绛珠仙草欲以一生眼泪还神瑛侍者灌溉之恩。" ; :occursAt :dahuangshan .
+:e2 a :仙幻谶语 ; :hasTitle "甄士隐梦幻识通灵" ; :hasDate "红楼前一年·夏梦识通灵 · 中秋赠银" ; :hasSeason "红楼元年·夏" ; :inChapter 1 ; :hasDesc "姑苏乡宦士隐梦入太虚见通灵玉；贾雨村寄居葫芦庙，中秋对月吟联，得士隐赠银赴考。" ; :inEra :era1 ; :occursAt :gusu .
+:e3 a :身世遭际 ; :hasTitle "元宵失英莲·葫芦庙火" ; :hasDate "红楼元年·正月十五失英莲 · 三月十五庙火" ; :hasSeason "红楼元年·元宵/三月十五" ; :inChapter 1 ; :hasDesc "元宵霍启看灯失英莲；三月十五葫芦庙炸供起火，甄家烧作白地，士隐贫病投岳丈封肃。" ; :inEra :era1 ; :occursAt :gusu .
+:e4 a :仙幻谶语 ; :hasTitle "《好了歌》·士隐出家" ; :hasDate "红楼元年·秋后出家" ; :hasSeason "红楼元年·中秋后" ; :inChapter 1 ; :hasDesc "跛足道人唱好了歌，士隐彻悟作注，疯癫随道人而去——“真事隐去”。" ; :inEra :era1 ; :occursAt :gusu .
+:e5 a :宦途经济 ; :hasTitle "冷子兴演说荣国府" ; :hasDate "红楼六年·维扬塾中闲话" ; :hasSeason "红楼元年" ; :inChapter 2 ; :hasDesc "村肆闲话，贾府族谱家势娓娓道来；宝玉衔玉而生，元春入宫，探春迎春惜春各有来历。" ; :inEra :era2 .
+:e6 a :身世遭际 ; :hasTitle "林黛玉进贾府" ; :hasDate "红楼七年·出月初二入都" ; :hasSeason "红楼元年" ; :inChapter 3 ; :hasDesc "母丧进京，步步留心时时在意；宝黛初会便觉似曾相识，宝玉摔玉痴狂初现。" ; :inEra :era2 ; :occursAt :rongfu .
+:e7 a :宦途经济 ; :hasTitle "葫芦僧判断葫芦案" ; :hasDate "红楼七年·是年（雨村起复）" ; :hasSeason "红楼元年" ; :inChapter 4 ; :hasDesc "雨村起复应天府，门子献护官符；徇情枉法放了薛蟠，任英莲一去无踪。薛家同进京都。" ; :inEra :era2 ; :occursAt :yingtian ; :occursAt :jinling .
+:e8 a :仙幻谶语 ; :hasTitle "宝玉梦游太虚幻境" ; :hasDate "红楼八年·正月（宁府梅开）" ; :hasSeason "红楼元年" ; :inChapter 5, 6 ; :hasDesc "警幻以茶酒曲册点化宝玉：金陵十二钗正副册与红楼梦曲尽演诸艳终身——全书总谶；袭人初试云雨。" ; :inEra :era2 ; :occursAt :taixu .
+:e9 a :宦途经济 ; :hasTitle "刘姥姥一进荣国府" ; :hasDate "红楼八年·十月（秋尽冬初）" ; :hasSeason "红楼元年·秋末冬初" ; :inChapter 6 ; :hasDesc "家计无着打抽丰，周瑞家的引进凤姐院，得银二十两——“偶因济刘氏，巧得遇恩人”伏线。" ; :inEra :era2 ; :occursAt :rongfu .
+:e10 a :宦途经济 ; :hasTitle "送宫花·比通灵·闹学堂" ; :hasDate "红楼八年·冬（送宫花·比通灵）· 次年春（闹学堂）" ; :hasSeason "红楼元年" ; :inChapter 7, 8, 9 ; :hasDesc "周瑞家的送宫花一路冷眼；金锁与通灵玉初对，冷香丸说病，枫露茶撵茜雪；家塾顽童大闹。" ; :inEra :era2 ; :occursAt :rongfu ; :occursAt :jiashu .
+:e11 a :病丧生死 ; :hasTitle "可卿病笃·张友士论病" ; :hasDate "红楼九年·冬至前后（十一月三十冬至）" ; :hasSeason "红楼二年·冬至（十一月三十）" ; :inChapter 10, 11 ; :hasDesc "可卿经年不愈，冯紫英荐张友士细穷源：“这病总是忧虑伤脾”，虑到冬底果然。" ; :inEra :era3 ; :occursAt :ningfu .
+:e12 a :风波冲突 ; :hasTitle "毒设相思局·贾瑞殒命" ; :hasDate "红楼十年·腊月设局 · 次年腊月尽殒命" ; :hasSeason "红楼二年" ; :inChapter 11, 12 ; :hasDesc "贾瑞觊觎凤姐，凤姐设局寒夜粪坑两番捉弄；风月宝鉴正面骷髅背面幻影，正照而亡。" ; :inEra :era3 ; :occursAt :rongfu ; :occursAt :ningfu .
+:e13 a :病丧生死 ; :hasTitle "秦可卿之死·协理宁国府" ; :hasDate "红楼十二年·九月下旬起丧（四十九日）" ; :hasSeason "红楼二年" ; :inChapter 13, 14, 15 ; :hasDesc "可卿丧礼逾制奢华，珍爷哭得如泪人；凤姐协理宁府立威；脂批：原“淫丧天香楼”一节被命芹溪删去。" ; :inEra :era3 ; :occursAt :ningfu ; :annotatedBy :q_tianxianglou .
+:e14 a :风波冲突 ; :hasTitle "凤姐弄权铁槛寺" ; :hasDate "红楼十二年·丧仪间（停灵京郊）" ; :hasSeason "红楼二年" ; :inChapter 15 ; :hasDesc "停灵水月庵，净虚老尼说合退婚讼事，三千两到手——“自此凤姐胆识愈壮，以后所作所为诸如此类，不可胜数”。" ; :inEra :era3 ; :occursAt :tiekan .
+:e15 a :病丧生死 ; :hasTitle "北静王路祭·秦钟夭逝" ; :hasDate "红楼十二年·九-十月路祭 · 冬秦钟夭逝" ; :hasSeason "红楼二年" ; :inChapter 14, 15, 16 ; :hasDesc "北静王与宝玉结交赠鹡鸰念珠；贾琏陪黛玉奔扬州父丧；秦钟情陷水月庵，业亡身殒。" ; :inEra :era3 ; :occursAt :tiekan ; :occursAt :yangzhou .
+:e16 a :宦途经济 ; :hasTitle "元才加封·筹建省亲别墅" ; :hasDate "红楼十二年·冬（才选凤藻宫 · 兴工）" ; :hasSeason "红楼二年" ; :inChapter 16 ; :hasDesc "元春晋封凤藻宫尚书加封贤德妃；贾府大兴土木营建省亲别墅，贾蔷下姑苏采买十二官。" ; :inEra :era3 ; :occursAt :dudu ; :occursAt :daguan .
+:e17 a :节庆祭祀 ; :hasTitle "试才题对额·元妃省亲" ; :hasDate "红楼十三年·正月题对额 · 正月十五元宵省亲" ; :hasSeason "红楼三年·正月十五" ; :inChapter 17, 18 ; :hasDesc "贾政携宝玉游园题咏，一园景致初得名；省亲夜灯火如昼，烈火烹油之盛、骨肉分离之泪；妙玉入园。" ; :inEra :era4 ; :occursAt :daguan .
+:e18 a :宦途经济 ; :hasTitle "袭人箴宝玉·平儿救贾琏" ; :hasDate "红楼十三年·正月（元宵后）· 二月" ; :hasSeason "红楼三年" ; :inChapter 19, 20, 21 ; :hasDesc "花袭人娇嗔箴玉，李嬷嬷拄杖骂袭人；大姐儿（巧姐）出痘，贾琏私会多姑娘，平儿软语遮掩。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
+:e19 a :情缘际会 ; :hasTitle "共读西厢·芸红遗帕" ; :hasDate "红楼十三年·二月二十二搬入大观园" ; :hasSeason "红楼三年" ; :inChapter 23, 24 ; :hasDesc "元妃命姐妹入园，宝黛沁芳闸畔共读《会真记》初萌葬花意；贾芸谋差种树借醉金刚银，小红遗帕惹相思。" ; :inEra :era4 ; :occursAt :daguan ; :occursAt :qinfang ; :occursAt :huazhong .
+:e20 a :风波冲突 ; :hasTitle "魇魔法叔嫂逢五鬼" ; :hasDate "红楼十三年·三-四月（癞僧言「十三载」）" ; :hasSeason "红楼三年" ; :inChapter 25 ; :hasDesc "赵姨娘买通马道婆魇镇凤姐宝玉，叔嫂癫狂垂死；癞僧跛道持玉诵咒，一佛出世。" ; :inEra :era4 ; :occursAt :rongfu .
+:e21 a :情缘际会 ; :hasTitle "潇湘春困·滴翠亭扑蝶·泣残红" ; :hasDate "红楼十三年·四月二十六未时交芒种" ; :hasSeason "红楼三年·四月二十六芒种" ; :inChapter 26, 27 ; :hasDesc "黛玉春困幽情被窗外宝玉听去；宝钗滴翠亭扑蝶金蝉脱壳；芒种节黛玉泣残红，宝玉恸倒山坡。" ; :inEra :era4 ; :occursAt :xiaoxiang ; :occursAt :dicui ; :occursAt :huazhong .
+:e22 a :情缘际会 ; :hasTitle "蒋玉菡情赠茜香罗" ; :hasDate "红楼十三年·四月末（冯紫英家宴）" ; :hasSeason "红楼三年" ; :inChapter 28 ; :hasDesc "冯紫英家宴，宝玉琪官互赠汗巾；那条茜香罗日后系上袭人腰间。" ; :inEra :era4 .
+:e23 a :节庆祭祀 ; :hasTitle "清虚观打醮·龄官划蔷" ; :hasDate "红楼十三年·五月初一至初三打醮" ; :hasSeason "红楼三年·五月初一/端午" ; :inChapter 29, 30 ; :hasDesc "张道士提亲致宝黛口角砸玉；宝玉烈日窥龄官画“蔷”，痴及局外。" ; :inEra :era4 ; :occursAt :qingxu ; :occursAt :yihong ; :occursAt :lixiang .
+:e24 a :病丧生死 ; :hasTitle "金钏投井·撕扇千金一笑" ; :hasDate "红楼十三年·五月初四被撵 · 初五端阳撕扇 · 五月中投井" ; :hasSeason "红楼三年·端午" ; :inChapter 30, 31, 32 ; :hasDesc "宝玉金钏顽笑，王夫人掌掴撵逐，金钏含耻投井；晴雯撕扇一笑值千金。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
+:e25 a :风波冲突 ; :hasTitle "大承笞挞·题帕三绝" ; :hasDate "红楼十三年·六月（盛夏笞挞）" ; :hasSeason "红楼三年" ; :inChapter 33, 34 ; :hasDesc "忠顺王府索琪官、贾环进谗金钏事，贾政怒笞宝玉几毙；宝钗送药、黛玉题帕三首情诗。" ; :inEra :era4 ; :occursAt :rongfu .
+:e26 a :情缘际会 ; :hasTitle "莲叶羹·绣鸳鸯梦兆" ; :hasDate "红楼十三年·夏（莲叶羹·绣鸳鸯）" ; :hasSeason "红楼三年·夏" ; :inChapter 35, 36 ; :hasDesc "玉钏亲尝莲叶羹；宝钗绣鸳鸯坐上宝玉睡榻，正逢宝玉梦中喊骂“和尚道士的话如何信得，什么金玉姻缘”。" ; :inEra :era4 ; :occursAt :yihong ; :occursAt :lixiang .
+:e27 a :诗社雅集 ; :hasTitle "秋爽斋结海棠社·菊花诗" ; :hasDate "红楼十六年·八月二十贾政赴学差后 · 八月末结社" ; :hasSeason "红楼三年·秋" ; :inChapter 37, 38 ; :hasDesc "探春花笺邀社，海棠、菊花两番雅集：黛玉魁夺菊花诗，宝钗讽和螃蟹咏压卷。" ; :inEra :era5 ; :occursAt :qiushuang ; :occursAt :liaofeng .
+:e28 a :诗社雅集 ; :hasTitle "刘姥姥二进大观园" ; :hasDate "红楼十六年·八月末-九月初（两宴·品茶·醉卧）" ; :hasSeason "红楼三年·秋" ; :inChapter 39, 40, 41, 42 ; :hasDesc "瓜菜报恩，贾母留客：两宴大观园、三宣牙牌令、栊翠庵品茶、醉卧怡红院；“母蝗虫”雅谑补馀香。" ; :inEra :era5 ; :occursAt :daguan ; :occursAt :longcui ; :occursAt :yihong .
+:e29 a :风波冲突 ; :hasTitle "撮土为香·凤姐泼醋" ; :hasDate "红楼十六年·九月初二" ; :hasSeason "红楼三年·九月初二" ; :inChapter 43, 44 ; :hasDesc "凤姐生日攒金庆寿，宝玉私往水仙庵井台祭金钏；席间贾琏私通事发，凤姐泼醋，平儿理妆。" ; :inEra :era5 ; :occursAt :shuixian ; :occursAt :rongfu .
+:e30 a :诗社雅集 ; :hasTitle "金兰契·风雨词" ; :hasDate "红楼十六年·九月末-十月（秋雨）" ; :hasSeason "红楼三年·秋末" ; :inChapter 45 ; :hasDesc "宝钗兰言解疑癖，钗黛剖心成金兰；秋窗风雨夕，黛玉作《代别离》。" ; :inEra :era5 ; :occursAt :xiaoxiang .
+:e31 a :风波冲突 ; :hasTitle "鸳鸯抗婚·柳湘莲惩蟠" ; :hasDate "红楼十六年·十月初（眼前十月一上坟）" ; :hasSeason "红楼三年" ; :inChapter 46, 47 ; :hasDesc "贾赦强索鸳鸯，鸳鸯铰发立誓绝之；赖大家酒席上柳湘莲赚薛蟠荒郊痛打，惧祸远走。" ; :inEra :era5 ; :occursAt :rongfu .
+:e32 a :诗社雅集 ; :hasTitle "香菱学诗·石呆子扇案" ; :hasDate "红楼十六年·十月-十一月" ; :hasSeason "红楼三年·冬" ; :inChapter 48 ; :hasDesc "香菱苦吟终得梦中得句；贾雨村讹石呆子拖欠官银抄其古扇奉贾赦。" ; :inEra :era5 ; :occursAt :xiaoxiang ; :occursAt :hengwu .
+:e33 a :诗社雅集 ; :hasTitle "琉璃世界白雪红梅" ; :hasDate "红楼十六年·十一月-腊月（大雪）" ; :hasSeason "红楼三年·冬" ; :inChapter 49, 50, 51 ; :hasDesc "宝琴岫烟纹绮齐至，众芳联诗芦雪广；宝琴踏雪红梅，十首怀古诗谜悬千古；晴雯病中先遇胡庸医。" ; :inEra :era5 ; :occursAt :luxue ; :occursAt :hengwu .
+:e34 a :病丧生死 ; :hasTitle "病补雀金裘" ; :hasDate "红楼十六年·腊月（病补雀金裘）" ; :hasSeason "红楼三年·冬" ; :inChapter 52 ; :hasDesc "俄罗斯雀金裘烧洞无人能补，晴雯病重夜补，“勇”字当之；坠儿偷虾须镯事发被撵。" ; :inEra :era5 ; :occursAt :yihong .
+:e35 a :节庆祭祀 ; :hasTitle "除夕祭宗祠·元宵开夜宴" ; :hasDate "红楼十六年·腊月二十九-除夕祭宗祠 · 次年正月十五夜宴" ; :hasSeason "红楼四年·除夕/元宵" ; :inChapter 53, 54 ; :hasDesc "乌进孝进租一单写尽末世；宁府祭宗祠、荣府元宵夜宴，史太君破陈腐旧套，凤姐效戏彩斑衣。" ; :inEra :era5 ; :occursAt :ningfu ; :occursAt :rongfu ; :occursAt :heishan .
+:e36 a :宦途经济 ; :hasTitle "敏探春兴利除宿弊" ; :hasDate "红楼十七年·正月末（年事方过）" ; :hasSeason "红楼四年·春" ; :inChapter 55, 56 ; :hasDesc "凤姐病，探春理家开源节流，宝钗小惠全大体；甄府女眷进京，宝玉梦见甄宝玉。" ; :inEra :era6 ; :occursAt :qiushuang .
+:e37 a :情缘际会 ; :hasTitle "慧紫鹃情辞试忙玉" ; :hasDate "红楼十七年·二-三月（春困试玉）" ; :hasSeason "红楼四年" ; :inChapter 57 ; :hasDesc "紫鹃一句“回苏州去”，宝玉痴病大发满屋死寂；薛姨妈爱语慰痴颦，岫烟典衣暗写世情。" ; :inEra :era6 ; :occursAt :xiaoxiang ; :occursAt :yihong .
+:e38 a :风波冲突 ; :hasTitle "茉莉粉·蔷薇硝·玫瑰露" ; :hasDate "红楼十七年·三-五月（杏子阴·茉莉粉）" ; :hasSeason "红楼四年" ; :inChapter 58, 59, 60, 61 ; :hasDesc "十二官入园声势渐起，芳官与干娘斗气；柳五儿蒙冤被囚，平儿情权判冤决狱。" ; :inEra :era6 ; :occursAt :yihong ; :occursAt :luxue .
+:e39 a :节庆祭祀 ; :hasTitle "憨湘云醉眠芍药裀·群芳夜宴" ; :hasDate "红楼十七年·四月二十六生辰（红学一说）" ; :hasSeason "红楼四年·宝玉生辰（一说与芒种同日）" ; :inChapter 62, 63 ; :hasDesc "宝玉生日众芳掣签：宝钗牡丹“任是无情也动人”，湘云醉卧芍药，黛玉芙蓉“莫怨东风当自嗟”。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :yihong .
+:e40 a :病丧生死 ; :hasTitle "死金丹·五美吟" ; :hasDate "红楼十七年·四月廿六夜-五月（死金丹·五美吟）" ; :hasSeason "红楼四年" ; :inChapter 63, 64 ; :hasDesc "贾敬吞金服砂死于玄真观，尤氏独艳理亲丧；宝玉病愈题五美吟寄幽情。" ; :inEra :era6 ; :occursAt :xuanguan ; :occursAt :ningfu ; :occursAt :xiaoxiang .
+:e41 a :婚嫁姻缘 ; :hasTitle "贾二舍偷娶尤二姨" ; :hasDate "红楼十七年·六月（偷娶小花枝巷）" ; :hasSeason "红楼四年" ; :inChapter 65 ; :hasDesc "贾琏孝中偷娶尤二姐于小花枝巷；兴儿演说府中人物——“嘴甜心苦，两面三刀”。" ; :inEra :era6 ; :occursAt :ningfu .
+:e42 a :情缘际会 ; :hasTitle "鸳鸯剑下三姐魂·冷二郎入空门" ; :hasDate "红楼十七年·八-九月（鸳鸯剑下·入空门）" ; :hasSeason "红楼四年" ; :inChapter 66 ; :hasDesc "柳湘莲聘定尤三姐，闻其名悔婚索剑；三姐剑下自明心迹血溅当场，湘莲斩断尘缘随道人去。" ; :inEra :era6 .
+:e43 a :风波冲突 ; :hasTitle "酸凤姐大闹宁国府·尤二姐吞金" ; :hasDate "红楼十七年·九-腊月（借剑杀人）" ; :hasSeason "红楼四年" ; :inChapter 67, 68, 69 ; :hasDesc "凤姐闻讯赚二姐入大观园，唆张华都察院兴讼，大闹宁府索银；借剑杀人，二姐吞金自逝，腹中男胎亦堕。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :ningfu ; :occursAt :duchayuan .
+:e44 a :诗社雅集 ; :hasTitle "重建桃花社·柳絮词" ; :hasDate "红楼十八年·三月初二起社 · 暮春放风筝" ; :hasSeason "红楼五年·暮春" ; :inChapter 70 ; :hasDesc "黛玉桃花社重开，湘云柳絮词起兴；放风筝，探春凤凰一谶。" ; :inEra :era7 ; :occursAt :xiaoxiang ; :occursAt :daguan .
+:e45 a :节庆祭祀 ; :hasTitle "八旬大庆·无意遇鸳鸯" ; :hasDate "红楼十八年·八月初三八旬大庆" ; :hasSeason "红楼五年" ; :inChapter 71, 72 ; :hasDesc "贾母八旬大庆两府大宴；鸳鸯撞破司棋潘又安私会；凤姐恃强羞说病，来旺家倚势霸成亲强聘彩霞。" ; :inEra :era7 ; :occursAt :rongfu ; :occursAt :daguan .
+:e46 a :风波冲突 ; :hasTitle "绣春囊风波·抄检大观园" ; :hasDate "红楼十八年·八月中（中秋前抄检）" ; :hasSeason "红楼五年" ; :inChapter 73, 74 ; :hasDesc "傻大姐拾绣春囊，王善保家的进谗；抄检之夜探春抗辩掌掴，晴雯倒箧，司棋事发，惜春割席；江南甄府同被抄没。" ; :inEra :era7 ; :occursAt :daguan .
+:e47 a :节庆祭祀 ; :hasTitle "中秋异兆悲音·冷月葬花魂" ; :hasDate "红楼十八年·八月十五中秋" ; :hasSeason "红楼五年·中秋" ; :inChapter 75, 76 ; :hasDesc "宁府夜宴祠墙下异兆悲音；凸碧堂品笛，凹晶馆联诗“寒塘渡鹤影，冷月葬花魂”。" ; :inEra :era7 ; :occursAt :tubi ; :occursAt :ningfu .
+:e48 a :病丧生死 ; :hasTitle "晴雯夭亡·芙蓉女儿诔" ; :hasDate "红楼十八年·八月十六-下浣（夭亡·诔）" ; :hasSeason "红楼五年·秋" ; :inChapter 77, 78 ; :hasDesc "王夫人清检怡红院，晴雯四五日水米不曾沾牙抱屈而亡，小丫头幻为芙蓉花神；宝玉夜诔晴雯，芳官等斩情归水月。" ; :inEra :era7 ; :occursAt :yihong .
+:e49 a :诗社雅集 ; :hasTitle "姽婳词·老学士闲征" ; :hasDate "红楼十八年·八月（同夜双璧）" ; :hasSeason "红楼五年" ; :inChapter 78 ; :hasDesc "贾政命宝玉咏林四娘“姽婳将军”，《芙蓉诔》同夜双璧。" ; :inEra :era7 ; :occursAt :rongfu .
+:e50 a :婚嫁姻缘 ; :hasTitle "迎春误嫁中山狼" ; :hasDate "红楼十八年·九-十月（迎春于归）" ; :hasSeason "红楼五年·秋" ; :inChapter 79, 80 ; :hasDesc "贾赦一言定姻，迎春嫁孙绍祖；“金闺花柳质，一载赴黄粱”，紫菱洲人去楼空。" ; :inEra :era7 ; :occursAt :ziling .
+:e51 a :婚嫁姻缘 ; :hasTitle "悔娶河东狮·香菱受虐" ; :hasDate "红楼十八年·九-十月（河东狮进门）" ; :hasSeason "红楼五年" ; :inChapter 79, 80 ; :hasDesc "薛蟠娶夏金桂，改香菱为秋菱步步折挫；宝玉天齐庙问“疗妒方”，一问痴心——八十回终。" ; :inEra :era7 ; :occursAt :xiazhu ; :occursAt :tianqi .
+
+########## 实例层 ABox · 参与（人物 → 事件） ##########
+:baoyu :参与 :e1 .
+:daiyu :参与 :e1 .
+:shiyin :参与 :e2 .
+:yucun :参与 :e2 .
+:xiangling :参与 :e2 .
+:shiyin :参与 :e3 .
+:fengsu :参与 :e3 .
+:xiangling :参与 :e3 .
+:shiyin :参与 :e4 .
+:lengzixing :参与 :e5 .
+:yucun :参与 :e5 .
+:baoyu :参与 :e5 .
+:jiamu :参与 :e5 .
+:daiyu :参与 :e6 .
+:jiamu :参与 :e6 .
+:baoyu :参与 :e6 .
+:xifeng :参与 :e6 .
+:xiren :参与 :e6 .
+:jiazheng :参与 :e6 .
+:xingfuren :参与 :e6 .
+:jiashe :参与 :e6 .
+:yucun :参与 :e7 .
+:menzi :参与 :e7 .
+:fengyuan :参与 :e7 .
+:xuepan :参与 :e7 .
+:xiangling :参与 :e7 .
+:xueyima :参与 :e7 .
+:baochai :参与 :e7 .
+:baoyu :参与 :e8 .
+:keqing :参与 :e8 .
+:xiren :参与 :e8 .
+:liulaolao :参与 :e9 .
+:gouer :参与 :e9 .
+:zhouruijia :参与 :e9 .
+:xifeng :参与 :e9 .
+:pinger :参与 :e9 .
+:zhouruijia :参与 :e10 .
+:baochai :参与 :e10 .
+:baoyu :参与 :e10 .
+:qinzhong :参与 :e10 .
+:jinrong :参与 :e10 .
+:limomo :参与 :e10 .
+:qianxue :参与 :e10 .
+:jiadairu :参与 :e10 .
+:keqing :参与 :e11 .
+:zhangyoushi :参与 :e11 .
+:fengziying :参与 :e11 .
+:jiazhen :参与 :e11 .
+:youshi :参与 :e11 .
+:jiarui :参与 :e12 .
+:xifeng :参与 :e12 .
+:keqing :参与 :e13 .
+:jiazhen :参与 :e13 .
+:youshi :参与 :e13 .
+:jiarong :参与 :e13 .
+:xifeng :参与 :e13 .
+:daiquan :参与 :e13 .
+:xifeng :参与 :e14 .
+:pinger :参与 :e14 .
+:qinzhong :参与 :e14 .
+:zhineng :参与 :e14 .
+:shuirong :参与 :e15 .
+:baoyu :参与 :e15 .
+:qinzhong :参与 :e15 .
+:zhineng :参与 :e15 .
+:qinye :参与 :e15 .
+:jialian :参与 :e15 .
+:daiyu :参与 :e15 .
+:linruhai :参与 :e15 .
+:yuanchun :参与 :e16 .
+:jiamu :参与 :e16 .
+:jiazheng :参与 :e16 .
+:jiaqiang :参与 :e16 .
+:baoyu :参与 :e17 .
+:jiazheng :参与 :e17 .
+:yuanchun :参与 :e17 .
+:jiamu :参与 :e17 .
+:miaoyu :参与 :e17 .
+:daiyu :参与 :e17 .
+:baochai :参与 :e17 .
+:xiren :参与 :e18 .
+:baoyu :参与 :e18 .
+:limomo :参与 :e18 .
+:jialian :参与 :e18 .
+:duoguniang :参与 :e18 .
+:pinger :参与 :e18 .
+:sier :参与 :e18 .
+:qiaojie :参与 :e18 .
+:daiyu :参与 :e19 .
+:baoyu :参与 :e19 .
+:jiayun :参与 :e19 .
+:xiaohong :参与 :e19 .
+:mingyan :参与 :e19 .
+:jiaqin :参与 :e19 .
+:nier :参与 :e19 .
+:pushiren :参与 :e19 .
+:zhaoyiniang :参与 :e20 .
+:madaopo :参与 :e20 .
+:xifeng :参与 :e20 .
+:baoyu :参与 :e20 .
+:daiyu :参与 :e21 .
+:baochai :参与 :e21 .
+:baoyu :参与 :e21 .
+:xiaohong :参与 :e21 .
+:tanchun :参与 :e21 .
+:baoyu :参与 :e22 .
+:yuhan :参与 :e22 .
+:xuepan :参与 :e22 .
+:fengziying :参与 :e22 .
+:xiren :参与 :e22 .
+:jiamu :参与 :e23 .
+:zhangdaoshi :参与 :e23 .
+:daiyu :参与 :e23 .
+:baoyu :参与 :e23 .
+:lingguan :参与 :e23 .
+:jiaqiang :参与 :e23 .
+:jinchan :参与 :e24 .
+:wangfuren :参与 :e24 .
+:baoyu :参与 :e24 .
+:qingwen :参与 :e24 .
+:yuchan :参与 :e24 .
+:baoyu :参与 :e25 .
+:jiazheng :参与 :e25 .
+:jiahuan :参与 :e25 .
+:zhongshunwang :参与 :e25 .
+:yuhan :参与 :e25 .
+:daiyu :参与 :e25 .
+:baochai :参与 :e25 .
+:xiren :参与 :e25 .
+:yuchan :参与 :e26 .
+:baoyu :参与 :e26 .
+:baochai :参与 :e26 .
+:xiren :参与 :e26 .
+:lingguan :参与 :e26 .
+:tanchun :参与 :e27 .
+:daiyu :参与 :e27 .
+:baochai :参与 :e27 .
+:xiangyun :参与 :e27 .
+:liwan :参与 :e27 .
+:baoyu :参与 :e27 .
+:xichun :参与 :e27 .
+:yingchun :参与 :e27 .
+:liulaolao :参与 :e28 .
+:jiamu :参与 :e28 .
+:xifeng :参与 :e28 .
+:miaoyu :参与 :e28 .
+:baner :参与 :e28 .
+:qiaojie :参与 :e28 .
+:daiyu :参与 :e28 .
+:pinger :参与 :e28 .
+:baoyu :参与 :e28 .
+:baochai :参与 :e28 .
+:baoyu :参与 :e29 .
+:jinchan :参与 :e29 .
+:xifeng :参与 :e29 .
+:jialian :参与 :e29 .
+:pinger :参与 :e29 .
+:baoerjia :参与 :e29 .
+:mingyan :参与 :e29 .
+:daiyu :参与 :e30 .
+:baochai :参与 :e30 .
+:xifeng :参与 :e30 .
+:yuanyang :参与 :e31 .
+:jiashe :参与 :e31 .
+:xingfuren :参与 :e31 .
+:jiamu :参与 :e31 .
+:xianglian :参与 :e31 .
+:xuepan :参与 :e31 .
+:laida :参与 :e31 .
+:xiangling :参与 :e32 .
+:daiyu :参与 :e32 .
+:shidaizi :参与 :e32 .
+:jiashe :参与 :e32 .
+:yucun :参与 :e32 .
+:baochai :参与 :e32 .
+:baoqin :参与 :e33 .
+:xiangyun :参与 :e33 .
+:daiyu :参与 :e33 .
+:baochai :参与 :e33 .
+:tanchun :参与 :e33 .
+:liwen :参与 :e33 .
+:xingqiuyan :参与 :e33 .
+:xueke :参与 :e33 .
+:baoyu :参与 :e33 .
+:qingwen :参与 :e33 .
+:hujunrong :参与 :e33 .
+:xiren :参与 :e33 .
+:qingwen :参与 :e34 .
+:baoyu :参与 :e34 .
+:sheyue :参与 :e34 .
+:zhuier :参与 :e34 .
+:wujinxiao :参与 :e35 .
+:jiazhen :参与 :e35 .
+:jiamu :参与 :e35 .
+:xifeng :参与 :e35 .
+:baoyu :参与 :e35 .
+:tanchun :参与 :e36 .
+:baochai :参与 :e36 .
+:liwan :参与 :e36 .
+:pinger :参与 :e36 .
+:zhaoyiniang :参与 :e36 .
+:zhenbaoyu :参与 :e36 .
+:zijun :参与 :e37 .
+:baoyu :参与 :e37 .
+:daiyu :参与 :e37 .
+:xueyima :参与 :e37 .
+:xingqiuyan :参与 :e37 .
+:fangguan :参与 :e38 .
+:chunyan :参与 :e38 .
+:wuer :参与 :e38 .
+:liusao :参与 :e38 .
+:caiyun :参与 :e38 .
+:tanchun :参与 :e38 .
+:pinger :参与 :e38 .
+:baoyu :参与 :e38 .
+:xiangyun :参与 :e39 .
+:xiangling :参与 :e39 .
+:baoyu :参与 :e39 .
+:baochai :参与 :e39 .
+:daiyu :参与 :e39 .
+:tanchun :参与 :e39 .
+:sheyue :参与 :e39 .
+:fangguan :参与 :e39 .
+:cuilv :参与 :e39 .
+:jiajing :参与 :e40 .
+:youshi :参与 :e40 .
+:jiazhen :参与 :e40 .
+:daiyu :参与 :e40 .
+:baoyu :参与 :e40 .
+:jiarong :参与 :e40 .
+:jialian :参与 :e41 .
+:youerjie :参与 :e41 .
+:yousanjie :参与 :e41 .
+:xinger :参与 :e41 .
+:youshi :参与 :e41 .
+:jiazhen :参与 :e41 .
+:yousanjie :参与 :e42 .
+:xianglian :参与 :e42 .
+:baoyu :参与 :e42 .
+:jialian :参与 :e42 .
+:xifeng :参与 :e43 .
+:youerjie :参与 :e43 .
+:jialian :参与 :e43 .
+:youshi :参与 :e43 .
+:hujunrong :参与 :e43 .
+:daiyu :参与 :e44 .
+:xiangyun :参与 :e44 .
+:tanchun :参与 :e44 .
+:baochai :参与 :e44 .
+:baoyu :参与 :e44 .
+:jiamu :参与 :e45 .
+:yuanyang :参与 :e45 .
+:siqi :参与 :e45 .
+:panyouan :参与 :e45 .
+:xifeng :参与 :e45 .
+:laiwang :参与 :e45 .
+:caixia :参与 :e45 .
+:wangshanbao :参与 :e46 .
+:tanchun :参与 :e46 .
+:qingwen :参与 :e46 .
+:siqi :参与 :e46 .
+:ruhua :参与 :e46 .
+:xichun :参与 :e46 .
+:xifeng :参与 :e46 .
+:wangfuren :参与 :e46 .
+:baoyu :参与 :e46 .
+:zhenbaoyu :参与 :e46 .
+:jiazhen :参与 :e47 .
+:jiamu :参与 :e47 .
+:daiyu :参与 :e47 .
+:xiangyun :参与 :e47 .
+:miaoyu :参与 :e47 .
+:qingwen :参与 :e48 .
+:baoyu :参与 :e48 .
+:wangfuren :参与 :e48 .
+:xiren :参与 :e48 .
+:fangguan :参与 :e48 .
+:duoguniang :参与 :e48 .
+:jiazheng :参与 :e49 .
+:baoyu :参与 :e49 .
+:yingchun :参与 :e50 .
+:shaozu :参与 :e50 .
+:jiashe :参与 :e50 .
+:daiyu :参与 :e50 .
+:xuepan :参与 :e51 .
+:jingui :参与 :e51 .
+:xiangling :参与 :e51 .
+:baoyu :参与 :e51 .
+:yitie :参与 :e51 .
