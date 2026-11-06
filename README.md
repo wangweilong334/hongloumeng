@@ -2,7 +2,7 @@
 
 > 满纸荒唐言，一把辛酸泪。
 
-一份读《红楼梦》前八十回的交互图鉴，由《红楼梦脂评汇校本》的正文与脂批整理而成，打开浏览器即可翻阅。129 位人物写明年岁、正文提及次数和相互关系；书中地理按周汝昌「京—宁双城」说落到今日省界，并重建荣宁二府与大观园平面；71 则大事按红楼纪年逐日开列；117 篇诗、词、曲、判词与联谜可按体裁检索；这些实例再连成一张 3445 条三元组的知识图谱。人物与情节的画，取自清代改琦《红楼梦图咏》和孙温《绘全本红楼梦》，全部嵌在页面中，不联网也能看。
+一份读《红楼梦》前八十回的交互图鉴，由《红楼梦脂评汇校本》的正文与脂批整理而成，打开浏览器即可翻阅。129 位人物写明年岁、正文提及次数和相互关系；书中地理按周汝昌「京—宁双城」说落到今日省界，并重建荣宁二府与大观园平面；85 则大事按红楼纪年逐日开列；117 篇诗、词、曲、判词与联谜可按体裁检索；这些实例再连成一张 3496 条三元组的知识图谱。人物与情节的画，取自清代改琦《红楼梦图咏》和孙温《绘全本红楼梦》，全部嵌在页面中，不联网也能看。
 
 ## 能看什么
 
@@ -10,10 +10,10 @@
 
 - **章节解读**：前八十回逐回阅读。回目照录脂评汇校本（甲戌本系统，与通行本多有不同；第十七、十八回未分回，第八十回原回目阙，均按汇校本标「续」）。每一回有白话速览，并转述脂砚斋、鲁迅、俞平伯、周汝昌、张爱玲、王昆仑、蔡义江、蒋勋、白先勇、欧丽娟、刘心武等人的看法，注明出处；有争议处标明是一家之言。可用键盘 ← / → 翻回。
 - **人物谱**：129 人，按贾、史、王、薛、林、甄、官场市井、方外筛选。每人有身份、外号、生卒与虚岁、首次出现的回目、正文提及次数，以及血亲、主仆、情仇等关系。
-- **逐日事件**：71 条，事事有日期。原文写明的照录；只写节令或由情节推定的，标「约」和「推定」。月份仍是书中农历，写明时辰的附上清制与现代钟点的对照，并摘一句汇校本原文。涉及人物标注当时虚岁。
+- **逐日事件**：85 条，事事有日期。原文写明的照录；只写节令或由情节推定的，标「约」和「推定」。月份仍是书中农历，写明时辰的附上清制与现代钟点的对照，并摘一句汇校本原文。涉及人物标注当时虚岁。
 - **地图**：三层。一是今日省级行政区底图上的红楼地名（京都即今北京，金陵即今南京，姑苏、扬州为实录；大如州、平安州、黑山村、大荒山等推考落点以虚线圈出，并注明存疑或一家之言）；二是荣宁二府总图；三是依游园次第约拟的大观园平面。可拖拽、缩放。点开一地，能看到这里发生的事和住过的人。底图只作文史示意，不作行政区划依据。
 - **红楼撷珍**：117 篇，体裁含诗、词、曲、歌、联、文、偈铭、谜、令、谶。判词和曲子注明所写之人，对联匾额注明所挂之处，酒令花签注明所在宴席；每篇有出处、背景、作者，并连到相关人物、事件和地点。
-- **本体建模**：先看模型层（TBox）的类与属性，再看实例层（ABox），然后是可拖拽的知识图谱（3445 条三元组）。圆点大小对应正文提及次数，连线是人物、事件、地点、作品之间的对象属性。另有一段 OWL / Turtle 预览。
+- **本体建模**：先看模型层（TBox）的类与属性，再看实例层（ABox），然后是可拖拽的知识图谱（3496 条三元组）。圆点大小对应正文提及次数，连线是人物、事件、地点、作品之间的对象属性。另有一段 OWL / Turtle 预览。
 
 年龄按虚岁、以宝玉出生之年为红楼元年推算；书中前后矛盾处照录原文，未写清的加「约」。推定日期和存疑地名都留着角标，不把推考写成定论。
 
@@ -35,12 +35,14 @@
 
 | 文件 | 内容 |
 | --- | --- |
-| `data/honglou_data.json` | 页面所用的结构化数据：129 人、54 地、51 条事件、202 组人物关系、14 条脂批、7 段红楼纪年、三层地图、80 回的回目与白话速览及名家解读、117 篇撷珍、71 条逐日记录，以及本体元数据（其中 `onto.triples` 为 3445）。另含省级边界和内嵌图片及其图注。 |
+| `data/honglou_data.json` | 页面所用的结构化数据：129 人、54 地、52 条事件、202 组人物关系、14 条脂批、7 段红楼纪年、三层地图、80 回的回目与白话速览及名家解读、117 篇撷珍、85 条逐日记录，以及本体元数据（其中 `onto.triples` 为 3496）。另含省级边界和内嵌图片及其图注。 |
 | `data/chapters.json` | 前八十回的解码文本。每回有回目、`body`（正文）和 `comments`（从汇校本版面解出的眉批、侧批等；各回合计 5634 条，其中夹有回目标记）。 |
 | `data/mentions.json` | 159 个姓名与称呼的出现统计：首次出现的回目、该回次数、总次数，以及出现过的回次列表。人物谱中的提及次数，是按正文里的姓名、简称和外号另行归并后的结果。 |
 | `data/ontology.ttl` | 同一套知识的 OWL / Turtle 序列化，见下节。 |
 
-`honglou_data.json` 里的「事件」是 51 条情节单元；「逐日事件」是 71 条带日期的流水。二者通过字段互相引用，不是同一份清单。
+`honglou_data.json` 里的「事件」是 52 条情节单元；「逐日事件」是 85 条带日期的流水。二者通过字段互相引用，不是同一份清单。
+
+纪年在库里有两套，不要混着读。`eras`、`event.y`、`event.hly`、`event.season` 和逐日的 `y` 用的是绝对年：以宝玉出生为红楼元年，从脂批和书中年龄逆推，三十六回到三十七回之间空着十四、十五年，这两年没有逐日。`years` 另把前八十回压成红楼元年到六年，只作叙事压缩，不拿来改写 `season`。凡属推定，页面上仍标「约」或在说明里写明是一家之言。
 
 ## 本体
 
@@ -48,7 +50,7 @@
 
 模型层定义七个顶层类：**人物、事件、地点、家族、纪年、脂批、作品**。人物按身份分为主子姻眷、官宦皇亲、仆婢仆役、优伶伶人、医卜清客、方外僧道、市井平民；事件与地点亦有子类（如风波冲突、诗社雅集、园林院苑、府邸庄园）。对象属性包括血亲眷属、夫妻妾室、主仆役使、朋友知交、情缘私恋、仇怨对立，以及「参与」「发生于」「居于」「撰作」「所咏」等，把人、事、地、作品连在一起。数据属性记录姓名、外号、生卒、提及次数、回次和名句等。
 
-实例层计入 129 人、51 事、54 地、6 个家族、7 段纪年、14 条脂批、117 篇作品。页面知识图谱中的三元组共计 3445 条。
+实例层计入 129 人、52 事、54 地、6 个家族、7 段纪年、14 条脂批、117 篇作品。页面知识图谱中的三元组共计 3496 条。
 
 页内「OWL / Turtle 序列」只嵌了预览。完整文件是 `data/ontology.ttl`。该栏的下载按钮指向与 `index.html` 同级的 `红楼梦本体.ttl`；仓库里不放这个副本，阅读和图谱也不依赖它。
 
@@ -66,4 +68,4 @@
 
 ## English
 
-*Dream of the Red Chamber: People, Events, and Places* is a self-contained one-page guide to the first 80 chapters of the Zhiyan Zhai collated text (脂评汇校本). It includes 129 characters with ages, mention counts, and relationships; a present-day map of the novel’s geography following Zhou Ruchang’s Beijing–Nanjing “two cities” theory, plus reconstructed plans of the Rong and Ning mansions and the Grand View Garden; 71 major events set out day by day; 117 poems and prophetic verses; and a knowledge graph of 3,445 triples. Character art comes from Gai Qi’s *Illustrated Poems on the Dream of the Red Chamber* and Sun Wen’s complete Qing-dynasty illustration cycle. Open `index.html` in a browser. Once GitHub Pages is enabled from the root of `main`, the site will be at <https://wangweilong334.github.io/hongloumeng/>.
+*Dream of the Red Chamber: People, Events, and Places* is a self-contained one-page guide to the first 80 chapters of the Zhiyan Zhai collated text (脂评汇校本). It includes 129 characters with ages, mention counts, and relationships; a present-day map of the novel’s geography following Zhou Ruchang’s Beijing–Nanjing “two cities” theory, plus reconstructed plans of the Rong and Ning mansions and the Grand View Garden; 85 major events set out day by day; 117 poems and prophetic verses; and a knowledge graph of 3,496 triples. Character art comes from Gai Qi’s *Illustrated Poems on the Dream of the Red Chamber* and Sun Wen’s complete Qing-dynasty illustration cycle. Open `index.html` in a browser. Once GitHub Pages is enabled from the root of `main`, the site will be at <https://wangweilong334.github.io/hongloumeng/>.

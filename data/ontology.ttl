@@ -173,13 +173,13 @@
 :g_santi a :作品 ; :hasTitle "旷性怡情等三首（迎春 · 惜春 · 探春）" ; :gemKind "诗" ; :inChapter 18 ; :hasDesc "三春应制各题一景，才情高下与各人判词互映；探春之作气象最阔。" ; :famousLine "山水横拖千里外，楼台高起五云中" ; :depicts :e17 ; :composedAt :daguan ; :features :yingchun ; :features :xichun ; :features :tanchun .
 :g_xuzhuangzi a :作品 ; :hasTitle "续〈庄子·胠箧〉" ; :gemKind "文" ; :inChapter 21 ; :hasDesc "愤极之戏笔，次日酒醒即'焚花散麝'成戏语；黛玉题绝于后，遂有一场'作践南华'公案。" ; :famousLine "戕宝钗之仙姿，灰黛玉之灵窍" ; :authoredBy :baoyu ; :depicts :e18 ; :composedAt :yihong ; :features :baoyu ; :features :xiren ; :features :daiyu ; :features :baochai .
 :g_daiyu_ti a :作品 ; :hasTitle "黛玉题绝（嘲宝玉续庄）" ; :gemKind "诗" ; :inChapter 21 ; :hasDesc "四句辛辣，直驳宝玉'焚花散麝'之论；次日宝玉见之，笑自己'多事'。" ; :famousLine "作践南华庄子因" ; :authoredBy :daiyu ; :depicts :e18 ; :composedAt :yihong ; :features :daiyu ; :features :baoyu .
-:g_canchan a :作品 ; :hasTitle "宝玉参禅偈（并黛玉续笔）" ; :gemKind "偈铭" ; :inChapter 22 ; :hasDesc "宝玉自以为悟，黛玉续二句，宝钗谓'实在这丫头悟得彻底'——比出禅机高下，亦是三人关系之微缩。" ; :famousLine "无立足境，是方干净" ; :authoredBy :baoyu ; :composedAt :rongfu ; :features :baoyu ; :features :daiyu ; :features :baochai .
-:g_jishengcao a :作品 ; :hasTitle "寄生草（《鲁智深醉闹五台山》）" ; :gemKind "曲" ; :inChapter 22 ; :hasDesc "宝钗念曲而宝玉顿悟，遂有参禅偈一场公案；'赤条条来去无牵挂'为宝玉日后出家之先声。" ; :famousLine "赤条条来去无牵挂" ; :composedAt :rongfu ; :features :baochai ; :features :baoyu .
-:g_mi_yuanchun a :作品 ; :hasTitle "爆竹谜（元春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "一响而散，应元春荣华之短促；贾政愈想愈闷，'悲谶语'三字点题。" ; :famousLine "一声震得人方恐" ; :authoredBy :yuanchun ; :composedAt :rongfu ; :features :yuanchun .
-:g_mi_yingchun a :作品 ; :hasTitle "算盘谜（迎春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "打动乱如麻，正迎春懦弱任人之谶——'算盘'即身不由己。" ; :famousLine "天运人功理不穷" ; :authoredBy :yingchun ; :composedAt :rongfu ; :features :yingchun .
-:g_mi_tanchun a :作品 ; :hasTitle "风筝谜（探春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "与判词'清明涕送江边望'互证——风筝断线，远适不归之谶。" ; :famousLine "游丝一断浑无力" ; :authoredBy :tanchun ; :composedAt :rongfu ; :features :tanchun .
-:g_mi_xichun a :作品 ; :hasTitle "海灯谜（惜春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "佛前海灯，应'独卧青灯古佛旁'之判；贾政叹'此物还倒罢了'。" ; :famousLine "性中自有大光明" ; :authoredBy :xichun ; :composedAt :rongfu ; :features :xichun .
-:g_mi_baochai a :作品 ; :hasTitle "更香谜（宝钗）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "更香燃尽方知时过——'焦首''煎心'写尽日后岁月；脂本此谜归属有异文，汇校依庚辰本列于宝钗名下。" ; :famousLine "焦首朝朝还暮暮，煎心日日复年年" ; :authoredBy :baochai ; :composedAt :rongfu ; :features :baochai .
+:g_canchan a :作品 ; :hasTitle "宝玉参禅偈（并黛玉续笔）" ; :gemKind "偈铭" ; :inChapter 22 ; :hasDesc "宝玉自以为悟，黛玉续二句，宝钗谓'实在这丫头悟得彻底'——比出禅机高下，亦是三人关系之微缩。" ; :famousLine "无立足境，是方干净" ; :authoredBy :baoyu ; :composedAt :rongfu ; :features :baoyu ; :features :daiyu ; :features :baochai ; :depicts :e52 .
+:g_jishengcao a :作品 ; :hasTitle "寄生草（《鲁智深醉闹五台山》）" ; :gemKind "曲" ; :inChapter 22 ; :hasDesc "宝钗念曲而宝玉顿悟，遂有参禅偈一场公案；'赤条条来去无牵挂'为宝玉日后出家之先声。" ; :famousLine "赤条条来去无牵挂" ; :composedAt :rongfu ; :features :baochai ; :features :baoyu ; :depicts :e52 .
+:g_mi_yuanchun a :作品 ; :hasTitle "爆竹谜（元春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "一响而散，应元春荣华之短促；贾政愈想愈闷，'悲谶语'三字点题。" ; :famousLine "一声震得人方恐" ; :authoredBy :yuanchun ; :composedAt :rongfu ; :features :yuanchun ; :depicts :e52 .
+:g_mi_yingchun a :作品 ; :hasTitle "算盘谜（迎春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "打动乱如麻，正迎春懦弱任人之谶——'算盘'即身不由己。" ; :famousLine "天运人功理不穷" ; :authoredBy :yingchun ; :composedAt :rongfu ; :features :yingchun ; :depicts :e52 .
+:g_mi_tanchun a :作品 ; :hasTitle "风筝谜（探春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "与判词'清明涕送江边望'互证——风筝断线，远适不归之谶。" ; :famousLine "游丝一断浑无力" ; :authoredBy :tanchun ; :composedAt :rongfu ; :features :tanchun ; :depicts :e52 .
+:g_mi_xichun a :作品 ; :hasTitle "海灯谜（惜春）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "佛前海灯，应'独卧青灯古佛旁'之判；贾政叹'此物还倒罢了'。" ; :famousLine "性中自有大光明" ; :authoredBy :xichun ; :composedAt :rongfu ; :features :xichun ; :depicts :e52 .
+:g_mi_baochai a :作品 ; :hasTitle "更香谜（宝钗）" ; :gemKind "谜" ; :inChapter 22 ; :hasDesc "更香燃尽方知时过——'焦首''煎心'写尽日后岁月；脂本此谜归属有异文，汇校依庚辰本列于宝钗名下。" ; :famousLine "焦首朝朝还暮暮，煎心日日复年年" ; :authoredBy :baochai ; :composedAt :rongfu ; :features :baochai ; :depicts :e52 .
 :g_sishi a :作品 ; :hasTitle "四时即事诗四首" ; :gemKind "诗" ; :inChapter 23 ; :hasDesc "大观园第一段安富尊荣岁月之写真；'麝月''檀云''茜雪'诸名嵌入句中，脂批谓伏丫头名姓。" ; :famousLine "窗明麝月开宫镜，室霭檀云品御香" ; :authoredBy :baoyu ; :depicts :e19 ; :composedAt :yihong ; :features :baoyu .
 :g_chisong a :作品 ; :hasTitle "癞僧持颂（沉酣一梦）" ; :gemKind "偈铭" ; :inChapter 25 ; :hasDesc "和尚摸玉长叹'青埂峰一别，展眼已过十三载'——通灵玉之来历与年限由此补足；持颂一毕，叔嫂遂愈。" ; :famousLine "沉酣一梦终须醒" ; :depicts :e20 ; :composedAt :rongfu ; :features :baoyu ; :features :xifeng .
 :g_zanghua a :作品 ; :hasTitle "葬花吟" ; :gemKind "诗" ; :inChapter 27 ; :hasDesc "黛玉诗谶之首，亦全书女儿命运之总哀；脂批谓'埋香冢葬花乃诸艳归源'，宝玉恸倒山坡之上。" ; :famousLine "质本洁来还洁去，强于污淖陷渠沟" ; :authoredBy :daiyu ; :depicts :e21 ; :composedAt :huazhong ; :features :daiyu ; :features :baoyu .
@@ -629,56 +629,58 @@
 
 ########## 实例层 ABox · 事件 ##########
 :e1 a :仙幻谶语 ; :hasTitle "女娲弃石·绛珠还泪" ; :hasSeason "洪荒楔子" ; :inChapter 1 ; :hasDesc "大荒山无稽崖炼剩一石，僧道大展幻术携入红尘；绛珠仙草欲以一生眼泪还神瑛侍者灌溉之恩。" ; :occursAt :dahuangshan .
-:e2 a :仙幻谶语 ; :hasTitle "甄士隐梦幻识通灵" ; :hasDate "红楼前一年·夏梦识通灵 · 中秋赠银" ; :hasSeason "红楼元年·夏" ; :inChapter 1 ; :hasDesc "姑苏乡宦士隐梦入太虚见通灵玉；贾雨村寄居葫芦庙，中秋对月吟联，得士隐赠银赴考。" ; :inEra :era1 ; :occursAt :gusu .
+:e2 a :仙幻谶语 ; :hasTitle "甄士隐梦幻识通灵" ; :hasDate "红楼前一年·夏梦识通灵 · 中秋赠银" ; :hasSeason "红楼前一年·夏" ; :inChapter 1 ; :hasDesc "姑苏乡宦士隐梦入太虚见通灵玉；贾雨村寄居葫芦庙，中秋对月吟联，得士隐赠银赴考。" ; :inEra :era1 ; :occursAt :gusu .
 :e3 a :身世遭际 ; :hasTitle "元宵失英莲·葫芦庙火" ; :hasDate "红楼元年·正月十五失英莲 · 三月十五庙火" ; :hasSeason "红楼元年·元宵/三月十五" ; :inChapter 1 ; :hasDesc "元宵霍启看灯失英莲；三月十五葫芦庙炸供起火，甄家烧作白地，士隐贫病投岳丈封肃。" ; :inEra :era1 ; :occursAt :gusu .
 :e4 a :仙幻谶语 ; :hasTitle "《好了歌》·士隐出家" ; :hasDate "红楼元年·秋后出家" ; :hasSeason "红楼元年·中秋后" ; :inChapter 1 ; :hasDesc "跛足道人唱好了歌，士隐彻悟作注，疯癫随道人而去——“真事隐去”。" ; :inEra :era1 ; :occursAt :gusu .
-:e5 a :宦途经济 ; :hasTitle "冷子兴演说荣国府" ; :hasDate "红楼六年·维扬塾中闲话" ; :hasSeason "红楼元年" ; :inChapter 2 ; :hasDesc "村肆闲话，贾府族谱家势娓娓道来；宝玉衔玉而生，元春入宫，探春迎春惜春各有来历。" ; :inEra :era2 .
-:e6 a :身世遭际 ; :hasTitle "林黛玉进贾府" ; :hasDate "红楼七年·出月初二入都" ; :hasSeason "红楼元年" ; :inChapter 3 ; :hasDesc "母丧进京，步步留心时时在意；宝黛初会便觉似曾相识，宝玉摔玉痴狂初现。" ; :inEra :era2 ; :occursAt :rongfu .
-:e7 a :宦途经济 ; :hasTitle "葫芦僧判断葫芦案" ; :hasDate "红楼七年·是年（雨村起复）" ; :hasSeason "红楼元年" ; :inChapter 4 ; :hasDesc "雨村起复应天府，门子献护官符；徇情枉法放了薛蟠，任英莲一去无踪。薛家同进京都。" ; :inEra :era2 ; :occursAt :yingtian ; :occursAt :jinling .
-:e8 a :仙幻谶语 ; :hasTitle "宝玉梦游太虚幻境" ; :hasDate "红楼八年·正月（宁府梅开）" ; :hasSeason "红楼元年" ; :inChapter 5, 6 ; :hasDesc "警幻以茶酒曲册点化宝玉：金陵十二钗正副册与红楼梦曲尽演诸艳终身——全书总谶；袭人初试云雨。" ; :inEra :era2 ; :occursAt :taixu .
-:e9 a :宦途经济 ; :hasTitle "刘姥姥一进荣国府" ; :hasDate "红楼八年·十月（秋尽冬初）" ; :hasSeason "红楼元年·秋末冬初" ; :inChapter 6 ; :hasDesc "家计无着打抽丰，周瑞家的引进凤姐院，得银二十两——“偶因济刘氏，巧得遇恩人”伏线。" ; :inEra :era2 ; :occursAt :rongfu .
-:e10 a :宦途经济 ; :hasTitle "送宫花·比通灵·闹学堂" ; :hasDate "红楼八年·冬（送宫花·比通灵）· 次年春（闹学堂）" ; :hasSeason "红楼元年" ; :inChapter 7, 8, 9 ; :hasDesc "周瑞家的送宫花一路冷眼；金锁与通灵玉初对，冷香丸说病，枫露茶撵茜雪；家塾顽童大闹。" ; :inEra :era2 ; :occursAt :rongfu ; :occursAt :jiashu .
-:e11 a :病丧生死 ; :hasTitle "可卿病笃·张友士论病" ; :hasDate "红楼九年·冬至前后（十一月三十冬至）" ; :hasSeason "红楼二年·冬至（十一月三十）" ; :inChapter 10, 11 ; :hasDesc "可卿经年不愈，冯紫英荐张友士细穷源：“这病总是忧虑伤脾”，虑到冬底果然。" ; :inEra :era3 ; :occursAt :ningfu .
-:e12 a :风波冲突 ; :hasTitle "毒设相思局·贾瑞殒命" ; :hasDate "红楼十年·腊月设局 · 次年腊月尽殒命" ; :hasSeason "红楼二年" ; :inChapter 11, 12 ; :hasDesc "贾瑞觊觎凤姐，凤姐设局寒夜粪坑两番捉弄；风月宝鉴正面骷髅背面幻影，正照而亡。" ; :inEra :era3 ; :occursAt :rongfu ; :occursAt :ningfu .
-:e13 a :病丧生死 ; :hasTitle "秦可卿之死·协理宁国府" ; :hasDate "红楼十二年·九月下旬起丧（四十九日）" ; :hasSeason "红楼二年" ; :inChapter 13, 14, 15 ; :hasDesc "可卿丧礼逾制奢华，珍爷哭得如泪人；凤姐协理宁府立威；脂批：原“淫丧天香楼”一节被命芹溪删去。" ; :inEra :era3 ; :occursAt :ningfu ; :annotatedBy :q_tianxianglou .
-:e14 a :风波冲突 ; :hasTitle "凤姐弄权铁槛寺" ; :hasDate "红楼十二年·丧仪间（停灵京郊）" ; :hasSeason "红楼二年" ; :inChapter 15 ; :hasDesc "停灵水月庵，净虚老尼说合退婚讼事，三千两到手——“自此凤姐胆识愈壮，以后所作所为诸如此类，不可胜数”。" ; :inEra :era3 ; :occursAt :tiekan .
-:e15 a :病丧生死 ; :hasTitle "北静王路祭·秦钟夭逝" ; :hasDate "红楼十二年·九-十月路祭 · 冬秦钟夭逝" ; :hasSeason "红楼二年" ; :inChapter 14, 15, 16 ; :hasDesc "北静王与宝玉结交赠鹡鸰念珠；贾琏陪黛玉奔扬州父丧；秦钟情陷水月庵，业亡身殒。" ; :inEra :era3 ; :occursAt :tiekan ; :occursAt :yangzhou .
-:e16 a :宦途经济 ; :hasTitle "元才加封·筹建省亲别墅" ; :hasDate "红楼十二年·冬（才选凤藻宫 · 兴工）" ; :hasSeason "红楼二年" ; :inChapter 16 ; :hasDesc "元春晋封凤藻宫尚书加封贤德妃；贾府大兴土木营建省亲别墅，贾蔷下姑苏采买十二官。" ; :inEra :era3 ; :occursAt :dudu ; :occursAt :daguan .
-:e17 a :节庆祭祀 ; :hasTitle "试才题对额·元妃省亲" ; :hasDate "红楼十三年·正月题对额 · 正月十五元宵省亲" ; :hasSeason "红楼三年·正月十五" ; :inChapter 17, 18 ; :hasDesc "贾政携宝玉游园题咏，一园景致初得名；省亲夜灯火如昼，烈火烹油之盛、骨肉分离之泪；妙玉入园。" ; :inEra :era4 ; :occursAt :daguan .
-:e18 a :宦途经济 ; :hasTitle "袭人箴宝玉·平儿救贾琏" ; :hasDate "红楼十三年·正月（元宵后）· 二月" ; :hasSeason "红楼三年" ; :inChapter 19, 20, 21 ; :hasDesc "花袭人娇嗔箴玉，李嬷嬷拄杖骂袭人；大姐儿（巧姐）出痘，贾琏私会多姑娘，平儿软语遮掩。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
-:e19 a :情缘际会 ; :hasTitle "共读西厢·芸红遗帕" ; :hasDate "红楼十三年·二月二十二搬入大观园" ; :hasSeason "红楼三年" ; :inChapter 23, 24 ; :hasDesc "元妃命姐妹入园，宝黛沁芳闸畔共读《会真记》初萌葬花意；贾芸谋差种树借醉金刚银，小红遗帕惹相思。" ; :inEra :era4 ; :occursAt :daguan ; :occursAt :qinfang ; :occursAt :huazhong .
-:e20 a :风波冲突 ; :hasTitle "魇魔法叔嫂逢五鬼" ; :hasDate "红楼十三年·三-四月（癞僧言「十三载」）" ; :hasSeason "红楼三年" ; :inChapter 25 ; :hasDesc "赵姨娘买通马道婆魇镇凤姐宝玉，叔嫂癫狂垂死；癞僧跛道持玉诵咒，一佛出世。" ; :inEra :era4 ; :occursAt :rongfu .
-:e21 a :情缘际会 ; :hasTitle "潇湘春困·滴翠亭扑蝶·泣残红" ; :hasDate "红楼十三年·四月二十六未时交芒种" ; :hasSeason "红楼三年·四月二十六芒种" ; :inChapter 26, 27 ; :hasDesc "黛玉春困幽情被窗外宝玉听去；宝钗滴翠亭扑蝶金蝉脱壳；芒种节黛玉泣残红，宝玉恸倒山坡。" ; :inEra :era4 ; :occursAt :xiaoxiang ; :occursAt :dicui ; :occursAt :huazhong .
-:e22 a :情缘际会 ; :hasTitle "蒋玉菡情赠茜香罗" ; :hasDate "红楼十三年·四月末（冯紫英家宴）" ; :hasSeason "红楼三年" ; :inChapter 28 ; :hasDesc "冯紫英家宴，宝玉琪官互赠汗巾；那条茜香罗日后系上袭人腰间。" ; :inEra :era4 .
-:e23 a :节庆祭祀 ; :hasTitle "清虚观打醮·龄官划蔷" ; :hasDate "红楼十三年·五月初一至初三打醮" ; :hasSeason "红楼三年·五月初一/端午" ; :inChapter 29, 30 ; :hasDesc "张道士提亲致宝黛口角砸玉；宝玉烈日窥龄官画“蔷”，痴及局外。" ; :inEra :era4 ; :occursAt :qingxu ; :occursAt :yihong ; :occursAt :lixiang .
-:e24 a :病丧生死 ; :hasTitle "金钏投井·撕扇千金一笑" ; :hasDate "红楼十三年·五月初四被撵 · 初五端阳撕扇 · 五月中投井" ; :hasSeason "红楼三年·端午" ; :inChapter 30, 31, 32 ; :hasDesc "宝玉金钏顽笑，王夫人掌掴撵逐，金钏含耻投井；晴雯撕扇一笑值千金。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
-:e25 a :风波冲突 ; :hasTitle "大承笞挞·题帕三绝" ; :hasDate "红楼十三年·六月（盛夏笞挞）" ; :hasSeason "红楼三年" ; :inChapter 33, 34 ; :hasDesc "忠顺王府索琪官、贾环进谗金钏事，贾政怒笞宝玉几毙；宝钗送药、黛玉题帕三首情诗。" ; :inEra :era4 ; :occursAt :rongfu .
-:e26 a :情缘际会 ; :hasTitle "莲叶羹·绣鸳鸯梦兆" ; :hasDate "红楼十三年·夏（莲叶羹·绣鸳鸯）" ; :hasSeason "红楼三年·夏" ; :inChapter 35, 36 ; :hasDesc "玉钏亲尝莲叶羹；宝钗绣鸳鸯坐上宝玉睡榻，正逢宝玉梦中喊骂“和尚道士的话如何信得，什么金玉姻缘”。" ; :inEra :era4 ; :occursAt :yihong ; :occursAt :lixiang .
-:e27 a :诗社雅集 ; :hasTitle "秋爽斋结海棠社·菊花诗" ; :hasDate "红楼十六年·八月二十贾政赴学差后 · 八月末结社" ; :hasSeason "红楼三年·秋" ; :inChapter 37, 38 ; :hasDesc "探春花笺邀社，海棠、菊花两番雅集：黛玉魁夺菊花诗，宝钗讽和螃蟹咏压卷。" ; :inEra :era5 ; :occursAt :qiushuang ; :occursAt :liaofeng .
-:e28 a :诗社雅集 ; :hasTitle "刘姥姥二进大观园" ; :hasDate "红楼十六年·八月末-九月初（两宴·品茶·醉卧）" ; :hasSeason "红楼三年·秋" ; :inChapter 39, 40, 41, 42 ; :hasDesc "瓜菜报恩，贾母留客：两宴大观园、三宣牙牌令、栊翠庵品茶、醉卧怡红院；“母蝗虫”雅谑补馀香。" ; :inEra :era5 ; :occursAt :daguan ; :occursAt :longcui ; :occursAt :yihong .
-:e29 a :风波冲突 ; :hasTitle "撮土为香·凤姐泼醋" ; :hasDate "红楼十六年·九月初二" ; :hasSeason "红楼三年·九月初二" ; :inChapter 43, 44 ; :hasDesc "凤姐生日攒金庆寿，宝玉私往水仙庵井台祭金钏；席间贾琏私通事发，凤姐泼醋，平儿理妆。" ; :inEra :era5 ; :occursAt :shuixian ; :occursAt :rongfu .
-:e30 a :诗社雅集 ; :hasTitle "金兰契·风雨词" ; :hasDate "红楼十六年·九月末-十月（秋雨）" ; :hasSeason "红楼三年·秋末" ; :inChapter 45 ; :hasDesc "宝钗兰言解疑癖，钗黛剖心成金兰；秋窗风雨夕，黛玉作《代别离》。" ; :inEra :era5 ; :occursAt :xiaoxiang .
-:e31 a :风波冲突 ; :hasTitle "鸳鸯抗婚·柳湘莲惩蟠" ; :hasDate "红楼十六年·十月初（眼前十月一上坟）" ; :hasSeason "红楼三年" ; :inChapter 46, 47 ; :hasDesc "贾赦强索鸳鸯，鸳鸯铰发立誓绝之；赖大家酒席上柳湘莲赚薛蟠荒郊痛打，惧祸远走。" ; :inEra :era5 ; :occursAt :rongfu .
-:e32 a :诗社雅集 ; :hasTitle "香菱学诗·石呆子扇案" ; :hasDate "红楼十六年·十月-十一月" ; :hasSeason "红楼三年·冬" ; :inChapter 48 ; :hasDesc "香菱苦吟终得梦中得句；贾雨村讹石呆子拖欠官银抄其古扇奉贾赦。" ; :inEra :era5 ; :occursAt :xiaoxiang ; :occursAt :hengwu .
-:e33 a :诗社雅集 ; :hasTitle "琉璃世界白雪红梅" ; :hasDate "红楼十六年·十一月-腊月（大雪）" ; :hasSeason "红楼三年·冬" ; :inChapter 49, 50, 51 ; :hasDesc "宝琴岫烟纹绮齐至，众芳联诗芦雪广；宝琴踏雪红梅，十首怀古诗谜悬千古；晴雯病中先遇胡庸医。" ; :inEra :era5 ; :occursAt :luxue ; :occursAt :hengwu .
-:e34 a :病丧生死 ; :hasTitle "病补雀金裘" ; :hasDate "红楼十六年·腊月（病补雀金裘）" ; :hasSeason "红楼三年·冬" ; :inChapter 52 ; :hasDesc "俄罗斯雀金裘烧洞无人能补，晴雯病重夜补，“勇”字当之；坠儿偷虾须镯事发被撵。" ; :inEra :era5 ; :occursAt :yihong .
-:e35 a :节庆祭祀 ; :hasTitle "除夕祭宗祠·元宵开夜宴" ; :hasDate "红楼十六年·腊月二十九-除夕祭宗祠 · 次年正月十五夜宴" ; :hasSeason "红楼四年·除夕/元宵" ; :inChapter 53, 54 ; :hasDesc "乌进孝进租一单写尽末世；宁府祭宗祠、荣府元宵夜宴，史太君破陈腐旧套，凤姐效戏彩斑衣。" ; :inEra :era5 ; :occursAt :ningfu ; :occursAt :rongfu ; :occursAt :heishan .
-:e36 a :宦途经济 ; :hasTitle "敏探春兴利除宿弊" ; :hasDate "红楼十七年·正月末（年事方过）" ; :hasSeason "红楼四年·春" ; :inChapter 55, 56 ; :hasDesc "凤姐病，探春理家开源节流，宝钗小惠全大体；甄府女眷进京，宝玉梦见甄宝玉。" ; :inEra :era6 ; :occursAt :qiushuang .
-:e37 a :情缘际会 ; :hasTitle "慧紫鹃情辞试忙玉" ; :hasDate "红楼十七年·二-三月（春困试玉）" ; :hasSeason "红楼四年" ; :inChapter 57 ; :hasDesc "紫鹃一句“回苏州去”，宝玉痴病大发满屋死寂；薛姨妈爱语慰痴颦，岫烟典衣暗写世情。" ; :inEra :era6 ; :occursAt :xiaoxiang ; :occursAt :yihong .
-:e38 a :风波冲突 ; :hasTitle "茉莉粉·蔷薇硝·玫瑰露" ; :hasDate "红楼十七年·三-五月（杏子阴·茉莉粉）" ; :hasSeason "红楼四年" ; :inChapter 58, 59, 60, 61 ; :hasDesc "十二官入园声势渐起，芳官与干娘斗气；柳五儿蒙冤被囚，平儿情权判冤决狱。" ; :inEra :era6 ; :occursAt :yihong ; :occursAt :luxue .
-:e39 a :节庆祭祀 ; :hasTitle "憨湘云醉眠芍药裀·群芳夜宴" ; :hasDate "红楼十七年·四月二十六生辰（红学一说）" ; :hasSeason "红楼四年·宝玉生辰（一说与芒种同日）" ; :inChapter 62, 63 ; :hasDesc "宝玉生日众芳掣签：宝钗牡丹“任是无情也动人”，湘云醉卧芍药，黛玉芙蓉“莫怨东风当自嗟”。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :yihong .
-:e40 a :病丧生死 ; :hasTitle "死金丹·五美吟" ; :hasDate "红楼十七年·四月廿六夜-五月（死金丹·五美吟）" ; :hasSeason "红楼四年" ; :inChapter 63, 64 ; :hasDesc "贾敬吞金服砂死于玄真观，尤氏独艳理亲丧；宝玉病愈题五美吟寄幽情。" ; :inEra :era6 ; :occursAt :xuanguan ; :occursAt :ningfu ; :occursAt :xiaoxiang .
-:e41 a :婚嫁姻缘 ; :hasTitle "贾二舍偷娶尤二姨" ; :hasDate "红楼十七年·六月（偷娶小花枝巷）" ; :hasSeason "红楼四年" ; :inChapter 65 ; :hasDesc "贾琏孝中偷娶尤二姐于小花枝巷；兴儿演说府中人物——“嘴甜心苦，两面三刀”。" ; :inEra :era6 ; :occursAt :ningfu .
-:e42 a :情缘际会 ; :hasTitle "鸳鸯剑下三姐魂·冷二郎入空门" ; :hasDate "红楼十七年·八-九月（鸳鸯剑下·入空门）" ; :hasSeason "红楼四年" ; :inChapter 66 ; :hasDesc "柳湘莲聘定尤三姐，闻其名悔婚索剑；三姐剑下自明心迹血溅当场，湘莲斩断尘缘随道人去。" ; :inEra :era6 .
-:e43 a :风波冲突 ; :hasTitle "酸凤姐大闹宁国府·尤二姐吞金" ; :hasDate "红楼十七年·九-腊月（借剑杀人）" ; :hasSeason "红楼四年" ; :inChapter 67, 68, 69 ; :hasDesc "凤姐闻讯赚二姐入大观园，唆张华都察院兴讼，大闹宁府索银；借剑杀人，二姐吞金自逝，腹中男胎亦堕。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :ningfu ; :occursAt :duchayuan .
-:e44 a :诗社雅集 ; :hasTitle "重建桃花社·柳絮词" ; :hasDate "红楼十八年·三月初二起社 · 暮春放风筝" ; :hasSeason "红楼五年·暮春" ; :inChapter 70 ; :hasDesc "黛玉桃花社重开，湘云柳絮词起兴；放风筝，探春凤凰一谶。" ; :inEra :era7 ; :occursAt :xiaoxiang ; :occursAt :daguan .
-:e45 a :节庆祭祀 ; :hasTitle "八旬大庆·无意遇鸳鸯" ; :hasDate "红楼十八年·八月初三八旬大庆" ; :hasSeason "红楼五年" ; :inChapter 71, 72 ; :hasDesc "贾母八旬大庆两府大宴；鸳鸯撞破司棋潘又安私会；凤姐恃强羞说病，来旺家倚势霸成亲强聘彩霞。" ; :inEra :era7 ; :occursAt :rongfu ; :occursAt :daguan .
-:e46 a :风波冲突 ; :hasTitle "绣春囊风波·抄检大观园" ; :hasDate "红楼十八年·八月中（中秋前抄检）" ; :hasSeason "红楼五年" ; :inChapter 73, 74 ; :hasDesc "傻大姐拾绣春囊，王善保家的进谗；抄检之夜探春抗辩掌掴，晴雯倒箧，司棋事发，惜春割席；江南甄府同被抄没。" ; :inEra :era7 ; :occursAt :daguan .
-:e47 a :节庆祭祀 ; :hasTitle "中秋异兆悲音·冷月葬花魂" ; :hasDate "红楼十八年·八月十五中秋" ; :hasSeason "红楼五年·中秋" ; :inChapter 75, 76 ; :hasDesc "宁府夜宴祠墙下异兆悲音；凸碧堂品笛，凹晶馆联诗“寒塘渡鹤影，冷月葬花魂”。" ; :inEra :era7 ; :occursAt :tubi ; :occursAt :ningfu .
-:e48 a :病丧生死 ; :hasTitle "晴雯夭亡·芙蓉女儿诔" ; :hasDate "红楼十八年·八月十六-下浣（夭亡·诔）" ; :hasSeason "红楼五年·秋" ; :inChapter 77, 78 ; :hasDesc "王夫人清检怡红院，晴雯四五日水米不曾沾牙抱屈而亡，小丫头幻为芙蓉花神；宝玉夜诔晴雯，芳官等斩情归水月。" ; :inEra :era7 ; :occursAt :yihong .
-:e49 a :诗社雅集 ; :hasTitle "姽婳词·老学士闲征" ; :hasDate "红楼十八年·八月（同夜双璧）" ; :hasSeason "红楼五年" ; :inChapter 78 ; :hasDesc "贾政命宝玉咏林四娘“姽婳将军”，《芙蓉诔》同夜双璧。" ; :inEra :era7 ; :occursAt :rongfu .
-:e50 a :婚嫁姻缘 ; :hasTitle "迎春误嫁中山狼" ; :hasDate "红楼十八年·九-十月（迎春于归）" ; :hasSeason "红楼五年·秋" ; :inChapter 79, 80 ; :hasDesc "贾赦一言定姻，迎春嫁孙绍祖；“金闺花柳质，一载赴黄粱”，紫菱洲人去楼空。" ; :inEra :era7 ; :occursAt :ziling .
-:e51 a :婚嫁姻缘 ; :hasTitle "悔娶河东狮·香菱受虐" ; :hasDate "红楼十八年·九-十月（河东狮进门）" ; :hasSeason "红楼五年" ; :inChapter 79, 80 ; :hasDesc "薛蟠娶夏金桂，改香菱为秋菱步步折挫；宝玉天齐庙问“疗妒方”，一问痴心——八十回终。" ; :inEra :era7 ; :occursAt :xiazhu ; :occursAt :tianqi .
+:e5 a :宦途经济 ; :hasTitle "冷子兴演说荣国府" ; :hasDate "红楼六年·维扬塾中闲话" ; :hasSeason "红楼六年" ; :inChapter 2 ; :hasDesc "村肆闲话，贾府族谱家势娓娓道来；宝玉衔玉而生，元春入宫，探春迎春惜春各有来历。" ; :inEra :era2 .
+:e6 a :身世遭际 ; :hasTitle "林黛玉进贾府" ; :hasDate "红楼七年·出月初二入都" ; :hasSeason "红楼七年" ; :inChapter 3 ; :hasDesc "母丧进京，步步留心时时在意；宝黛初会便觉似曾相识，宝玉摔玉痴狂初现。" ; :inEra :era2 ; :occursAt :rongfu .
+:e7 a :宦途经济 ; :hasTitle "葫芦僧判断葫芦案" ; :hasDate "红楼七年·是年（雨村起复）" ; :hasSeason "红楼七年" ; :inChapter 4 ; :hasDesc "雨村起复应天府，门子献护官符；徇情枉法放了薛蟠，任英莲一去无踪。薛家同进京都。" ; :inEra :era2 ; :occursAt :yingtian ; :occursAt :jinling .
+:e8 a :仙幻谶语 ; :hasTitle "宝玉梦游太虚幻境" ; :hasDate "红楼八年·正月（宁府梅开）" ; :hasSeason "红楼八年·正月" ; :inChapter 5, 6 ; :hasDesc "警幻以茶酒曲册点化宝玉：金陵十二钗正副册与红楼梦曲尽演诸艳终身——全书总谶；袭人初试云雨。" ; :inEra :era2 ; :occursAt :taixu .
+:e9 a :宦途经济 ; :hasTitle "刘姥姥一进荣国府" ; :hasDate "红楼八年·十月（秋尽冬初）" ; :hasSeason "红楼八年·秋末冬初" ; :inChapter 6 ; :hasDesc "家计无着打抽丰，周瑞家的引进凤姐院，得银二十两——“偶因济刘氏，巧得遇恩人”伏线。" ; :inEra :era2 ; :occursAt :rongfu .
+:e10 a :宦途经济 ; :hasTitle "送宫花·比通灵·闹学堂" ; :hasDate "红楼八年·冬（送宫花·比通灵）· 九年春（闹学堂）" ; :hasSeason "红楼八年·冬至九年春" ; :inChapter 7, 8, 9 ; :hasDesc "周瑞家的送宫花一路冷眼；金锁与通灵玉初对，冷香丸说病，枫露茶撵茜雪。家塾闹学堂在次年春（红楼九年），与冬天这几桩不是同一日。" ; :inEra :era2 ; :occursAt :rongfu ; :occursAt :jiashu .
+:e11 a :病丧生死 ; :hasTitle "可卿病笃·张友士论病" ; :hasDate "红楼九年·冬至前后（十一月三十冬至）" ; :hasSeason "红楼九年·冬至（十一月三十）" ; :inChapter 10, 11 ; :hasDesc "可卿经年不愈，冯紫英荐张友士细穷源：“这病总是忧虑伤脾”，虑到冬底果然。" ; :inEra :era3 ; :occursAt :ningfu .
+:e12 a :风波冲突 ; :hasTitle "毒设相思局·贾瑞殒命" ; :hasDate "红楼十年·腊月设局 · 次年腊月尽殒命" ; :hasSeason "红楼十年·腊月至十一年腊月" ; :inChapter 11, 12 ; :hasDesc "贾瑞觊觎凤姐，凤姐设局寒夜粪坑两番捉弄；风月宝鉴正面骷髅背面幻影，正照而亡。" ; :inEra :era3 ; :occursAt :rongfu ; :occursAt :ningfu .
+:e13 a :病丧生死 ; :hasTitle "秦可卿之死·协理宁国府" ; :hasDate "红楼十二年·九月下旬起丧（四十九日）" ; :hasSeason "红楼十二年" ; :inChapter 13, 14, 15 ; :hasDesc "可卿丧礼逾制奢华，珍爷哭得如泪人；凤姐协理宁府立威；脂批：原“淫丧天香楼”一节被命芹溪删去。" ; :inEra :era3 ; :occursAt :ningfu ; :annotatedBy :q_tianxianglou .
+:e14 a :风波冲突 ; :hasTitle "凤姐弄权铁槛寺" ; :hasDate "红楼十二年·丧仪间（停灵京郊）" ; :hasSeason "红楼十二年" ; :inChapter 15 ; :hasDesc "停灵水月庵，净虚老尼说合退婚讼事，三千两到手——“自此凤姐胆识愈壮，以后所作所为诸如此类，不可胜数”。" ; :inEra :era3 ; :occursAt :tiekan .
+:e15 a :病丧生死 ; :hasTitle "北静王路祭·秦钟夭逝" ; :hasDate "红楼十二年·十月路祭赠念珠 · 十二月秦钟夭逝（日子推定）" ; :hasSeason "红楼十二年" ; :inChapter 14, 15, 16 ; :hasDesc "送殡路上北静王与宝玉初会，解腕上鹡鸰香念珠相赠；是冬秦钟夭逝。林如海死讯由昭儿在丧仪中报回。黛玉南归在前一年冬底，另记，不并入这条。" ; :inEra :era3 ; :occursAt :tiekan ; :occursAt :yangzhou .
+:e16 a :宦途经济 ; :hasTitle "元才加封·筹建省亲别墅" ; :hasDate "红楼十二年·冬（才选凤藻宫 · 兴工）" ; :hasSeason "红楼十二年·冬" ; :inChapter 16 ; :hasDesc "元春晋封凤藻宫尚书加封贤德妃；贾府大兴土木营建省亲别墅，贾蔷下姑苏采买十二官。" ; :inEra :era3 ; :occursAt :dudu ; :occursAt :daguan .
+:e17 a :节庆祭祀 ; :hasTitle "试才题对额·元妃省亲" ; :hasDate "红楼十三年·正月题对额 · 正月十五元宵省亲" ; :hasSeason "红楼十三年·正月十五" ; :inChapter 17, 18 ; :hasDesc "贾政携宝玉游园题咏，一园景致初得名；省亲夜灯火如昼，烈火烹油之盛、骨肉分离之泪；妙玉入园。" ; :inEra :era4 ; :occursAt :daguan .
+:e18 a :宦途经济 ; :hasTitle "袭人箴宝玉·平儿救贾琏" ; :hasDate "红楼十三年·正月（元宵后）· 二月" ; :hasSeason "红楼十三年" ; :inChapter 19, 20, 21 ; :hasDesc "花袭人娇嗔箴玉，李嬷嬷拄杖骂袭人；大姐儿（巧姐）出痘，贾琏私会多姑娘，平儿软语遮掩。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
+:e19 a :情缘际会 ; :hasTitle "共读西厢·芸红遗帕" ; :hasDate "红楼十三年·二月二十二搬入大观园" ; :hasSeason "红楼十三年" ; :inChapter 23, 24 ; :hasDesc "元妃命姐妹入园，宝黛沁芳闸畔共读《会真记》初萌葬花意；贾芸谋差种树借醉金刚银，小红遗帕惹相思。" ; :inEra :era4 ; :occursAt :daguan ; :occursAt :qinfang ; :occursAt :huazhong .
+:e20 a :风波冲突 ; :hasTitle "魇魔法叔嫂逢五鬼" ; :hasDate "红楼十三年·三-四月（癞僧言「十三载」）" ; :hasSeason "红楼十三年" ; :inChapter 25 ; :hasDesc "赵姨娘买通马道婆魇镇凤姐宝玉，叔嫂癫狂垂死；癞僧跛道持玉诵咒，一佛出世。" ; :inEra :era4 ; :occursAt :rongfu .
+:e21 a :情缘际会 ; :hasTitle "潇湘春困·滴翠亭扑蝶·泣残红" ; :hasDate "红楼十三年·四月二十六未时交芒种" ; :hasSeason "红楼十三年·四月二十六芒种" ; :inChapter 26, 27 ; :hasDesc "黛玉春困幽情被窗外宝玉听去；宝钗滴翠亭扑蝶金蝉脱壳；芒种节黛玉泣残红，宝玉恸倒山坡。" ; :inEra :era4 ; :occursAt :xiaoxiang ; :occursAt :dicui ; :occursAt :huazhong .
+:e22 a :情缘际会 ; :hasTitle "蒋玉菡情赠茜香罗" ; :hasDate "红楼十三年·四月末（冯紫英家宴）" ; :hasSeason "红楼十三年" ; :inChapter 28 ; :hasDesc "冯紫英家宴，宝玉琪官互赠汗巾；那条茜香罗日后系上袭人腰间。" ; :inEra :era4 .
+:e23 a :节庆祭祀 ; :hasTitle "清虚观打醮" ; :hasDate "红楼十三年·五月初一至初三打醮" ; :hasSeason "红楼十三年·五月初一至初三" ; :inChapter 29, 30 ; :hasDesc "五月初一至初三贾母带队打平安醮。张道士提亲，宝黛口角砸玉。龄官划蔷在初四，归下一条。" ; :inEra :era4 ; :occursAt :qingxu ; :occursAt :yihong ; :occursAt :lixiang .
+:e24 a :病丧生死 ; :hasTitle "龄官划蔷·金钏投井·撕扇" ; :hasDate "红楼十三年·五月初四划蔷、金钏被撵 · 初五端阳撕扇 · 五月中投井" ; :hasSeason "红楼十三年·端午" ; :inChapter 30, 31, 32 ; :hasDesc "端阳前一日，宝玉惹金钏被王夫人撵出，又在蔷薇架下看龄官一笔一笔画「蔷」；端午晴雯撕扇；金钏含耻投井。" ; :inEra :era4 ; :occursAt :rongfu ; :occursAt :yihong .
+:e25 a :风波冲突 ; :hasTitle "大承笞挞·题帕三绝" ; :hasDate "红楼十三年·六月（盛夏笞挞）" ; :hasSeason "红楼十三年" ; :inChapter 33, 34 ; :hasDesc "忠顺王府索琪官、贾环进谗金钏事，贾政怒笞宝玉几毙；宝钗送药、黛玉题帕三首情诗。" ; :inEra :era4 ; :occursAt :rongfu .
+:e26 a :情缘际会 ; :hasTitle "莲叶羹·绣鸳鸯梦兆" ; :hasDate "红楼十三年·夏（莲叶羹·绣鸳鸯）" ; :hasSeason "红楼十三年·夏" ; :inChapter 35, 36 ; :hasDesc "玉钏亲尝莲叶羹；宝钗绣鸳鸯坐上宝玉睡榻，正逢宝玉梦中喊骂“和尚道士的话如何信得，什么金玉姻缘”。" ; :inEra :era4 ; :occursAt :yihong ; :occursAt :lixiang .
+:e27 a :诗社雅集 ; :hasTitle "秋爽斋结海棠社·菊花诗" ; :hasDate "红楼十六年·八月二十贾政赴学差后 · 八月末结社" ; :hasSeason "红楼十六年·秋" ; :inChapter 37, 38 ; :hasDesc "探春花笺邀社，海棠、菊花两番雅集：黛玉魁夺菊花诗，宝钗讽和螃蟹咏压卷。" ; :inEra :era5 ; :occursAt :qiushuang ; :occursAt :liaofeng .
+:e28 a :诗社雅集 ; :hasTitle "刘姥姥二进大观园" ; :hasDate "红楼十六年·八月末-九月初（两宴·品茶·醉卧）" ; :hasSeason "红楼十六年·秋" ; :inChapter 39, 40, 41, 42 ; :hasDesc "瓜菜报恩，贾母留客：两宴大观园、三宣牙牌令、栊翠庵品茶、醉卧怡红院；“母蝗虫”雅谑补馀香。" ; :inEra :era5 ; :occursAt :daguan ; :occursAt :longcui ; :occursAt :yihong .
+:e29 a :风波冲突 ; :hasTitle "撮土为香·凤姐泼醋" ; :hasDate "红楼十六年·九月初二" ; :hasSeason "红楼十六年·九月初二" ; :inChapter 43, 44 ; :hasDesc "凤姐生日攒金庆寿，宝玉私往水仙庵井台祭金钏；席间贾琏私通事发，凤姐泼醋，平儿理妆。" ; :inEra :era5 ; :occursAt :shuixian ; :occursAt :rongfu .
+:e30 a :诗社雅集 ; :hasTitle "金兰契·风雨词" ; :hasDate "红楼十六年·九月末-十月（秋雨）" ; :hasSeason "红楼十六年·秋末" ; :inChapter 45 ; :hasDesc "宝钗兰言解疑癖，钗黛剖心成金兰；秋窗风雨夕，黛玉作《代别离》。" ; :inEra :era5 ; :occursAt :xiaoxiang .
+:e31 a :风波冲突 ; :hasTitle "鸳鸯抗婚·惩蟠·石呆子扇案" ; :hasDate "红楼十六年·九月十四惩蟠 · 十月十四扇案口述（月份推定）" ; :hasSeason "红楼十六年" ; :inChapter 46, 47, 48 ; :hasDesc "贾赦强索鸳鸯，鸳鸯铰发立誓。赖大家宴上柳湘莲痛打薛蟠后远走。石呆子二十把旧扇被贾雨村讹作拖欠官银抄没，贾琏说了句公道话反被贾赦混打——抄扇起于是年春，事到十月十四由平儿向宝钗口述。扇案不并入香菱学诗。" ; :inEra :era5 ; :occursAt :rongfu .
+:e32 a :诗社雅集 ; :hasTitle "香菱学诗" ; :hasDate "红楼十六年·十月（香菱入园苦吟）" ; :hasSeason "红楼十六年·冬" ; :inChapter 48 ; :hasDesc "薛蟠出门后香菱住进蘅芜苑，拜黛玉为师，废寝忘食，梦中得句。" ; :inEra :era5 ; :occursAt :xiaoxiang ; :occursAt :hengwu .
+:e33 a :诗社雅集 ; :hasTitle "琉璃世界白雪红梅" ; :hasDate "红楼十六年·十月头场雪（芦雪广联句·踏雪红梅）· 十一月晴雯遇胡庸医" ; :hasSeason "红楼十六年·冬" ; :inChapter 49, 50, 51 ; :hasDesc "贾母说这才是十月里头场雪。雪夜众人在芦雪广拥炉联句，次日割腥啖膻、咏红梅；宝琴十首怀古诗谜悬千古。晴雯病中先遇胡庸医，另在十一月。" ; :inEra :era5 ; :occursAt :luxue ; :occursAt :hengwu .
+:e34 a :病丧生死 ; :hasTitle "病补雀金裘" ; :hasDate "红楼十六年·腊月（病补雀金裘）" ; :hasSeason "红楼十六年·冬" ; :inChapter 52 ; :hasDesc "俄罗斯雀金裘烧洞无人能补，晴雯病重夜补，“勇”字当之；坠儿偷虾须镯事发被撵。" ; :inEra :era5 ; :occursAt :yihong .
+:e35 a :节庆祭祀 ; :hasTitle "除夕祭宗祠·元宵开夜宴" ; :hasDate "红楼十六年·腊月二十九-除夕祭宗祠 · 次年正月十五夜宴" ; :hasSeason "红楼十六年除夕至十七年元宵" ; :inChapter 53, 54 ; :hasDesc "乌进孝进租一单写尽末世；宁府除夕祭宗祠仍在红楼十六年，荣府元宵夜宴已入十七年。史太君破陈腐旧套，凤姐效戏彩斑衣。" ; :inEra :era5 ; :occursAt :ningfu ; :occursAt :rongfu ; :occursAt :heishan .
+:e36 a :宦途经济 ; :hasTitle "敏探春兴利除宿弊" ; :hasDate "红楼十七年·正月末（年事方过）" ; :hasSeason "红楼十七年·春" ; :inChapter 55, 56 ; :hasDesc "凤姐病，探春理家开源节流，宝钗小惠全大体；甄府女眷进京，宝玉梦见甄宝玉。" ; :inEra :era6 ; :occursAt :qiushuang .
+:e37 a :情缘际会 ; :hasTitle "慧紫鹃情辞试忙玉" ; :hasDate "红楼十七年·二-三月（春困试玉）" ; :hasSeason "红楼十七年" ; :inChapter 57 ; :hasDesc "紫鹃一句“回苏州去”，宝玉痴病大发满屋死寂；薛姨妈爱语慰痴颦，岫烟典衣暗写世情。" ; :inEra :era6 ; :occursAt :xiaoxiang ; :occursAt :yihong .
+:e38 a :风波冲突 ; :hasTitle "茉莉粉·蔷薇硝·玫瑰露" ; :hasDate "红楼十七年·三-五月（杏子阴·茉莉粉）" ; :hasSeason "红楼十七年" ; :inChapter 58, 59, 60, 61 ; :hasDesc "十二官入园声势渐起，芳官与干娘斗气；柳五儿蒙冤被囚，平儿情权判冤决狱。" ; :inEra :era6 ; :occursAt :yihong ; :occursAt :luxue .
+:e39 a :节庆祭祀 ; :hasTitle "憨湘云醉眠芍药裀·群芳夜宴" ; :hasDate "红楼十七年·四月二十六生辰（红学一说）" ; :hasSeason "红楼十七年·宝玉生辰（一说与芒种同日）" ; :inChapter 62, 63 ; :hasDesc "宝玉生日众芳掣签：宝钗牡丹“任是无情也动人”，湘云醉卧芍药，黛玉芙蓉“莫怨东风当自嗟”。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :yihong .
+:e40 a :病丧生死 ; :hasTitle "死金丹·五美吟" ; :hasDate "红楼十七年·四月廿六夜-五月（死金丹·五美吟）" ; :hasSeason "红楼十七年" ; :inChapter 63, 64 ; :hasDesc "贾敬吞金服砂死于玄真观，尤氏独艳理亲丧；宝玉病愈题五美吟寄幽情。" ; :inEra :era6 ; :occursAt :xuanguan ; :occursAt :ningfu ; :occursAt :xiaoxiang .
+:e41 a :婚嫁姻缘 ; :hasTitle "贾二舍偷娶尤二姨" ; :hasDate "红楼十七年·八月初三偷娶小花枝巷（月份推定）" ; :hasSeason "红楼十七年" ; :inChapter 64, 65 ; :hasDesc "第64回贾琏看中尤二姐，逼张华退婚，择初三黄道吉日。第65回初二先送尤老娘与三姐进新房，次日五更素轿抬二姐过门。月份取七月瓜果之后、八月柳湘莲进京之前，属推定。" ; :inEra :era6 ; :occursAt :ningfu .
+:e42 a :情缘际会 ; :hasTitle "鸳鸯剑下三姐魂·冷二郎入空门" ; :hasDate "红楼十七年·八-九月（鸳鸯剑下·入空门）" ; :hasSeason "红楼十七年" ; :inChapter 66 ; :hasDesc "柳湘莲聘定尤三姐，闻其名悔婚索剑；三姐剑下自明心迹血溅当场，湘莲斩断尘缘随道人去。" ; :inEra :era6 .
+:e43 a :风波冲突 ; :hasTitle "酸凤姐大闹宁国府·尤二姐吞金" ; :hasDate "红楼十七年·十月十五赚入、大闹（月份推定）· 腊月吞金" ; :hasSeason "红楼十七年" ; :inChapter 67, 68, 69 ; :hasDesc "凤姐赚尤二姐入园，唆张华往都察院告状，大闹宁国府索银；又借秋桐日日辱骂。尤二姐被胡庸医打下男胎，腊月吞金自逝。十月十五是正文写明的进香之日，月份属推定。" ; :inEra :era6 ; :occursAt :daguan ; :occursAt :ningfu ; :occursAt :duchayuan .
+:e44 a :诗社雅集 ; :hasTitle "重建桃花社·柳絮词" ; :hasDate "红楼十八年·三月初二起社 · 暮春放风筝" ; :hasSeason "红楼十八年·暮春" ; :inChapter 70 ; :hasDesc "黛玉桃花社重开，湘云柳絮词起兴；放风筝，探春凤凰一谶。" ; :inEra :era7 ; :occursAt :xiaoxiang ; :occursAt :daguan .
+:e45 a :节庆祭祀 ; :hasTitle "八旬大庆·无意遇鸳鸯" ; :hasDate "红楼十八年·八月初三八旬大庆" ; :hasSeason "红楼十八年" ; :inChapter 71, 72 ; :hasDesc "贾母八旬大庆两府大宴；鸳鸯撞破司棋潘又安私会；凤姐恃强羞说病，来旺家倚势霸成亲强聘彩霞。" ; :inEra :era7 ; :occursAt :rongfu ; :occursAt :daguan .
+:e46 a :风波冲突 ; :hasTitle "绣春囊风波·抄检大观园" ; :hasDate "红楼十八年·八月中（中秋前抄检）" ; :hasSeason "红楼十八年" ; :inChapter 73, 74 ; :hasDesc "傻大姐拾绣春囊，王善保家的进谗；抄检之夜探春抗辩掌掴，晴雯倒箧，司棋事发，惜春割席；江南甄府同被抄没。江南甄府被抄是同回侧闻，甄宝玉并未到场。" ; :inEra :era7 ; :occursAt :daguan .
+:e47 a :节庆祭祀 ; :hasTitle "中秋异兆悲音·冷月葬花魂" ; :hasDate "红楼十八年·八月十五中秋" ; :hasSeason "红楼十八年·中秋" ; :inChapter 75, 76 ; :hasDesc "宁府夜宴祠墙下异兆悲音；凸碧堂品笛，凹晶馆联诗“寒塘渡鹤影，冷月葬花魂”。" ; :inEra :era7 ; :occursAt :tubi ; :occursAt :ningfu .
+:e48 a :病丧生死 ; :hasTitle "晴雯夭亡·芙蓉女儿诔" ; :hasDate "红楼十八年·八月十六-下浣（夭亡·诔）" ; :hasSeason "红楼十八年·秋" ; :inChapter 77, 78 ; :hasDesc "王夫人清检怡红院，晴雯抱屈而亡，宝玉夜作《芙蓉女儿诔》。芳官、藕官、蕊官等被王夫人交出，随水月庵智通、地藏庵圆信出家——美优伶斩情归水月。" ; :inEra :era7 ; :occursAt :yihong .
+:e49 a :诗社雅集 ; :hasTitle "姽婳词·老学士闲征" ; :hasDate "红楼十八年·八月（同夜双璧）" ; :hasSeason "红楼十八年" ; :inChapter 78 ; :hasDesc "贾政命宝玉咏林四娘“姽婳将军”，《芙蓉诔》同夜双璧。" ; :inEra :era7 ; :occursAt :rongfu .
+:e50 a :婚嫁姻缘 ; :hasTitle "迎春误嫁中山狼" ; :hasDate "红楼十八年·九-十月（迎春于归）" ; :hasSeason "红楼十八年·秋" ; :inChapter 79, 80 ; :hasDesc "贾赦一言定姻，迎春嫁孙绍祖；“金闺花柳质，一载赴黄粱”，紫菱洲人去楼空。" ; :inEra :era7 ; :occursAt :ziling .
+:e51 a :婚嫁姻缘 ; :hasTitle "悔娶河东狮·香菱受虐" ; :hasDate "红楼十八年·九-十月（河东狮进门）" ; :hasSeason "红楼十八年" ; :inChapter 79, 80 ; :hasDesc "薛蟠娶夏金桂，改香菱为秋菱步步折挫；宝玉天齐庙问“疗妒方”，一问痴心——八十回终。" ; :inEra :era7 ; :occursAt :xiazhu ; :occursAt :tianqi .
+
+:e52 a :仙幻谶语 ; :hasTitle "制灯谜·宝玉悟禅机" ; :hasDate "红楼十三年·正月二十一日及笄 · 二十二日续偈、制灯谜（上元字面与叙事次序不合）" ; :hasSeason "红楼十三年·正月廿一至廿二" ; :inChapter 22 ; :hasDesc "正月二十一日贾母给宝钗过及笄生日，席上宝钗念《寄生草》，宝玉当夜占偈。次日黛玉续「无立足境，是方干净」，宝玉自云不过顽话。同日娘娘送出灯谜，贾政看姊妹们的谜，心里说「今乃上元佳节」却又悲不祥——与二十一生日、且省亲元宵已过的时序不合，正文自相矛盾，日期取叙事顺序（一家之言）。" ; :inEra :era4 ; :occursAt :jiamuyuan .
 
 ########## 实例层 ABox · 参与（人物 → 事件） ##########
 :baoyu :参与 :e1 .
@@ -795,7 +797,6 @@
 :zhangdaoshi :参与 :e23 .
 :daiyu :参与 :e23 .
 :baoyu :参与 :e23 .
-:lingguan :参与 :e23 .
 :jiaqiang :参与 :e23 .
 :jinchan :参与 :e24 .
 :wangfuren :参与 :e24 .
@@ -839,6 +840,7 @@
 :jialian :参与 :e29 .
 :pinger :参与 :e29 .
 :baoerjia :参与 :e29 .
+:baoer :参与 :e29 .
 :mingyan :参与 :e29 .
 :daiyu :参与 :e30 .
 :baochai :参与 :e30 .
@@ -852,9 +854,6 @@
 :laida :参与 :e31 .
 :xiangling :参与 :e32 .
 :daiyu :参与 :e32 .
-:shidaizi :参与 :e32 .
-:jiashe :参与 :e32 .
-:yucun :参与 :e32 .
 :baochai :参与 :e32 .
 :baoqin :参与 :e33 .
 :xiangyun :参与 :e33 .
@@ -970,3 +969,40 @@
 :xiangling :参与 :e51 .
 :baoyu :参与 :e51 .
 :yitie :参与 :e51 .
+:ligui :参与 :e10 .
+:jingxu :参与 :e14 .
+:fenger :参与 :e14 .
+:ligui :参与 :e15 .
+:zhaomomo :参与 :e16 .
+:baoqinya :参与 :e17 .
+:qiuwen :参与 :e19 .
+:lingguan :参与 :e24 .
+:qiuwen :参与 :e24 .
+:shidaizi :参与 :e31 .
+:yucun :参与 :e31 .
+:jialian :参与 :e31 .
+:pinger :参与 :e31 .
+:ouguan :参与 :e38 .
+:ruiguan :参与 :e38 .
+:youlaoniang :参与 :e41 .
+:youlaoniang :参与 :e42 .
+:youerjie :参与 :e42 .
+:zhanghua :参与 :e43 .
+:qiutong :参与 :e43 .
+:youlaoniang :参与 :e43 .
+:fenger :参与 :e43 .
+:pinger :参与 :e43 .
+:ouguan :参与 :e48 .
+:ruiguan :参与 :e48 .
+:baochan :参与 :e51 .
+:baochai :参与 :e52 .
+:baoyu :参与 :e52 .
+:daiyu :参与 :e52 .
+:xiangyun :参与 :e52 .
+:xiren :参与 :e52 .
+:jiamu :参与 :e52 .
+:jiazheng :参与 :e52 .
+:xifeng :参与 :e52 .
+:tanchun :参与 :e52 .
+:yingchun :参与 :e52 .
+:xichun :参与 :e52 .
