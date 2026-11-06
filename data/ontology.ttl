@@ -328,7 +328,7 @@
 :baochai a :主子姻眷 ; :hasName "薛宝钗" ; :hasAlias "宝姐姐" ; :hasNickname "蘅芜君" ; :hasNickname "山中高士晶莹雪" ; :hasRole "薛姨妈之女，宝姑娘" ; :memberOf :薛氏 ; :residesAt :hengwu ; :firstInChapter 4 ; :mentionCount 848 ; :birthYear "红楼前二年" .
 :xueke a :主子姻眷 ; :hasName "薛蝌" ; :hasRole "薛蟠堂弟，送妹宝琴进京" ; :memberOf :薛氏 ; :firstInChapter 49 ; :mentionCount 14 .
 :baoqin a :主子姻眷 ; :hasName "薛宝琴" ; :hasNickname "琴姑娘" ; :hasRole "薛蝌之妹，已许梅翰林之子" ; :memberOf :薛氏 ; :firstInChapter 49 ; :mentionCount 113 ; :birthYear "红楼四年" .
-:jingui a :主子姻眷 ; :hasName "夏金桂" ; :hasAlias "金桂" ; :hasNickname "河东狮" ; :hasRole "薛蟠之妻，皇商“桂花夏家”独女" ; :memberOf :薛氏 ; :firstInChapter 17 ; :mentionCount 59 ; :birthYear "红楼二年" .
+:jingui a :主子姻眷 ; :hasName "夏金桂" ; :hasAlias "金桂" ; :hasNickname "河东狮" ; :hasRole "薛蟠之妻，皇商“桂花夏家”独女" ; :memberOf :薛氏 ; :firstInChapter 79 ; :mentionCount 58 ; :birthYear "红楼二年" .
 :linruhai a :官宦皇亲 ; :hasName "林如海" ; :hasRole "前科探花，兰台寺大夫，钦点巡盐御史" ; :memberOf :林氏 ; :residesAt :yangzhou ; :firstInChapter 2 ; :mentionCount 10 ; :birthYear "红楼前三十一年" ; :deathYear "红楼十二年九月初三巳时（14）" .
 :jiamin a :主子姻眷 ; :hasName "贾敏" ; :hasRole "贾母幼女，林如海之妻" ; :memberOf :贾氏 ; :firstInChapter 2 ; :mentionCount 1 ; :birthYear "红楼前三十四年" ; :deathYear "红楼七年（约）（3）" .
 :daiyu a :主子姻眷 ; :hasName "林黛玉" ; :hasAlias "林姑娘" ; :hasAlias "林妹妹" ; :hasNickname "颦儿" ; :hasNickname "颦颦" ; :hasNickname "潇湘妃子" ; :hasRole "贾母外孙女，绛珠仙草转世" ; :memberOf :林氏 ; :residesAt :xiaoxiang ; :firstInChapter 2 ; :mentionCount 1136 ; :birthYear "红楼二年" .
@@ -375,7 +375,7 @@
 :zijun a :仆婢仆役 ; :hasName "紫鹃" ; :hasAlias "鹦哥" ; :hasRole "黛玉大丫鬟，原贾母丫鬟鹦哥" ; :memberOf :贾氏 ; :residesAt :xiaoxiang ; :firstInChapter 3 ; :mentionCount 148 ; :birthYear "红楼元年" .
 :xueyan a :仆婢仆役 ; :hasName "雪雁" ; :hasRole "黛玉自苏州带来的小丫鬟" ; :memberOf :贾氏 ; :residesAt :xiaoxiang ; :firstInChapter 3 ; :mentionCount 29 ; :birthYear "红楼五年" .
 :yinger a :仆婢仆役 ; :hasName "莺儿（黄金莺）" ; :hasAlias "黄金莺" ; :hasRole "宝钗大丫鬟" ; :memberOf :贾氏 ; :residesAt :hengwu ; :firstInChapter 7 ; :mentionCount 110 ; :birthYear "红楼三年" .
-:yuanyang a :仆婢仆役 ; :hasName "鸳鸯" ; :hasRole "贾母倚重大丫鬟" ; :memberOf :贾氏 ; :residesAt :jiamuyuan ; :firstInChapter 1 ; :mentionCount 275 ; :birthYear "红楼前三年" .
+:yuanyang a :仆婢仆役 ; :hasName "鸳鸯" ; :hasRole "贾母倚重大丫鬟" ; :memberOf :贾氏 ; :residesAt :jiamuyuan ; :firstInChapter 20 ; :mentionCount 271 ; :birthYear "红楼前三年" .
 :jinchan a :仆婢仆役 ; :hasName "金钏儿" ; :hasRole "王夫人丫鬟，玉钏之姊" ; :memberOf :贾氏 ; :firstInChapter 7 ; :mentionCount 51 ; :birthYear "红楼元年" ; :deathYear "红楼十三年五月（32）" .
 :yuchan a :仆婢仆役 ; :hasName "玉钏儿" ; :hasRole "王夫人丫鬟，金钏之妹" ; :memberOf :贾氏 ; :firstInChapter 25 ; :mentionCount 50 ; :birthYear "红楼元年" .
 :caiyun a :仆婢仆役 ; :hasName "彩云" ; :hasRole "王夫人丫鬟" ; :memberOf :贾氏 ; :firstInChapter 5 ; :mentionCount 39 .
@@ -408,6 +408,21 @@
 :youerjie a :主子姻眷 ; :hasName "尤二姐" ; :hasRole "尤老娘前夫之女，贾琏偷娶之妾" ; :memberOf :贾氏 ; :firstInChapter 63 ; :mentionCount 91 ; :birthYear "红楼前七年" ; :deathYear "红楼十七年腊月（69）" .
 :yousanjie a :主子姻眷 ; :hasName "尤三姐" ; :hasRole "尤二姐之妹" ; :memberOf :贾氏 ; :firstInChapter 63 ; :mentionCount 40 ; :birthYear "红楼前六年" ; :deathYear "红楼十七年八-九月（66）" .
 
+:qiuwen a :仆婢仆役 ; :hasName "秋纹" ; :hasRole "宝玉怡红院丫鬟" ; :memberOf :贾氏 ; :residesAt :yihong ; :firstInChapter 19 ; :mentionCount 56 .
+:zhanghua a :市井平民 ; :hasName "张华" ; :hasRole "尤二姐指腹之婿，后退婚" ; :firstInChapter 64 ; :mentionCount 38 .
+:qiutong a :仆婢仆役 ; :hasName "秋桐" ; :hasRole "贾赦所赐，贾琏之妾" ; :memberOf :贾氏 ; :residesAt :fengjieyuan ; :firstInChapter 69 ; :mentionCount 23 ; :birthYear "红楼元年" .
+:youlaoniang a :主子姻眷 ; :hasName "尤老娘" ; :hasRole "尤氏继母，二姐三姐之母" ; :memberOf :贾氏 ; :residesAt :ningfu ; :firstInChapter 64 ; :mentionCount 20 .
+:baochan a :仆婢仆役 ; :hasName "宝蟾" ; :hasRole "夏金桂陪房丫鬟" ; :memberOf :薛氏 ; :firstInChapter 79 ; :mentionCount 24 .
+:ouguan a :优伶伶人 ; :hasName "藕官" ; :hasRole "十二官小生，分与黛玉，后出家" ; :memberOf :贾氏 ; :residesAt :xiaoxiang ; :firstInChapter 58 ; :mentionCount 34 .
+:ruiguan a :优伶伶人 ; :hasName "蕊官" ; :hasRole "十二官小旦，分与宝钗，后出家" ; :memberOf :贾氏 ; :residesAt :hengwu ; :firstInChapter 58 ; :mentionCount 22 .
+:ligui a :仆婢仆役 ; :hasName "李贵" ; :hasRole "宝玉奶兄，李嬷嬷之子" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 9 ; :mentionCount 30 .
+:baoer a :仆婢仆役 ; :hasName "鲍二" ; :hasRole "贾琏小厮" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 44 ; :mentionCount 10 .
+:fenger a :仆婢仆役 ; :hasName "丰儿" ; :hasRole "凤姐房中小丫头" ; :memberOf :贾氏 ; :residesAt :fengjieyuan ; :firstInChapter 7 ; :mentionCount 24 .
+:zhaomomo a :仆婢仆役 ; :hasName "赵嬷嬷" ; :hasRole "贾琏乳母" ; :memberOf :贾氏 ; :residesAt :rongfu ; :firstInChapter 16 ; :mentionCount 13 .
+:jingxu a :方外僧道 ; :hasName "净虚" ; :hasRole "馒头庵（水月庵）老尼" ; :residesAt :tiekan ; :firstInChapter 15 ; :mentionCount 5 .
+:daishu a :仆婢仆役 ; :hasName "待书" ; :hasAlias "侍书" ; :hasRole "探春丫鬟" ; :memberOf :贾氏 ; :residesAt :qiushuang ; :firstInChapter 7 ; :mentionCount 17 .
+:baoqinya a :仆婢仆役 ; :hasName "抱琴" ; :hasRole "元春丫鬟，随入宫中" ; :memberOf :贾氏 ; :firstInChapter 18 ; :mentionCount 1 .
+
 ########## 实例层 ABox · 人物—人物关系 ##########
 :jiamu :血亲眷属 :baoyu . # 祖孙：隔代最疼
 :jiamu :血亲眷属 :daiyu . # 祖孙：最怜外孙女
@@ -417,12 +432,12 @@
 :jiamu :主仆役使 :yuanyang . # 主仆：倚重
 :jiamu :血亲眷属 :baoqin . # 祖孙：认干孙女
 :jiamu :朋友知交 :zhangdaoshi . # 世交：荣国公替身
-:jiazheng :血亲眷属 :baoyu . # 父子：严父逆子
+:jiazheng :血亲眷属 :baoyu . # 父子：严父逆子；第33回大承笞挞
 :jiazheng :血亲眷属 :yuanchun . # 父女
 :jiazheng :血亲眷属 :tanchun . # 父女
 :jiazheng :血亲眷属 :jiahuan . # 父子
 :jiazheng :夫妻妾室 :wangfuren . # 夫妻
-:jiazheng :夫妻妾室 :zhaoyiniang . # 夫妻：妾
+:jiazheng :主仆役使 :zhaoyiniang . # 主妾：妾，非正妻
 :jiazhu :夫妻妾室 :liwan . # 夫妻：早夭
 :jiazhu :血亲眷属 :jialan . # 父子
 :liwan :血亲眷属 :jialan . # 母子：守节教子
@@ -460,7 +475,6 @@
 :jialian :情缘私恋 :baoerjia . # 私通
 :jialian :主仆役使 :xinger . # 主仆
 :jialian :血亲眷属 :daiyu . # 表兄妹：同奔扬州丧
-:wangfuren :血亲眷属 :jiahuan . # 母子
 :zhaoyiniang :血亲眷属 :jiahuan . # 母子
 :zhaoyiniang :血亲眷属 :tanchun . # 母女：探春不认生母
 :zhaoyiniang :交易勾结 :madaopo . # 勾结：魇魔法
@@ -483,11 +497,10 @@
 :baoyu :仇怨对立 :zhongshunwang . # 祸因：索琪官
 :baoyu :血亲眷属 :jialan . # 叔侄
 :baoyu :朋友知交 :miaoyu . # 茶缘：栊翠庵品茶
-:baoyu :血亲眷属 :jiazheng . # 父子：大承笞挞
 :baoyu :血亲眷属 :jiahuan . # 兄弟：进谗相害
 :baoyu :事缘交往 :jinchan . # 事缘：顽笑致祸
 :baoyu :主仆役使 :yuchan . # 主仆：亲尝莲叶羹
-:baoyu :血亲眷属 :jiaqiang . # 兄弟
+:baoyu :血亲眷属 :jiaqiang . # 族兄弟：宁府远房，非同胞
 :baoyu :师恩庇护 :jiayun . # 义父子：认干爷
 :baoyu :事缘交往 :wuer . # 缘：欲进怡红院
 :baoyu :情缘私恋 :xiangling . # 怜惜：情解石榴裙
@@ -528,7 +541,7 @@
 :caiyun :情缘私恋 :jiahuan . # 私情：偷赠玫瑰露
 :siqi :主仆役使 :yingchun . # 主仆
 :siqi :情缘私恋 :panyouan . # 情：私传信物
-:siqi :血亲眷属 :wangshanbao . # 祖孙：外孙女
+:wangshanbao :血亲眷属 :siqi . # 外祖孙：外孙女
 :wangshanbao :仇怨对立 :tanchun . # 仇：一掌之辱
 :wangshanbao :主仆役使 :xingfuren . # 主仆：陪房
 :ruhua :主仆役使 :xichun . # 主仆：割席撵逐
@@ -544,7 +557,7 @@
 :jiaqiang :情缘私恋 :lingguan . # 情：龄官画蔷
 :jiaqiang :朋友知交 :fangguan . # 同伶：十二官
 :xianglian :情缘私恋 :yousanjie . # 情定：鸳鸯剑
-:xianglian :情缘私恋 :yousanjie . # 殉情：三姐自刎后出家
+:xianglian :情缘私恋 :yousanjie . # 自刎：尤三姐自刎；湘莲未死，随跛道出家
 :shaozu :夫妻妾室 :yingchun . # 夫妻：中山狼
 :yucun :仇怨对立 :menzi . # 充发：献符后被逐
 :yucun :仇怨对立 :shidaizi . # 陷害：讹以官银
@@ -553,7 +566,7 @@
 :jiaoxing :主仆役使 :shiyin . # 旧仆：甄家丫鬟
 :shiyin :血亲眷属 :xiangling . # 父女：元宵失散
 :shiyin :血亲眷属 :fengsu . # 翁婿：半哄半赚
-:liulaolao :血亲眷属 :gouer . # 母女：岳母
+:liulaolao :血亲眷属 :gouer . # 岳母婿：正文明写狗儿之岳母；同回又有“女儿女婿”字样，书中自相抵牾，取岳母
 :gouer :交易勾结 :wangfuren . # 连宗：远亲
 :liulaolao :血亲眷属 :baner . # 祖孙
 :baner :情缘私恋 :qiaojie . # 姻缘伏：柚子换佛手
@@ -569,9 +582,50 @@
 :hujunrong :事缘交往 :youerjie . # 误诊：堕胎
 :wangjiren :事缘交往 :jiamu . # 诊病：王太医
 :xinger :事缘交往 :youerjie . # 演说：评府中人物
-:mingyan :主仆役使 :baoyu . # 主仆
 :duoguniang :事缘交往 :baoyu . # 试：灯下试探
 :laiwang :仇怨对立 :caixia . # 强聘：霸成亲
+:wangfuren :血亲眷属 :baoyu . # 母子：嫡出
+:wangfuren :血亲眷属 :yuanchun . # 母女：嫡出
+:jiazheng :血亲眷属 :jiazhu . # 父子：长子早夭
+:xueyima :血亲眷属 :xuepan . # 母子
+:youerjie :血亲眷属 :yousanjie . # 姊妹：同为尤老娘自前夫家带来
+:youshi :血亲眷属 :youerjie . # 继姊妹：异父异母；继母带来，贾蓉言非贾珍所出
+:youshi :血亲眷属 :yousanjie . # 继姊妹：异父异母；继母带来，贾蓉言非贾珍所出
+:jiamu :血亲眷属 :xiangyun . # 侄孙：贾母出史氏；第49回因史鼐外任留下湘云。姑奶侄孙，约，一家之言
+:xueke :血亲眷属 :baoqin . # 兄妹：同胞
+:xueke :血亲眷属 :xuepan . # 堂兄弟：薛蟠从弟
+:xueke :夫妻妾室 :xingqiuyan . # 订婚：第57回薛姨妈定亲，前八十回尚未完婚
+:jiaoda :主仆役使 :jiazhen . # 旧仆：宁府世仆，随太爷出过兵
+:lengzixing :朋友知交 :yucun . # 友：雨村好友；第2回演说荣国府
+:zhouruijia :血亲眷属 :lengzixing . # 女婿：正文作周瑞之婿；周瑞家的即其妻
+:jiazheng :主仆役使 :laida . # 主仆：荣府大总管一家，不拆
+:zhanguang :事缘交往 :jiazheng . # 清客：门客帮闲
+:danpinren :事缘交往 :jiazheng . # 清客：门客帮闲
+:liwan :血亲眷属 :liwen . # 堂姊妹：正文为李纨寡婶之女，取堂姊妹，不作姑侄；纹、绮合并一条
+:zhenbaoyu :事缘交往 :baoyu . # 对照：第56回梦中同貌
+:zhanghua :夫妻妾室 :youerjie . # 退婚：指腹为婚，第64回被逼写退婚文约
+:xifeng :交易勾结 :zhanghua . # 利用：第68回封银勾来，着他写状告贾琏
+:jialian :主仆役使 :qiutong . # 主妾：贾赦房中丫鬟，年十七，赏与为妾
+:qiutong :仇怨对立 :youerjie . # 仇：骂“先奸后娶”，第69回
+:jingxu :交易勾结 :xifeng . # 勾结：第15回求凤姐写信拆人婚约
+:zhaomomo :师恩庇护 :jialian . # 乳母：贾琏乳母，第16回演说接驾
+:baoyu :主仆役使 :qiuwen . # 主仆：怡红院丫鬟
+:tanchun :主仆役使 :daishu . # 主仆：探春丫鬟；汇校本作待书
+:yuanchun :主仆役使 :baoqinya . # 主仆：元春带进宫的丫鬟，第18回
+:baoyu :主仆役使 :ligui . # 主仆：奶兄，第9回送宝玉上学
+:limomo :血亲眷属 :ligui . # 母子：正文称宝玉奶母之子；李嬷嬷为宝玉乳母，母子（约）
+:jialian :主仆役使 :baoer . # 主仆：贾琏小厮；第64回拨去伏侍二姐
+:baoer :夫妻妾室 :baoerjia . # 夫妻：第44回其妻自缢；后文仍以鲍二夫妻出现
+:jingui :主仆役使 :baochan . # 主仆：陪房丫鬟
+:daiyu :主仆役使 :ouguan . # 主仆：第58回分入潇湘馆
+:baochai :主仆役使 :ruiguan . # 主仆：第58回分入蘅芜苑
+:ouguan :朋友知交 :fangguan . # 同伶：十二官；烧纸事唯芳官、蕊官知
+:ruiguan :朋友知交 :fangguan . # 同伶：十二官
+:ouguan :朋友知交 :ruiguan . # 同伶：第77回同随地藏庵圆信出家
+:youlaoniang :血亲眷属 :youerjie . # 母女：自前夫家带来
+:youlaoniang :血亲眷属 :yousanjie . # 母女：自前夫家带来
+:youlaoniang :血亲眷属 :youshi . # 继母：第63回尤氏接继母来宁府看家
+:xifeng :主仆役使 :fenger . # 主仆：凤姐房中小丫头
 
 ########## 实例层 ABox · 事件 ##########
 :e1 a :仙幻谶语 ; :hasTitle "女娲弃石·绛珠还泪" ; :hasSeason "洪荒楔子" ; :inChapter 1 ; :hasDesc "大荒山无稽崖炼剩一石，僧道大展幻术携入红尘；绛珠仙草欲以一生眼泪还神瑛侍者灌溉之恩。" ; :occursAt :dahuangshan .
